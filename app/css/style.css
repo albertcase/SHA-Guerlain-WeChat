@@ -462,6 +462,9 @@ hr {
   width: 100%;
   border: #000 1px solid;
   border-radius: 4px;
+  font-size: 0.32rem;
+  padding: 0.2rem;
+  box-sizing: border-box;
 }
 #form-contact .input-box-youradvice label {
   display: block;
@@ -489,6 +492,9 @@ hr {
   height: 0.1rem;
   border-radius: 100%;
   background: #a1a1a1;
+}
+#form-contact .form-service .input-box.input-box-youradvice {
+  border: none;
 }
 #form-contact .form-service .input-box.input-box-youradvice:before {
   display: none;

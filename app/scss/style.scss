@@ -339,6 +339,9 @@ hr{
     width: 100%;
     border: #000 1px solid;
     border-radius: 4px;
+    font-size: 0.32rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
   }
   .input-box-youradvice{
     label{
@@ -369,6 +372,7 @@ hr{
         background: #a1a1a1;
       }
       &.input-box-youradvice{
+        border: none;
         &:before{
           display: none;
         }
