@@ -72,8 +72,9 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 80%;
   height: 100%;
+  left: 10%;
   min-height: 8rem;
   position: absolute;
   z-index: 1;
@@ -94,13 +95,13 @@ img {
   display: none !important;
 }
 
-.error {
-  display: block;
-  width: 5rem;
-  color: #FFFFFF;
-  font-size: 0.2rem;
-  text-align: center;
-  margin: 0.1rem auto;
+.error select {
+  border: red 1px solid;
+}
+.error input[type='text'],
+.error input[type='email'],
+.error input[type='tel'] {
+  border: red 1px solid;
 }
 
 /*
@@ -241,21 +242,21 @@ select {
 }
 
 ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 :-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 input:-webkit-autofill,
@@ -415,13 +416,103 @@ hr {
   background: none;
   height: 0;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   margin: 0.2rem auto;
   border: none;
   border-bottom: #000 1px dashed;
 }
 
+.title {
+  text-align: center;
+  font-size: 0.36rem;
+  margin: 0.4rem auto 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.32rem;
+  margin: 0.2rem 0 0.2rem;
+}
+
 /*for online-booking page*/
+#form-contact select {
+  width: 100%;
+  margin-bottom: 0.2rem;
+  background: transparent;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  background: url("../images/arrow-down.png") 96% center no-repeat;
+  background-size: auto 20%;
+}
+#form-contact select:focus {
+  outline: none;
+}
+#form-contact input[type="text"],
+#form-contact input[type="tel"],
+#form-contact input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+}
+#form-contact .input-box-contact {
+  font-size: 0.32rem;
+  margin: 0.4rem 0;
+}
+#form-contact #youradvice {
+  width: 100%;
+  border: #000 1px solid;
+  border-radius: 4px;
+}
+#form-contact .input-box-youradvice label {
+  display: block;
+  font-size: 0.32rem;
+  margin: 0.2rem 0;
+}
+#form-contact .btn-submit {
+  width: 100%;
+  height: 0.9rem;
+  font-size: 0.3rem;
+  background: #000;
+  margin: 0.3rem auto;
+}
+#form-contact .form-service .input-box {
+  position: relative;
+  border-bottom: #000 1px solid;
+  margin-bottom: 0.2rem;
+}
+#form-contact .form-service .input-box:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.35rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 100%;
+  background: #a1a1a1;
+}
+#form-contact .form-service .input-box.input-box-youradvice:before {
+  display: none;
+}
+#form-contact .form-service select {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+#form-contact .input-box-booking-time {
+  position: relative;
+  overflow: hidden;
+}
+#form-contact .input-box-booking-time select {
+  width: 60%;
+  float: right;
+}
+#form-contact .input-box-booking-time label {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.3rem;
+  font-size: 0.32rem;
+}
+
 #__bs_notify__ {
   display: none !important;
 }
