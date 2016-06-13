@@ -19,10 +19,8 @@ body{
 
 .wrapper{
   width: 80%;
+  margin: 0 auto;
   height: 100%;
-  left: 10%;
-  min-height: 8rem;
-  position: absolute;
   z-index: 1;
   &.landscape{
     background-size: 100%;
@@ -406,11 +404,65 @@ hr{
 }
 
 
-.page-online-booking{
-
+//For page-special-product
+.page-special-product{
+  background: #ebebeb;
+  padding: 0.1rem;
+  .wrapper{
+    position: absolute;
+    width: calc(100% - 0.2rem);
+    height: calc(100% - 0.2rem);
+    left: 0.1rem;
+    top: 0.1rem;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+    overflow: auto;
+  }
+  hr{
+    border-bottom: #b0b0b0 1px dotted;
+  }
 }
-
-
+  //for product list
+.products-list{
+  .item-product{
+    position: relative;
+    min-height: 3rem;
+    padding: 1rem;
+    border-bottom: #b0b0b0 1px dotted;
+    .product-image{
+      position: absolute;
+      @include size(1.22rem,2.57rem);
+      right: 0.6rem;
+      bottom: 1rem;
+    }
+    .product-name,
+    .product-des{
+      width: 4rem;
+    }
+    .product-name{
+      font-size: 0.3rem;
+      color: #000;
+      text-transform: uppercase;
+      line-height: 1.5;
+      font-weight: bold;
+    }
+    .product-des{
+      margin: 0.3rem 0;
+      font-size: 0.24rem;
+      color: #818181;
+    }
+    .btn-details{
+      @include size(1.67rem,0.43rem);
+      color: #fff;
+      text-align: center;
+      font-size: 0.22rem;
+      line-height: 0.43rem;
+      background: #d0a972;
+      border-radius: 3px;
+    }
+  }
+}
 
 
 //test
