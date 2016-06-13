@@ -520,11 +520,11 @@ hr {
   font-size: 0.32rem;
 }
 
-.page-special-product {
+.page-product {
   background: #ebebeb;
   padding: 0.1rem;
 }
-.page-special-product .wrapper {
+.page-product .wrapper {
   position: absolute;
   width: calc(100% - 0.2rem);
   height: calc(100% - 0.2rem);
@@ -535,42 +535,42 @@ hr {
   color: #000;
   overflow: auto;
 }
-.page-special-product hr {
+.page-product hr {
   border-bottom: #b0b0b0 1px dotted;
 }
-.page-special-product .popup .inner {
+.page-product .popup .inner {
   width: 90%;
   font-size: 0.24rem;
   color: #818181;
 }
-.page-special-product .popup .inner .product-image {
+.page-product .popup .inner .product-image img {
   width: 1.22rem;
   height: 2.57rem;
   margin: 0 auto;
 }
-.page-special-product .popup .inner .product-summary {
+.page-product .popup .inner .product-summary {
   margin: 0.2rem 0;
   text-align: justify;
 }
-.page-special-product .popup .inner .clearfix {
+.page-product .popup .inner .clearfix {
   height: 0.2rem;
 }
-.page-special-product .popup .inner .product-price,
-.page-special-product .popup .inner .product-volume {
+.page-product .popup .inner .product-price,
+.page-product .popup .inner .product-volume {
   position: relative;
   display: inline;
   clear: both;
   padding: 0 0.5rem;
 }
-.page-special-product .popup .inner .product-price span,
-.page-special-product .popup .inner .product-volume span {
+.page-product .popup .inner .product-price span,
+.page-product .popup .inner .product-volume span {
   background: #fff;
   position: relative;
   padding: 0 0.25rem;
   z-index: 2;
 }
-.page-special-product .popup .inner .product-price:before,
-.page-special-product .popup .inner .product-volume:before {
+.page-product .popup .inner .product-price:before,
+.page-product .popup .inner .product-volume:before {
   content: '';
   display: block;
   position: absolute;
@@ -586,17 +586,44 @@ hr {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.page-special-product .popup .inner .product-price span {
+.page-product .popup .inner .product-price span {
   color: #000;
 }
-.page-special-product .popup .inner .btn-close {
+.page-product .popup .inner .btn-close {
   text-indent: -999em;
   position: absolute;
   top: 0.1rem;
   right: 0.1rem;
 }
-.page-special-product .popup .inner .btn-close:before, .page-special-product .popup .inner .btn-close:after {
+.page-product .popup .inner .btn-close:before, .page-product .popup .inner .btn-close:after {
   background: #515151;
+}
+
+.catagory-black .logo {
+  padding: 0.5rem 0 0.5rem;
+}
+.catagory-black .msgbox {
+  background: rgba(0, 0, 0, 0.8);
+}
+.catagory-black .inner {
+  border: #fff 1px solid;
+}
+.catagory-black .products-list {
+  background: #000;
+}
+.catagory-black .msg {
+  padding: 0 0 0.4rem;
+}
+.catagory-black .product-image {
+  width: 100%;
+  background: #000;
+  padding: 0.2rem 0;
+}
+.catagory-black .product-summary {
+  padding: 0.1rem 0.4rem;
+}
+.catagory-black .btn-close:before, .catagory-black .btn-close:after {
+  background: #afafaf !important;
 }
 
 .products-list .item-product {

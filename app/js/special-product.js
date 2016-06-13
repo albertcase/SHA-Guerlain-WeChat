@@ -25,7 +25,7 @@
             $('body').on('touchstart','.btn-close', function(){
                 Common.popupBox.remove();
             });
-            
+
 
         },
         showProductDetails:function(id){

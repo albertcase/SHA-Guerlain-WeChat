@@ -407,7 +407,7 @@ hr{
 
 
 //For page-special-product
-.page-special-product{
+.page-product{
   background: #ebebeb;
   padding: 0.1rem;
   .wrapper{
@@ -431,8 +431,11 @@ hr{
       font-size: 0.24rem;
       color: #818181;
       .product-image{
-        @include size(1.22rem,2.57rem);
-        margin: 0 auto;
+
+        img{
+          @include size(1.22rem,2.57rem);
+          margin: 0 auto;
+        }
       }
       .product-summary{
         margin: 0.2rem 0;
@@ -481,6 +484,36 @@ hr{
           background: #515151;
         }
       }
+    }
+  }
+}
+.catagory-black{
+  .logo{
+    padding: 0.5rem 0 0.5rem;
+  }
+  .msgbox{
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .inner{
+    border: #fff 1px solid;
+  }
+  .products-list{
+    background: #000;
+  }
+  .msg{
+    padding: 0 0 0.4rem;
+  }
+  .product-image{
+    width: 100%;
+    background: #000;
+    padding: 0.2rem 0;
+  }
+  .product-summary{
+    padding: 0.1rem 0.4rem;
+  }
+  .btn-close{
+    &:before,&:after{
+      background: #afafaf !important;
     }
   }
 }
