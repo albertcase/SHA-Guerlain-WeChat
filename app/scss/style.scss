@@ -35,6 +35,10 @@ img{
 .hide{
   display: none !important;
 }
+.clearfix{
+  clear: both;
+  display: block;
+}
 .error {
   select{
     border: red 1px solid;
@@ -261,7 +265,7 @@ select:-webkit-autofill {
   background: rgba(0,0,0,0.6);
   .inner{
     background: #fff;
-    border-radius: 3px;
+    border-radius: 1px;
     color: #000;
     font-size: 0.3rem;
     text-align: center;
@@ -274,8 +278,6 @@ select:-webkit-autofill {
   }
   .msg{
     padding: 0.4rem;
-    color: #885b26;
-    border-bottom: #d1d1d1 1px solid;
   }
   .btn-alert-ok{
     padding: 0.1rem;
@@ -421,6 +423,65 @@ hr{
   }
   hr{
     border-bottom: #b0b0b0 1px dotted;
+  }
+
+  .popup{
+    .inner{
+      width: 90%;
+      font-size: 0.24rem;
+      color: #818181;
+      .product-image{
+        @include size(1.22rem,2.57rem);
+        margin: 0 auto;
+      }
+      .product-summary{
+        margin: 0.2rem 0;
+        text-align: justify;
+      }
+      .clearfix{
+        height: 0.2rem;
+      }
+      .product-price,
+      .product-volume{
+        position: relative;
+        display: inline;
+        clear: both;
+        padding: 0 0.5rem;
+        span{
+          background: #fff;
+          position: relative;
+          padding: 0 0.25rem;
+          z-index: 2;
+        }
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 1px;
+          background: #333;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%,-50%));
+        }
+
+      }
+      .product-price{
+        span{
+          color: #000;
+        }
+      }
+      .btn-close{
+        text-indent: -999em;
+        position: absolute;
+        top: 0.1rem;
+        right: 0.1rem;
+        &:before,&:after{
+          background: #515151;
+        }
+      }
+    }
   }
 }
   //for product list

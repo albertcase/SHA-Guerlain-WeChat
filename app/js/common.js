@@ -105,6 +105,14 @@ function gotoPin(i) {
 				$('.alertpop').remove();
 			}
 		},
+		popupBox:{
+			add:function(msg){
+				$('body').append('<div class="msgbox popup"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
+			},
+			remove:function(){
+				$('.popup').remove();
+			}
+		},
 
 
 	};

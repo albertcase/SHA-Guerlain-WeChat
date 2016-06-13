@@ -93,6 +93,11 @@ img {
   display: none !important;
 }
 
+.clearfix {
+  clear: both;
+  display: block;
+}
+
 .error select {
   border: red 1px solid;
 }
@@ -378,7 +383,7 @@ select:-webkit-autofill {
 }
 .msgbox .inner {
   background: #fff;
-  border-radius: 3px;
+  border-radius: 1px;
   color: #000;
   font-size: 0.3rem;
   text-align: center;
@@ -395,8 +400,6 @@ select:-webkit-autofill {
 }
 .msgbox .msg {
   padding: 0.4rem;
-  color: #885b26;
-  border-bottom: #d1d1d1 1px solid;
 }
 .msgbox .btn-alert-ok {
   padding: 0.1rem;
@@ -534,6 +537,66 @@ hr {
 }
 .page-special-product hr {
   border-bottom: #b0b0b0 1px dotted;
+}
+.page-special-product .popup .inner {
+  width: 90%;
+  font-size: 0.24rem;
+  color: #818181;
+}
+.page-special-product .popup .inner .product-image {
+  width: 1.22rem;
+  height: 2.57rem;
+  margin: 0 auto;
+}
+.page-special-product .popup .inner .product-summary {
+  margin: 0.2rem 0;
+  text-align: justify;
+}
+.page-special-product .popup .inner .clearfix {
+  height: 0.2rem;
+}
+.page-special-product .popup .inner .product-price,
+.page-special-product .popup .inner .product-volume {
+  position: relative;
+  display: inline;
+  clear: both;
+  padding: 0 0.5rem;
+}
+.page-special-product .popup .inner .product-price span,
+.page-special-product .popup .inner .product-volume span {
+  background: #fff;
+  position: relative;
+  padding: 0 0.25rem;
+  z-index: 2;
+}
+.page-special-product .popup .inner .product-price:before,
+.page-special-product .popup .inner .product-volume:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  background: #333;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.page-special-product .popup .inner .product-price span {
+  color: #000;
+}
+.page-special-product .popup .inner .btn-close {
+  text-indent: -999em;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+}
+.page-special-product .popup .inner .btn-close:before, .page-special-product .popup .inner .btn-close:after {
+  background: #515151;
 }
 
 .products-list .item-product {
