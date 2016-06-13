@@ -608,6 +608,9 @@ hr {
 .catagory-black .inner {
   border: #fff 1px solid;
 }
+.catagory-black .products-list .item-product .product-name {
+  color: #fff;
+}
 .catagory-black .products-list {
   background: #000;
 }
