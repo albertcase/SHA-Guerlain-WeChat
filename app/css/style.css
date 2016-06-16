@@ -66,7 +66,7 @@ body {
 * common css
 */
 body {
-  font: 0.24rem/1.5 "Heiti",sans-serif;
+  font: 0.26rem/1.5 "Heiti",sans-serif;
   background: #fff;
   color: #000;
 }
@@ -96,6 +96,14 @@ img {
 .clearfix {
   clear: both;
   display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 .error select {
@@ -667,6 +675,36 @@ hr {
   line-height: 0.43rem;
   background: #d0a972;
   border-radius: 3px;
+}
+
+.vipservice .wrapper {
+  width: 96%;
+}
+
+.slidesjs-navigation {
+  display: none;
+}
+
+.slidesjs-pagination {
+  text-align: center;
+}
+
+.slidesjs-pagination li {
+  display: inline-block;
+  margin: 0.2rem 0.1rem;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 100%;
+  text-indent: -999em;
+  background: #eceded;
+}
+
+.slidesjs-pagination li a.active {
+  background: #d9ba8f;
 }
 
 #__bs_notify__ {

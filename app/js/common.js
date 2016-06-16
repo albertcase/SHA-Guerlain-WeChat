@@ -120,3 +120,7 @@ function gotoPin(i) {
 	this.Common = Common;
 
 }).call(this);
+
+$(function(){
+
+});
