@@ -1,12 +1,15 @@
 <?php
+
 class SysuserController extends SystemController
 {
 
 	public function actionIndex()
 	{
+		$department = new Department() ;
+		$departmentJson = $department->listForCombotree();
 		$permissions = new Permissions();
 		$permissionsJson = $permissions->listForcombobox();
-		$this->render('index',array('permissions'=>$permissionsJson));
+		$this->render('index',array('department'=>$departmentJson,'permissions'=>$permissionsJson));
 	}
 
 	public function actionList()
