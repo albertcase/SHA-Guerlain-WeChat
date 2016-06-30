@@ -12,7 +12,8 @@
             //loading all the resourse, such as css,js,image
             var self = this;
             self.bindEvent();
-            self.presenvationDate();
+            self.updateService();
+            //self.presenvationDate();
         },
         //bind all element event,such as click, touchstart
         bindEvent:function(){
@@ -32,12 +33,6 @@
             for(var i=0;i<selectEle.length;i++){
                 selectEle[i].addEventListener('change', removeFirst, false);
             }
-
-
-
-
-
-
         },
         presenvationDate:function(){
             var self = this,
@@ -208,16 +203,78 @@
             }
             return false;
         },
+        updateService:function(curservice){
+            var selectEle_1 = $('#input-select-1'),
+                selectWrapEle = $('.panel-select');
+            var serviceJson = [
+                    {
+                        title:'水疗中心',
+                        type:[{
+                            name:'123'
+                        }]
+                    },{
+                        title:'VIP服务',
+                        type:[{name:'香水邀约'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{'name':'导游服务'},{name:'购物助理'}]
+                    },{
+                        title:'定制服务',
+                        type:[]
+                    }
+                ];
+            if(curservice){
+                /*select current option*/
+            }else{
+                /*no select option,load all option*/
+                    /*append all option to first select*/
+                var optionHtml = '';
+                for(var i in serviceJson){
+                    optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
+                }
+                selectEle_1.append(optionHtml);
+
+                    /*load second*/
+                var secondSelectHtml = '';
+                if(serviceJson[0].type.length){
+                    for(var j in serviceJson[0].type){
+                        secondSelectHtml = '<div class="input-box input-box-select-2"><select name="select-2" id="input-select-2">'+
+                            '<option value="'+serviceJson[0].type[j].name+'">'+serviceJson[0].type[j].name+'</option>'+
+                            '</select></div>';
+                    }
+                    selectWrapEle.append(secondSelectHtml);
+                }
+
+
+            }
+
+            /*select first option and then displat other*/
+            selectEle_1.on('change',function(){
+                //console.log($(this).val());
+                //if($(this).val())
+                var secondHtml = '';
+                for(var i in serviceJson){
+                    if(serviceJson[i].title == $(this).val()){
+                     for(var j in serviceJson[i].type){
+                         secondHtml = secondHtml + '<option value="'+serviceJson[i].type[j].name+'">'+serviceJson[i].type[j].name+'</option>';
+                     }
+                      $('#input-select-2').html(secondHtml);
+                    }
+                }
+            });
+
+
+
+        },
         submitForm:function(){
             var self = this;
 
             /*
              * Submit the Form, so we need FormKeycodeValidate first and then api
              */
-            var btnSubmit = document.getElementsByClassName('btn-submit')[0];
+            var btnSubmit = $('.btn-submit');
             var enableSubmit = true;
-            btnSubmit.addEventListener('touchstart',function(e){
+            btnSubmit.on('touchstart',function(e){
                 e.preventDefault();
+
+
                 if(self.formValidate()){
                     if(!enableSubmit) return;
                     enableSubmit = false;
@@ -227,9 +284,9 @@
                         inputNameVal = document.getElementById('input-name').value,
                         inputMobileVal = document.getElementById('input-mobile').value,
                         inputEmailVal = document.getElementById('input-email').value,
-                        inputSelect1Val = document.getElementById('input-select-1').value,
-                        inputSelect2Val = document.getElementById('input-select-2').value,
-                        inputSelect3Val = document.getElementById('input-select-3').value,
+                        //inputSelect1Val = document.getElementById('input-select-1').value,
+                        //inputSelect2Val = document.getElementById('input-select-2').value,
+                        //inputSelect3Val = document.getElementById('input-select-3').value,
                         inputBookingTimeVal = document.getElementById('input-booking-time').value,
                         inputContactEle = document.getElementsByTagName('input-contact'),
                         inputContactValue = '电子邮件';
