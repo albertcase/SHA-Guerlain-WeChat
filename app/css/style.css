@@ -735,6 +735,19 @@ hr {
   margin: 0.6rem auto;
 }
 
+.page-storeinfo .title {
+  font-size: 0.46rem;
+}
+.page-storeinfo .title2 {
+  text-align: left;
+  font-size: 0.3rem;
+  margin: 0.4rem 0;
+}
+.page-storeinfo .info {
+  font-size: 0.24rem;
+  line-height: 2;
+}
+
 #__bs_notify__ {
   display: none !important;
 }
