@@ -71,6 +71,9 @@ body {
   color: #000;
 }
 
+@-webkit-keyframes fade {}
+@-moz-keyframes fade {}
+@-o-keyframes fade {}
 .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -705,6 +708,31 @@ hr {
 
 .slidesjs-pagination li a.active {
   background: #d9ba8f;
+}
+
+/*For qrcode page*/
+.page-qrcode .title {
+  font-size: 0.36rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.page-qrcode .subtitle {
+  margin-top: 0.1rem;
+  font-size: 0.3rem;
+  color: #818181;
+  text-align: center;
+}
+.page-qrcode .qrcode {
+  width: 2.7rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.page-qrcode .qrcode img {
+  width: 100%;
+}
+.page-qrcode .line {
+  border-bottom: #b3b3b3 1px solid;
+  margin: 0.6rem auto;
 }
 
 #__bs_notify__ {
