@@ -739,9 +739,10 @@ hr {
   font-size: 0.46rem;
 }
 .page-storeinfo .title2 {
+  font-weight: bold;
   text-align: left;
   font-size: 0.3rem;
-  margin: 0.4rem 0;
+  margin: 0.4rem 0 0.2rem;
 }
 .page-storeinfo .info {
   font-size: 0.24rem;
