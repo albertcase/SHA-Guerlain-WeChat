@@ -16,6 +16,9 @@ body{
   background: #fff;
   color: #000;
 }
+@include keyframes(fade){
+
+}
 
 .wrapper{
   width: 80%;
@@ -360,8 +363,11 @@ hr{
   .btn-submit{
     width: 100%;
     height: 0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
     font-size: 0.3rem;
     background: #000;
+    color: #fff;
     margin: 0.3rem auto;
   }
   .form-service{
@@ -592,6 +598,51 @@ hr{
 .slidesjs-pagination li a.active{
   background: #d9ba8f;
 }
+
+  /*For qrcode page*/
+.page-qrcode{
+  .title{
+    font-size: 0.36rem;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .subtitle{
+    margin-top: 0.1rem;
+    font-size: 0.3rem;
+    color: #818181;
+    text-align: center;
+  }
+  .qrcode{
+    width: 2.7rem;
+    margin: 0 auto;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .line{
+    border-bottom: #b3b3b3 1px solid;
+    margin: 0.6rem auto;
+  }
+}
+
+//for page-storeinfo
+.page-storeinfo{
+  .title{
+    font-size: 0.46rem;
+  }
+  .title2{
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.3rem;
+    margin: 0.4rem 0 0.2rem;
+  }
+  .info{
+    font-size: 0.24rem;
+    line-height: 2;
+  }
+}
+
 
 //test
 #__bs_notify__{
