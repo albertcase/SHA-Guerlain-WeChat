@@ -6,13 +6,16 @@
         this.mobileVal = '';
         //if submitted and record user msg, hasLogged is true
         this.hasLogged = false;
+
     };
     controller.prototype = {
         init:function(){
             //loading all the resourse, such as css,js,image
             var self = this;
             self.bindEvent();
-            self.updateService();
+
+            self.updateService('VIP服务');
+
             //self.presenvationDate();
         },
         //bind all element event,such as click, touchstart
@@ -213,8 +216,6 @@
         },
         updateService:function(curservice){
             var self = this;
-
-            self.presenvationDate();
             var selectEle_1 = $('#input-select-1'),
                 selectEle_2 = $('#input-select-2'),
                 selectEle_3 = $('#input-select-3'),
@@ -222,60 +223,74 @@
                 selectBox_2 = $('.input-box-select-2'),
                 selectBox_3 = $('.input-box-select-3'),
                 selectWrapEle = $('.panel-select');
-            //var secondHtml = '';
             var serviceJson = Api.serviceJson;
-
-            if(curservice){
-                /*select current option*/
-            }else{
-                /*no select option,load all option*/
-                    /*append all option to first select*/
-                var optionHtml = '';
-                for(var i in serviceJson){
-                    optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
-                }
-                selectEle_1.html(optionHtml);
-
-                    /*load second*/
-                var secondSelectHtml = '';
-                if(serviceJson[0].type){
-                    selectBox_2.removeClass('hide');
-                    for(var j in serviceJson[0].type){
-                        secondSelectHtml = secondSelectHtml+'<option value="'+serviceJson[0].type[j].name+'">'+serviceJson[0].type[j].name+'</option>';
-                    }
-                    selectEle_2.html(secondSelectHtml);
-                }else{
-                    selectBox_2.addClass('hide');
-                    selectEle_2.html('');
-                }
-
-
-            }
 
             /*select first option and then displat other*/
             selectEle_1.on('change',function(){
 
-                var secondHtml = '';
                 for(var i in serviceJson){
 
                     if(serviceJson[i].title == $(this).val()){
-                        if(serviceJson[i].type){
-                            for(var j in serviceJson[i].type){
-                                secondHtml = secondHtml + '<option value="'+serviceJson[i].type[j].name+'">'+serviceJson[i].type[j].name+'</option>';
-                            }
-                            selectEle_2.html(secondHtml);
-                            selectBox_2.removeClass('hide');
-                        }else{
-                            selectBox_2.addClass('hide');
-                            selectEle_2.html('');
-                        }
+                        console.log(i);
+                        self.initService(i);
                     }
 
                 }
             });
+                //load first
+            if(curservice){
+
+                for(var i in serviceJson){
+
+                    if(serviceJson[i].title == curservice){
+                        self.initService(i);
+                        selectEle_1.val(curservice);
+                        return;
+                    }else{
+
+                        if(i==serviceJson.length-1){
+                            self.initService(0);
+                        }
+                    }
+
+                }
 
 
+            }else{
+                /*no select option,load all option*/
+                /*append all option to first select*/
+                self.initService(0);
+            }
 
+
+        },
+        initService:function(index){
+            var selectEle_1 = $('#input-select-1'),
+                selectEle_2 = $('#input-select-2'),
+                selectEle_3 = $('#input-select-3'),
+                selectBox_1 = $('.input-box-select-1'),
+                selectBox_2 = $('.input-box-select-2'),
+                selectBox_3 = $('.input-box-select-3'),
+                selectWrapEle = $('.panel-select');
+            var serviceJson = Api.serviceJson;
+            var optionHtml = '';
+            for(var i in serviceJson){
+                optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
+            }
+            selectEle_1.html(optionHtml);
+
+            /*load second*/
+            var secondSelectHtml = '';
+            if(serviceJson[index].type){
+                selectBox_2.removeClass('hide');
+                for(var j in serviceJson[index].type){
+                    secondSelectHtml = secondSelectHtml+'<option value="'+serviceJson[index].type[j].name+'">'+serviceJson[index].type[j].name+'</option>';
+                }
+                selectEle_2.html(secondSelectHtml);
+            }else{
+                selectBox_2.addClass('hide');
+                selectEle_2.html('');
+            }
         },
         submitForm:function(){
             var self = this;
