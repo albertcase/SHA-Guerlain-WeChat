@@ -8,38 +8,119 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="/app/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="/app/css/accordion.css"/>
     <!-- endinject -->
 
     <!-- inject:js -->
     <script type="text/javascript" src="../js/lib/jquery.js"></script>
     <script type="text/javascript" src="../js/lib/jquery.slides.js"></script>
-    <script type="text/javascript" src="../js/lib/pana-accordion.js"></script>
-    <!--<script type="text/javascript" src="../js/lib/shake.js"></script>-->
     <script type="text/javascript" src="../js/rem.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/vip.js"></script>
-    <!--<script type="text/javascript" src="../js/api.js"></script>-->
-    <!--<script type="text/javascript" src="../js/controller.js"></script>-->
 
     <!-- endinject -->
 </head>
 <body class="vipservice">
 <div class="wrapper">
-    <div class=" " >
+    <div class="slider" >
         <ul class="slideshow">
-            <li class="item"><img src="/app/images/arrow-down.png" alt=""/></li>
-            <li class="item"><img src="/app/images/product-1.png" alt=""/></li>
-            <li class="item"><img src="/app/images/logo.png" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
         </ul>
     </div>
     <p class="desc">
         随着法国娇兰对服务不断的升级与完善，您在香榭丽舍大街68号的旅行体验会更加丰富：这里的私人导购随时为您解决购物难题；具有丰富经验的调香师、彩妆师和美容专家聚集于此，提供全方位的美容建议。在这里，您可以体验法国娇兰独有的雕刻和刺绣定制服务。在香水瓶刻上首字母、名字、日期，以及信息，或者为唇膏附上独特标志，都将成为个性化纪念品。
     </p>
-    <h3 class="title">高级定制香氛</h3>
-    <p class="">
-        法国娇兰之家向年龄满七岁以上的年轻人介绍香水制作艺术，并为大家颁发“法国娇兰后辈”学徒证书，成就每个客人的香氛梦想！
+    <!-- 香水邀约 -->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">香水邀约</h3>
+    <p class="desc">
+        法国娇兰通过独一无二的咨询服务，倾听您的心声、挖掘独家记忆，以此为契机，帮您找到自己挚爱的香水味道。<br>
+        105欧元/1小时
     </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','香水邀约')">预约</div>
+    <!-- 妆容打造-->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">妆容打造</h3>
+    <p class="desc">
+        法国娇兰通过独一无二的咨询服务，倾听您的心声、挖掘独家记忆，以此为契机，帮您找到自己挚爱的香水味道。<br>
+
+        105欧元/1小时
+    </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','妆容打造')">预约</div>
+
+    <!-- 美妆课堂-->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">美妆课堂</h3>
+    <p class="desc">
+        这是法国娇兰的专家们展示独门技艺的时刻，他们会告诉您如何打造精致妆容，衬托自然美感，并在如何提亮肤色、提升双眸魅力、雕塑嘴唇和塑造完美日常妆容上给您专业的建议。<br>
+
+        155欧/1小时30分钟
+    </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','美妆课堂')">预约</div>
+
+    <!-- 护肤预约-->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">护肤预约</h3>
+    <p class="desc">
+        法国娇兰美容专家将为您设计理想的护肤流程，根据您的护肤需求，呈上适合您的精致方案。<br>
+        70欧/45分钟
+    </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','护肤预约')">预约</div>
+
+    <!-- 导游服务-->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">导游服务</h3>
+    <p class="desc">
+        娇兰之家展示了法国娇兰最富有创造力的作品，这里犹如一座体会地道法式生活艺术的博物馆，将法国娇兰的美丽杰作们陈列其间。如同任何一座博物馆，娇兰之家有偿提供门店的导游服务。只需一个半小时，就可以详细了解精品店的每个角落和所有细节。
+    </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','导游服务')">预约</div>
+
+    <!--  购物助理 -->
+    <div class="slider" >
+        <ul class="slideshow">
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/vip-1.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <h3 class="title">购物助理</h3>
+    <p class="desc">
+        娇兰之家的美容顾问们以诚挚周到的服务迎接您的到来。在宾客探访精品店的过程中，美容顾问将陪同左右，根据他们的需要与需求，提供专业的建议。
+    </p>
+    <div class="btn-booking" onclick="gotoBookingPage('VIP服务','购物助理')">预约</div>
+
+
 
 
 

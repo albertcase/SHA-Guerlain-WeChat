@@ -15,7 +15,7 @@
             self.bindEvent();
 
             // get 'service' name of url parameter
-            var serviceName = Common.queryString().service;
+            var serviceName = Common.queryString().servicefirst;
             self.updateService(serviceName);
             self.presenvationDate();
 
