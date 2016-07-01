@@ -36,15 +36,17 @@
         },
         presenvationDate:function(){
             var self = this,
-                bookingTimeEle = document.getElementById('input-booking-time');
+                bookingTimeEle = document.getElementById('input-booking-date');
             /*
             * time need show the next three month from tommorrow
             *
             * */
+            var weekname = ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
             var curDate = new Date(),
                 curYear = curDate.getFullYear(),
                 curMonth = curDate.getMonth()+1,
-                curDay = curDate.getDate()+1;
+                curDay = curDate.getDate()+ 1,
+                curWeek = curDate.getDay();
             var dateHtml = '';
             var nextMonth = curMonth,
                 nextYear = curYear;
@@ -103,12 +105,19 @@
                     }
                 }
 
+
                 if(nextMonth>12){
                     nextMonth = 1;
                     nextYear++;
                 }
-                dateHtml = dateHtml+'<option value="">'+nextMonth+'月'+curDay+'日</option>';
+                if(curWeek>6){
+                    curWeek = 0;
+                }
+                dateHtml = dateHtml+'<option value="">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
                 curDay++;
+                curWeek++;
+
+
             }
 
             bookingTimeEle.innerHTML = dateHtml;
@@ -204,22 +213,30 @@
             return false;
         },
         updateService:function(curservice){
+            var self = this;
             var selectEle_1 = $('#input-select-1'),
+                selectEle_2 = $('#input-select-2'),
+                selectEle_3 = $('#input-select-3'),
+                selectBox_1 = $('.input-box-select-1'),
+                selectBox_2 = $('.input-box-select-2'),
+                selectBox_3 = $('.input-box-select-3'),
                 selectWrapEle = $('.panel-select');
+            //var secondHtml = '';
             var serviceJson = [
                     {
                         title:'水疗中心',
-                        type:[{
-                            name:'123'
-                        }]
+                        type:[{name:'test'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{name:'导游服务'},{name:'购物助理'}],
+                        data:{},
+                        time:{}
                     },{
                         title:'VIP服务',
-                        type:[{name:'香水邀约'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{'name':'导游服务'},{name:'购物助理'}]
+                        type:[{name:'香水邀约'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{name:'导游服务'},{name:'购物助理'}]
                     },{
                         title:'定制服务',
-                        type:[]
+                        //type:[]
                     }
                 ];
+
             if(curservice){
                 /*select current option*/
             }else{
@@ -229,17 +246,18 @@
                 for(var i in serviceJson){
                     optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
                 }
-                selectEle_1.append(optionHtml);
+                selectEle_1.html(optionHtml);
 
                     /*load second*/
                 var secondSelectHtml = '';
-                if(serviceJson[0].type.length){
+                if(serviceJson[0].type){
+                    selectBox_2.removeClass('hide');
                     for(var j in serviceJson[0].type){
-                        secondSelectHtml = '<div class="input-box input-box-select-2"><select name="select-2" id="input-select-2">'+
-                            '<option value="'+serviceJson[0].type[j].name+'">'+serviceJson[0].type[j].name+'</option>'+
-                            '</select></div>';
+                        secondSelectHtml = secondSelectHtml+'<option value="'+serviceJson[0].type[j].name+'">'+serviceJson[0].type[j].name+'</option>';
                     }
-                    selectWrapEle.append(secondSelectHtml);
+                    selectEle_2.html(secondSelectHtml);
+                }else{
+                    selectBox_2.addClass('hide');
                 }
 
 
@@ -247,16 +265,24 @@
 
             /*select first option and then displat other*/
             selectEle_1.on('change',function(){
-                //console.log($(this).val());
-                //if($(this).val())
+
+                self.presenvationDate();
                 var secondHtml = '';
                 for(var i in serviceJson){
+
                     if(serviceJson[i].title == $(this).val()){
-                     for(var j in serviceJson[i].type){
-                         secondHtml = secondHtml + '<option value="'+serviceJson[i].type[j].name+'">'+serviceJson[i].type[j].name+'</option>';
-                     }
-                      $('#input-select-2').html(secondHtml);
+                        if(serviceJson[i].type){
+                            for(var j in serviceJson[i].type){
+                                secondHtml = secondHtml + '<option value="'+serviceJson[i].type[j].name+'">'+serviceJson[i].type[j].name+'</option>';
+                            }
+                            selectEle_2.html(secondHtml);
+                            selectBox_2.removeClass('hide');
+                        }else{
+                            selectBox_2.addClass('hide');
+                        }
+
                     }
+
                 }
             });
 
