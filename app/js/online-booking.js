@@ -14,9 +14,11 @@
             var self = this;
             self.bindEvent();
 
-            self.updateService('VIP服务');
+            // get 'service' name of url parameter
+            var serviceName = Common.queryString().service;
+            self.updateService(serviceName);
+            self.presenvationDate();
 
-            //self.presenvationDate();
         },
         //bind all element event,such as click, touchstart
         bindEvent:function(){
@@ -231,7 +233,6 @@
                 for(var i in serviceJson){
 
                     if(serviceJson[i].title == $(this).val()){
-                        console.log(i);
                         self.initService(i);
                     }
 
@@ -326,7 +327,17 @@
                     console.log(inputCallnameVal+' '+inputSurnameVal+' '+inputNameVal+' '+inputMobileVal+' '+inputEmailVal+' '+inputSelect1Val+' '+inputSelect2Val+' '+ inputSelect3Val+ ' '+inputBookingDateVal+' '+inputContactValue+' '+inputAdviceVal);
 
                     Api.submitAll({
-                        inputCallnameVal:inputCallnameVal
+                        sex:inputCallnameVal,
+                        first:inputSurnameVal,
+                        second:inputNameVal,
+                        mobile:inputMobileVal,
+                        email:inputEmailVal,
+                        type:inputContactValue,
+                        bak1:inputSelect1Val,
+                        bak2:inputSelect2Val,
+                        bak3:inputSelect3Val,
+                        date:inputBookingDateVal,
+                        comment:inputAdviceVal
                     },function(data){
                         if(data.status == 1){
                             //alert('提交成功');
