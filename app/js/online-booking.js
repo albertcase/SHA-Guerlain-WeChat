@@ -113,10 +113,9 @@
                 if(curWeek>6){
                     curWeek = 0;
                 }
-                dateHtml = dateHtml+'<option value="">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
+                dateHtml = dateHtml+'<option value="'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
                 curDay++;
                 curWeek++;
-
 
             }
 
@@ -130,11 +129,11 @@
                 inputSurname = document.getElementById('input-surname'),
                 inputName = document.getElementById('input-name'),
                 inputMobile = document.getElementById('input-mobile'),
-                inputEmail = document.getElementById('input-email'),
-                inputSelect1 = document.getElementById('input-select-1'),
-                inputSelect2 = document.getElementById('input-select-2'),
-                inputSelect3 = document.getElementById('input-select-3'),
-                inputBookingTime = document.getElementById('input-booking-time');
+                inputEmail = document.getElementById('input-email');
+                //inputSelect1 = document.getElementById('input-select-1'),
+                //inputSelect2 = document.getElementById('input-select-2'),
+                //inputSelect3 = document.getElementById('input-select-3'),
+                //inputBookingDate = document.getElementById('input-booking-date');
 
             if(!inputCallname.value){
                 Common.addClass(inputCallname.parentElement,'error');
@@ -178,33 +177,33 @@
             }
 
 
-            if(!inputSelect1.value){
-                Common.addClass(inputSelect1.parentElement,'error');
-                validate = false;
-            }else{
-                Common.removeClass(inputSelect1.parentElement,'error');
-            }
+            //if(!inputSelect1.value){
+            //    Common.addClass(inputSelect1.parentElement,'error');
+            //    validate = false;
+            //}else{
+            //    Common.removeClass(inputSelect1.parentElement,'error');
+            //}
 
-            if(!inputSelect2.value){
-                Common.addClass(inputSelect2.parentElement,'error');
-                validate = false;
-            }else{
-                Common.removeClass(inputSelect2.parentElement,'error');
-            }
+            //if(!inputSelect2.value){
+            //    Common.addClass(inputSelect2.parentElement,'error');
+            //    validate = false;
+            //}else{
+            //    Common.removeClass(inputSelect2.parentElement,'error');
+            //}
+            //
+            //if(!inputSelect3.value){
+            //    Common.addClass(inputSelect3.parentElement,'error');
+            //    validate = false;
+            //}else{
+            //    Common.removeClass(inputSelect3.parentElement,'error');
+            //}
 
-            if(!inputSelect3.value){
-                Common.addClass(inputSelect3.parentElement,'error');
-                validate = false;
-            }else{
-                Common.removeClass(inputSelect3.parentElement,'error');
-            }
-
-            if(!inputBookingTime.value){
-                Common.addClass(inputBookingTime.parentElement,'error');
-                validate = false;
-            }else{
-                Common.removeClass(inputBookingTime.parentElement,'error');
-            }
+            //if(!inputBookingDate.value){
+            //    Common.addClass(inputBookingDate.parentElement,'error');
+            //    validate = false;
+            //}else{
+            //    Common.removeClass(inputBookingDate.parentElement,'error');
+            //}
 
 
             if(validate){
@@ -214,6 +213,8 @@
         },
         updateService:function(curservice){
             var self = this;
+
+            self.presenvationDate();
             var selectEle_1 = $('#input-select-1'),
                 selectEle_2 = $('#input-select-2'),
                 selectEle_3 = $('#input-select-3'),
@@ -222,20 +223,7 @@
                 selectBox_3 = $('.input-box-select-3'),
                 selectWrapEle = $('.panel-select');
             //var secondHtml = '';
-            var serviceJson = [
-                    {
-                        title:'水疗中心',
-                        type:[{name:'test'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{name:'导游服务'},{name:'购物助理'}],
-                        data:{},
-                        time:{}
-                    },{
-                        title:'VIP服务',
-                        type:[{name:'香水邀约'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{name:'导游服务'},{name:'购物助理'}]
-                    },{
-                        title:'定制服务',
-                        //type:[]
-                    }
-                ];
+            var serviceJson = Api.serviceJson;
 
             if(curservice){
                 /*select current option*/
@@ -258,6 +246,7 @@
                     selectEle_2.html(secondSelectHtml);
                 }else{
                     selectBox_2.addClass('hide');
+                    selectEle_2.html('');
                 }
 
 
@@ -266,7 +255,6 @@
             /*select first option and then displat other*/
             selectEle_1.on('change',function(){
 
-                self.presenvationDate();
                 var secondHtml = '';
                 for(var i in serviceJson){
 
@@ -279,8 +267,8 @@
                             selectBox_2.removeClass('hide');
                         }else{
                             selectBox_2.addClass('hide');
+                            selectEle_2.html('');
                         }
-
                     }
 
                 }
@@ -293,14 +281,12 @@
             var self = this;
 
             /*
-             * Submit the Form, so we need FormKeycodeValidate first and then api
+             * Submit the Form
              */
             var btnSubmit = $('.btn-submit');
             var enableSubmit = true;
             btnSubmit.on('touchstart',function(e){
                 e.preventDefault();
-
-
                 if(self.formValidate()){
                     if(!enableSubmit) return;
                     enableSubmit = false;
@@ -310,21 +296,28 @@
                         inputNameVal = document.getElementById('input-name').value,
                         inputMobileVal = document.getElementById('input-mobile').value,
                         inputEmailVal = document.getElementById('input-email').value,
-                        //inputSelect1Val = document.getElementById('input-select-1').value,
-                        //inputSelect2Val = document.getElementById('input-select-2').value,
-                        //inputSelect3Val = document.getElementById('input-select-3').value,
-                        inputBookingTimeVal = document.getElementById('input-booking-time').value,
+                        inputSelect1Val = document.getElementById('input-select-1').value,
+                        inputSelect2Val = document.getElementById('input-select-2').value,
+                        inputSelect3Val = document.getElementById('input-select-3').value,
+                        inputBookingDateVal = document.getElementById('input-booking-date').value,
+                        inputAdviceVal = document.getElementById('youradvice').value,
                         inputContactEle = document.getElementsByTagName('input-contact'),
                         inputContactValue = '电子邮件';
-
                     for(var i=0;i<inputContactEle.length;i++){
                         if(inputContactEle[i].checked){
                             inputContactValue = inputContactEle[i].value;
                         }
                     };
+                    console.log(inputCallnameVal+' '+inputSurnameVal+' '+inputNameVal+' '+inputMobileVal+' '+inputEmailVal+' '+inputSelect1Val+' '+inputSelect2Val+' '+ inputSelect3Val+ ' '+inputBookingDateVal+' '+inputContactValue+' '+inputAdviceVal);
 
-                    console.log('inputCallnameVal'+inputCallnameVal+'inputSurnameVal'+inputSurnameVal+'inputNameVal'+inputNameVal+'inputMobileVal'+inputMobileVal+'inputEmailVal'+inputEmailVal+'inputSelect1Val'+inputSelect1Val+'inputSelect2Val'+inputSelect2Val+'inputSelect3Val'+inputSelect3Val+'inputBookingTimeVal'+inputBookingTimeVal);
-
+                    Api.submitAll({
+                        inputCallnameVal:inputCallnameVal
+                    },function(data){
+                        if(data.status == 1){
+                            //alert('提交成功');
+                            Common.alertBox.add('success');
+                        }
+                    });
 
 
                 };
