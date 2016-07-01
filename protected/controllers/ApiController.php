@@ -16,11 +16,12 @@ class ApiController extends Controller
 	    $bak2 = isset($_POST['bak2']) ? $_POST['bak2'] : '';
 	    $bak3 = isset($_POST['bak3']) ? $_POST['bak3'] : '';
 	    $date = isset($_POST['date']) ? $_POST['date'] : $tag = true;
+	    $comment = isset($_POST['comment']) ? $_POST['comment'] : $tag = true;
 	    if ( $tag ) {
 	    	print json_encode(array('code' => 2, 'msg' => '请填写必填项'));
 	    	Yii::app()->end();
 	    }
-	    $sql="insert into same_book set sex = :sex, first = :first, second = :second, mobile = :mobile, email = :email, type = :type, bak1 = :bak1, bak2 = :bak2, bak3 = :bak3, date = :date";
+	    $sql="insert into same_book set sex = :sex, first = :first, second = :second, mobile = :mobile, email = :email, type = :type, bak1 = :bak1, bak2 = :bak2, bak3 = :bak3, date = :date, comment = :comment";
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindParam(':sex',$sex,PDO::PARAM_STR);
 		$command->bindParam(':first',$first,PDO::PARAM_STR);
@@ -32,6 +33,7 @@ class ApiController extends Controller
 		$command->bindParam(':bak2',$bak2,PDO::PARAM_STR);
 		$command->bindParam(':bak3',$bak3,PDO::PARAM_STR);
 		$command->bindParam(':date',$date,PDO::PARAM_STR);
+		$command->bindParam(':comment',$comment,PDO::PARAM_STR);
 		$command->execute();
 	    print json_encode(array('code' => 1, 'msg' => '提交成功'));
 	    Yii::app()->end();
