@@ -20,6 +20,19 @@ class ApiController extends Controller
 	    	print json_encode(array('code' => 2, 'msg' => '请填写必填项'));
 	    	Yii::app()->end();
 	    }
+	    $sql="insert into same_book set sex = :sex, first = :first, second = :second, mobile = :mobile, email = :email, type = :type, bak1 = :bak1, bak2 = :bak2, bak3 = :bak3, date = :date";
+		$command = Yii::app()->db->createCommand($sql);
+		$command->bindParam(':sex',$sex,PDO::PARAM_STR);
+		$command->bindParam(':first',$first,PDO::PARAM_STR);
+		$command->bindParam(':second',$second,PDO::PARAM_STR);
+		$command->bindParam(':mobile',$mobile,PDO::PARAM_STR);
+		$command->bindParam(':email',$email,PDO::PARAM_STR);
+		$command->bindParam(':type',$type,PDO::PARAM_STR);
+		$command->bindParam(':bak1',$bak1,PDO::PARAM_STR);
+		$command->bindParam(':bak2',$bak2,PDO::PARAM_STR);
+		$command->bindParam(':bak3',$bak3,PDO::PARAM_STR);
+		$command->bindParam(':date',$date,PDO::PARAM_STR);
+		$command->execute();
 	    print json_encode(array('code' => 1, 'msg' => '提交成功'));
 	    Yii::app()->end();
 
