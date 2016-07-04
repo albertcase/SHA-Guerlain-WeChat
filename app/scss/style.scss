@@ -444,6 +444,7 @@ hr{
       width: 90%;
       font-size: 0.24rem;
       color: #818181;
+      border: #fff 1px solid;
       .msg{
         height: 100%;
         overflow: auto;
@@ -451,7 +452,9 @@ hr{
         max-height: 10rem;
       }
       .product-image{
-        height: 2rem;
+        //background: #000;
+        height: 4rem;
+        text-align: center;
         img{
           //@include size(1.22rem,2.57rem);
           margin: 0 auto;
@@ -462,6 +465,16 @@ hr{
       .product-summary{
         margin: 0.2rem 0;
         text-align: justify;
+        padding: 0.1rem 0.4rem;
+        .product-price{
+          width: 50%;
+          display: block;
+          margin: 0.2rem auto;
+          text-align: center;
+        }
+        p{
+          margin: 0.2rem 0;
+        }
       }
       .clearfix{
         height: 0.2rem;
@@ -509,6 +522,12 @@ hr{
     }
   }
 }
+.catagory-white{
+  .popup .inner .msg{
+    padding: 0.4rem 0;
+  }
+
+}
 .catagory-black{
   .logo{
     padding: 0.5rem 0 0.5rem;
@@ -534,7 +553,7 @@ hr{
     padding: 0.2rem 0;
   }
   .product-summary{
-    padding: 0.1rem 0.4rem;
+
   }
   .btn-close{
     &:before,&:after{
