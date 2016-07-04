@@ -27,11 +27,11 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 										$("#SystemWmenuAddEventKeywordArea").hide();
 										$("#SystemWmenuAddEventMenuList").show();
 										$("#SystemWmenuAddEventQrcodeList").hide();
-									}else if("text"){
+									}else if(record.id=="text"){
 										$("#SystemWmenuAddEventKeywordArea").show();
 										$("#SystemWmenuAddEventMenuList").hide();
 										$("#SystemWmenuAddEventQrcodeList").hide();
-									}else if("qrcode"){
+									}else if(record.id=="qrcode"){
 										$("#SystemWmenuAddEventKeywordArea").hide();
 										$("#SystemWmenuAddEventMenuList").hide();
 										$("#SystemWmenuAddEventQrcodeList").show();
