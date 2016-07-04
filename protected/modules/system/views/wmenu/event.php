@@ -18,13 +18,6 @@
 				formatter:function(value,row){
 					return '<a href=\'javascript:void(0)\' class=\'easyui-linkbutton\' onclick=openTab(\'编辑微信事件\',\'/wmenu/editevent?id='+row.id+'\')>编辑</a> | <a href=\'javascript:void(0)\' class=\'easyui-linkbutton\' onclick=systemWmenuEventDelete('+row.id+')>删除</a>';
 			}">操作</th>
-			<th data-options='field:"event",width:100,formatter:function(value,row){
-								if(!value){
-									return "无";
-								}else{
-									return value;
-								}
-						}'>事件</th>
 			<th data-options='field:"mname",width:100,formatter:function(value,row){
 								if(!value){
 									return "无";
@@ -47,6 +40,8 @@
 									return "点击";
 								}else if(value=="text"){
 									return "接收文本";
+								}else if(value=="qrcode"){
+									return "二维码";
 								}
 						}'>事件</th>
 			<th data-options='field:"keyword",width:100,formatter:function(value,row){
