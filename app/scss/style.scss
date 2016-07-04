@@ -440,19 +440,41 @@ hr{
 
   .popup{
     .inner{
+      position: absolute;
       width: 90%;
       font-size: 0.24rem;
       color: #818181;
+      border: #fff 1px solid;
+      .msg{
+        height: 100%;
+        overflow: auto;
+        padding: 0;
+        max-height: 10rem;
+      }
       .product-image{
-
+        //background: #000;
+        height: 4rem;
+        text-align: center;
         img{
-          @include size(1.22rem,2.57rem);
+          //@include size(1.22rem,2.57rem);
           margin: 0 auto;
+          width: auto;
+          height: 100%;
         }
       }
       .product-summary{
         margin: 0.2rem 0;
         text-align: justify;
+        padding: 0.1rem 0.4rem;
+        .product-price{
+          width: 50%;
+          display: block;
+          margin: 0.2rem auto;
+          text-align: center;
+        }
+        p{
+          margin: 0.2rem 0;
+        }
       }
       .clearfix{
         height: 0.2rem;
@@ -500,6 +522,12 @@ hr{
     }
   }
 }
+.catagory-white{
+  .popup .inner .msg{
+    padding: 0.4rem 0;
+  }
+
+}
 .catagory-black{
   .logo{
     padding: 0.5rem 0 0.5rem;
@@ -525,7 +553,7 @@ hr{
     padding: 0.2rem 0;
   }
   .product-summary{
-    padding: 0.1rem 0.4rem;
+
   }
   .btn-close{
     &:before,&:after{
@@ -578,6 +606,9 @@ hr{
 .vipservice .wrapper{
   width: 96%;
 }
+.slider {
+  margin: 2% 0;
+}
 .slidesjs-navigation{
   display: none;
 }
@@ -598,6 +629,16 @@ hr{
 .slidesjs-pagination li a.active{
   background: #d9ba8f;
 }
+.btn-booking{
+  width: 80%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  margin: 1em auto;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
 
   /*For qrcode page*/
 .page-qrcode{

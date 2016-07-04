@@ -15,8 +15,10 @@
             self.bindEvent();
 
             // get 'service' name of url parameter
-            var serviceName = Common.queryString().service;
-            self.updateService(serviceName);
+            var servicefirst = Common.queryString().servicefirst,
+                servicesecond = Common.queryString().servicesecond;
+            self.updateService(servicefirst,servicesecond);
+            //self.initService(1,5);
             self.presenvationDate();
 
         },
@@ -216,7 +218,7 @@
             }
             return false;
         },
-        updateService:function(curservice){
+        updateService:function(firstservice,secondservice){
             var self = this;
             var selectEle_1 = $('#input-select-1'),
                 selectEle_2 = $('#input-select-2'),
@@ -233,24 +235,36 @@
                 for(var i in serviceJson){
 
                     if(serviceJson[i].title == $(this).val()){
-                        self.initService(i);
+                        self.initService(i,0);
                     }
 
                 }
             });
+            console.log(firstservice+secondservice);
                 //load first
-            if(curservice){
+            if(firstservice){
 
                 for(var i in serviceJson){
 
-                    if(serviceJson[i].title == curservice){
-                        self.initService(i);
-                        selectEle_1.val(curservice);
-                        return;
+                    if(serviceJson[i].title == firstservice){
+
+                        if(serviceJson[i].type){
+                            for(var j in serviceJson[i].type){
+                                if(serviceJson[i].type[j].name == secondservice){
+
+                                    self.initService(i,j);
+                                    return;
+                                }
+                            }
+                        }else{
+                            self.initService(i,0);
+                        }
+
+                        //return;
                     }else{
 
                         if(i==serviceJson.length-1){
-                            self.initService(0);
+                            self.initService(0,0);
                         }
                     }
 
@@ -260,12 +274,12 @@
             }else{
                 /*no select option,load all option*/
                 /*append all option to first select*/
-                self.initService(0);
+                self.initService(0,0);
             }
 
 
         },
-        initService:function(index){
+        initService:function(index,index2){
             var selectEle_1 = $('#input-select-1'),
                 selectEle_2 = $('#input-select-2'),
                 selectEle_3 = $('#input-select-3'),
@@ -275,10 +289,11 @@
                 selectWrapEle = $('.panel-select');
             var serviceJson = Api.serviceJson;
             var optionHtml = '';
+            //selectEle_1.val(serviceJson[index].title);
             for(var i in serviceJson){
                 optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
             }
-            selectEle_1.html(optionHtml);
+            selectEle_1.html(optionHtml).val(serviceJson[index].title);
 
             /*load second*/
             var secondSelectHtml = '';
@@ -288,6 +303,8 @@
                     secondSelectHtml = secondSelectHtml+'<option value="'+serviceJson[index].type[j].name+'">'+serviceJson[index].type[j].name+'</option>';
                 }
                 selectEle_2.html(secondSelectHtml);
+                //console.log(index2);
+                selectEle_2.val(serviceJson[index].type[index2].name);
             }else{
                 selectBox_2.addClass('hide');
                 selectEle_2.html('');
