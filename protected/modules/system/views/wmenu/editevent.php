@@ -46,6 +46,9 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 									if("<?php echo $wmenu['event'];?>"=="click"){
 										$("#SystemWmenuEditEventMenuList").show();
 									}
+									if("<?php echo $wmenu['event'];?>"=="qrcode"){
+										$("#SystemWmenuEditEventQrcodeList").show();
+									}
 								}'>
 						
 					</td>
