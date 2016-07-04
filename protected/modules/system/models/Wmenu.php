@@ -223,6 +223,7 @@ class Wmenu{
 		$result = array('code'=>'','msg'=>'');
 		$id = $data['id'];
 		$mid = $data['mid'];
+		$qid = $data['qid'];
 		$event = $data['event'];
 		$msgtype = $data['msgtype'];
 		$content = $data['content'];
@@ -272,11 +273,25 @@ class Wmenu{
 			}
 		}
 
+		if ($event == 'qrcode') {
+			$sqlCheck = "SELECT id FROM same_wmenu_event WHERE qid=:qid AND event=:event AND id<>".$id;
+			$command = $this->_db->createCommand($sqlCheck);
+			$command->bindParam(':qid',$qid,PDO::PARAM_STR);
+			$command->bindParam(':event',$event,PDO::PARAM_STR);
+			$rsCheck = $command->select()->queryScalar();
+			if($rsCheck){
+				$result['code'] = 2;
+				$result['msg']  = '该二维码已经有了事件，请编辑修改！';
+				return json_encode($result);
+			}
+		}
+
 		try{
-			$sql = "UPDATE same_wmenu_event SET mid=:mid, event=:event, msgtype=:msgtype,content=:content, title=:title, description=:description, picUrl=:picUrl, url=:url, keyword=:keyword WHERE id=:id";
+			$sql = "UPDATE same_wmenu_event SET mid=:mid, qid=:qid, event=:event, msgtype=:msgtype,content=:content, title=:title, description=:description, picUrl=:picUrl, url=:url, keyword=:keyword WHERE id=:id";
 			$command = $this->_db->createCommand($sql);
 			$command->bindParam(':id',$id,PDO::PARAM_INT);
 			$command->bindParam(':mid',$mid,PDO::PARAM_STR);
+			$command->bindParam(':qid',$qid,PDO::PARAM_STR);
 			$command->bindParam(':event',$event,PDO::PARAM_STR);
 			$command->bindParam(':msgtype',$msgtype,PDO::PARAM_STR);
 			$command->bindParam(':content',$content,PDO::PARAM_STR);
