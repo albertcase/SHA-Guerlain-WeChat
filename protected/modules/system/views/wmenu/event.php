@@ -20,11 +20,7 @@
 			}">操作</th>
 			<th data-options='field:"mname",width:100,formatter:function(value,row){
 								if(!value){
-									if (!row.qrcode){
-										return "无";
-									}else{
-										return row.qrcode;
-									}
+									return "无"
 								}else{
 									return value;
 								}
@@ -50,11 +46,15 @@
 						}'>事件</th>
 			<th data-options='field:"keyword",width:100,formatter:function(value,row){
 								if(!value){
-									return "无";
+									if (!row.qrcode){
+										return "无";
+									}else{
+										return row.qrcode;
+									}
 								}else{
 									return value;
 								}
-						}'>事件</th>
+						}'>关键词</th>
 			
 			
 		</tr>
