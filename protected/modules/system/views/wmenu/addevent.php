@@ -177,6 +177,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 		submitForm:function(){			
 			var formdata = {
 				mid : $("input[name='SystemWmenuAddEventMenu']").val(),
+				qid : $("input[name='SystemWmenuAddEventQrcode']").val(),
 				event : $("input[name='SystemWmenuAddEventEvent']").val(),
 				msgtype : $("input[name='SystemWmenuAddEventMsgtype']").val(),
 				content : $("#SystemWmenuAddEventText").val(),
