@@ -553,14 +553,24 @@ hr {
   border-bottom: #b0b0b0 1px dotted;
 }
 .page-product .popup .inner {
+  position: absolute;
   width: 90%;
   font-size: 0.24rem;
   color: #818181;
 }
+.page-product .popup .inner .msg {
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  max-height: 10rem;
+}
+.page-product .popup .inner .product-image {
+  height: 2rem;
+}
 .page-product .popup .inner .product-image img {
-  width: 1.22rem;
-  height: 2.57rem;
   margin: 0 auto;
+  width: auto;
+  height: 100%;
 }
 .page-product .popup .inner .product-summary {
   margin: 0.2rem 0;

@@ -440,14 +440,23 @@ hr{
 
   .popup{
     .inner{
+      position: absolute;
       width: 90%;
       font-size: 0.24rem;
       color: #818181;
+      .msg{
+        height: 100%;
+        overflow: auto;
+        padding: 0;
+        max-height: 10rem;
+      }
       .product-image{
-
+        height: 2rem;
         img{
-          @include size(1.22rem,2.57rem);
+          //@include size(1.22rem,2.57rem);
           margin: 0 auto;
+          width: auto;
+          height: 100%;
         }
       }
       .product-summary{
