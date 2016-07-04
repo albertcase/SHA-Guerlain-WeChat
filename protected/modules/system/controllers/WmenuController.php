@@ -108,7 +108,8 @@ class WmenuController extends SystemController
 		$wmenu = new Wmenu();
 		$wmenuMsg = $wmenu->getEventById($id);
 		$pmenu = $wmenu->getPmenuForChild();
-		$this->render('editevent',array('wmenu'=>$wmenuMsg,'pmenu'=>$pmenu));
+		$pqrcode = $wmenu->getQrcodeForChild();
+		$this->render('editevent',array('wmenu'=>$wmenuMsg,'pmenu'=>$pmenu, 'pqrcode'=> $pqrcode));
 	}
 
 	public function actionEventupdate()
