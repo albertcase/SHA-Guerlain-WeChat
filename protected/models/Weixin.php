@@ -233,12 +233,12 @@ class Weixin{
     private function sceneLog($openid,$type,$ticket)
     {
     	try{
-	    	$sql = "INSERT INTO scenelog SET openid=:openid,type=:type,ticket=:ticket,timeint=:timeint";
+	    	$sql = "INSERT INTO scenelog SET openid=:openid,type=:type,ticket=:ticket";
 			$command=$this->_db->createCommand($sql);
 			$command->bindParam(":openid",$openid,PDO::PARAM_STR);
 			$command->bindParam(":type",$type,PDO::PARAM_STR);
 			$command->bindParam(":ticket",$ticket,PDO::PARAM_STR);
-			$command->bindParam(":timeint",time(),PDO::PARAM_STR);
+			//$command->bindParam(":timeint",time(),PDO::PARAM_STR);
 			$command->execute();
 		}catch(Exception $e){
 			print_r($e);
