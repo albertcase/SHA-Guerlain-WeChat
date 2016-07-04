@@ -117,7 +117,7 @@ class Weixin{
 						$this->sceneLog($fromUsername,1,$ticket);
 						//二维码事件
 						if ($ticket) {
-							$sql = "select id from same_qrcode where ticket = $ticket";
+							$sql = "select id from same_qrcode where ticket = '".$ticket."'";
 							$qid = $this->_db->createCommand($sql)->select()->queryScalar();
 							if ($qid) {
 								$sql = "select * from same_wmenu_event where qid = ". $qid;
@@ -151,7 +151,7 @@ class Weixin{
 						$this->sceneLog($fromUsername,2,$ticket);
 						//二维码事件
 						if ($ticket) {
-							$sql = "select id from same_qrcode where ticket = $ticket";
+							$sql = "select id from same_qrcode where ticket = '".$ticket."'";
 							$qid = $this->_db->createCommand($sql)->select()->queryScalar();
 							if ($qid) {
 								$sql = "select * from same_wmenu_event where qid = ". $qid;
