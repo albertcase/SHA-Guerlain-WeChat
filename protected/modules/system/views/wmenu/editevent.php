@@ -91,7 +91,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 					</td>
 				</tr>
 
-				<tr id="SystemWmenuEditEventMenuQrcode" style="display:none">
+				<tr id="SystemWmenuEditEventQrcodeList" style="display:none">
 					<td style="text-align:right" class="row">场景：</td>
 					<td style="text-align:left" class="row">
 						<input class="easyui-combobox" name="SystemWmenuEditEventQrcode" id="SystemWmenuEditEventQrcode" data-options='  
@@ -102,7 +102,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 									
 								},
 								onLoadSuccess:function(){
-									$("#SystemWmenuEditEventMenu").combobox("select", "<?php echo $wmenu["qid"];?>");
+									$("#SystemWmenuEditEventQrcode").combobox("select", "<?php echo $wmenu["qid"];?>");
 								}'>  
 					</td>
 				</tr>
