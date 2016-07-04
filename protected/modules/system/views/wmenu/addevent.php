@@ -21,17 +21,24 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 						<input class="easyui-combobox" name="SystemWmenuAddEventEvent" id="SystemWmenuAddEventEvent" data-options='  
 								valueField: "id",
 								textField: "name",
-								data: [{id:"subscribe",name:"关注"},{id:"click",name:"点击"},{id:"text",name:"接收文本"}],
+								data: [{id:"subscribe",name:"关注"},{id:"click",name:"点击"},{id:"text",name:"接收文本"},{id:"qrcode",name:"二维码"}],
 								onSelect: function(record){
 									if(record.id=="click"){
-										$("#SystemWmenuAddEventKeywordArea").hide()
+										$("#SystemWmenuAddEventKeywordArea").hide();
 										$("#SystemWmenuAddEventMenuList").show();
+										$("#SystemWmenuAddEventQrcodeList").hide();
 									}else if("text"){
 										$("#SystemWmenuAddEventKeywordArea").show();
 										$("#SystemWmenuAddEventMenuList").hide();
+										$("#SystemWmenuAddEventQrcodeList").hide();
+									}else if("qrcode"){
+										$("#SystemWmenuAddEventKeywordArea").hide();
+										$("#SystemWmenuAddEventMenuList").hide();
+										$("#SystemWmenuAddEventQrcodeList").show();
 									}else{
 										$("#SystemWmenuAddEventKeywordArea").hide();
 										$("#SystemWmenuAddEventMenuList").hide();
+										$("#SystemWmenuAddEventQrcodeList").hide();
 									}
 								},
 								onLoadSuccess:function(){
@@ -77,6 +84,23 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 								}'>  
 					</td>
 				</tr>
+
+				<tr id="SystemWmenuAddEventQrcodeList" style="display:none">
+					<td style="text-align:right" class="row">场景：</td>
+					<td style="text-align:left" class="row">
+						<input class="easyui-combobox" name="SystemWmenuAddEventQrcode" id="SystemWmenuAddEventQrcode" data-options='  
+								valueField: "id",
+								textField: "name",
+								data: <?php echo $pqrcode?>,
+								onSelect: function(record){
+									
+								},
+								onLoadSuccess:function(){
+									
+								}'>  
+					</td>
+				</tr>
+
 				<tr id="SystemWmenuAddEventKeywordArea" style="display:none">
 					<td style="text-align:right" class="row">接收的关键字：</td>
 					<td style="text-align:left" class="row">

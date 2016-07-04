@@ -199,6 +199,17 @@ class Wmenu{
 		return json_encode($ary);
 	}
 
+	public function getQrcodeForChild()
+	{
+		$sql="SELECT id,bak as name FROM same_wmenu";
+		$rs=$this->_db->createCommand($sql)->select()->queryAll();
+		$ary = array(array('id'=>0,'name'=>'无'));
+		for($i=0;$i<count($rs);$i++){
+			$ary[]=$rs[$i];
+		}
+		return json_encode($ary);
+	}
+
 	public function getEventById($id)
 	{
 		//$sql="SELECT A.*,B.name AS mname FROM same_wmenu_event A left join same_wmenu B ON B.id=A.mid where A.id=".$id;

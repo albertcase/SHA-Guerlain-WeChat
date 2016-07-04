@@ -127,7 +127,8 @@ class WmenuController extends SystemController
 	{
 		$wmenu = new Wmenu();
 		$pmenu = $wmenu->getPmenuForChild();
-		$this->render('addevent',array('pmenu'=>$pmenu));
+		$pqrcode = $wmenu->getQrcodeForChild();
+		$this->render('addevent',array('pmenu'=>$pmenu, 'pqrcode'=> $pqrcode));
 	}
 
 	public function actionEventadd()
