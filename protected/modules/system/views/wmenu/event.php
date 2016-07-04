@@ -20,7 +20,10 @@
 			}">操作</th>
 			<th data-options='field:"mname",width:100,formatter:function(value,row){
 								if(!value){
-									return "无";
+									if (!row.qrcode)
+										return "无";
+									else
+										return qrcode;
 								}else{
 									return value;
 								}

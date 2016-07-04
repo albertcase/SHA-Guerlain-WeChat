@@ -179,7 +179,7 @@ class Wmenu{
 		$sqlCount = "SELECT count(id) AS num FROM same_wmenu_event WHERE $where";
 		$count = $this->_db->createCommand($sqlCount)->select()->queryScalar();
 
-		$sql = "SELECT A.*,B.name AS mname FROM same_wmenu_event A left join same_wmenu B ON B.id=A.mid WHERE $where ORDER BY A.id DESC  limit $offset,$rows";
+		$sql = "SELECT A.*,B.name AS mname,C.bak AS qrcode FROM same_wmenu_event A left join same_wmenu B ON B.id=A.mid left join same_qrcde C ON A.qid = C.qid WHERE $where ORDER BY A.id DESC  limit $offset,$rows";
 		$command = $this->_db->createCommand($sql);		
 		$menuAll = $command->select()->queryAll();
 		$menuAll = array("total"=>$count,"rows"=>$menuAll);
