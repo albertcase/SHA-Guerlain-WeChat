@@ -201,7 +201,7 @@ class Wmenu{
 
 	public function getQrcodeForChild()
 	{
-		$sql="SELECT id,bak as name FROM same_wmenu";
+		$sql="SELECT id,bak as name FROM same_qrcode";
 		$rs=$this->_db->createCommand($sql)->select()->queryAll();
 		$ary = array(array('id'=>0,'name'=>'无'));
 		for($i=0;$i<count($rs);$i++){
