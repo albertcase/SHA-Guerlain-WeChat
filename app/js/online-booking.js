@@ -19,7 +19,6 @@
                 servicesecond = Common.queryString().servicesecond;
             self.updateService(servicefirst,servicesecond);
             //self.initService(1,5);
-            self.presenvationDate();
 
         },
         //bind all element event,such as click, touchstart
@@ -41,9 +40,11 @@
                 selectEle[i].addEventListener('change', removeFirst, false);
             }
         },
-        presenvationDate:function(){
+        presenvationDate:function(item){
             var self = this,
                 bookingTimeEle = document.getElementById('input-booking-date');
+            /*item is represent: 0 is 水疗中心,1 is VIP服务, 2 is 定制服务, 3 is Le 68餐厅 */
+
             /*
             * time need show the next three month from tommorrow
             *
@@ -120,7 +121,18 @@
                 if(curWeek>6){
                     curWeek = 0;
                 }
-                dateHtml = dateHtml+'<option value="'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
+
+                /*item is represent: 0 is 水疗中心,1 is VIP服务, 2 is 定制服务, 3 is Le 68餐厅 */
+                if(item == '0'){
+                //    水疗中心,周日休息
+                    if(!(curWeek==6) ){
+                        dateHtml = dateHtml+'<option value="'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
+                    }
+
+                }else{
+                    dateHtml = dateHtml+'<option value="'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'">'+nextMonth+'月'+curDay+'日 '+weekname[curWeek]+'</option>';
+                }
+
                 curDay++;
                 curWeek++;
 
@@ -240,7 +252,7 @@
 
                 }
             });
-            console.log(firstservice+secondservice);
+
                 //load first
             if(firstservice){
 
@@ -280,6 +292,7 @@
 
         },
         initService:function(index,index2){
+            var self = this;
             var selectEle_1 = $('#input-select-1'),
                 selectEle_2 = $('#input-select-2'),
                 selectEle_3 = $('#input-select-3'),
@@ -290,6 +303,8 @@
             var serviceJson = Api.serviceJson;
             var optionHtml = '';
             //selectEle_1.val(serviceJson[index].title);
+            self.presenvationDate(index);
+
             for(var i in serviceJson){
                 optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
             }
