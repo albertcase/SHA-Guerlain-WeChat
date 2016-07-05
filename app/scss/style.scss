@@ -570,9 +570,10 @@ hr{
     border-bottom: #b0b0b0 1px dotted;
     .product-image{
       position: absolute;
-      @include size(1.22rem,2.57rem);
+      width: 1.8rem;
       right: 0.6rem;
-      bottom: 1rem;
+      top: 50%;
+      @include transform(translate(0%,-50%));
     }
     .product-name,
     .product-des{
