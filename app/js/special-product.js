@@ -50,11 +50,20 @@
         },
         showProductDetails:function(id){
             var json = starProducts;
-            var productHtml = '<div class="product-image"><img src="'+json[id].productimgsrc+'" alt=""/></div>'+
-                '<div class="product-summary">'+json[id].productintro+'</div>'+
-                (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+
-                '<div class="clearfix"></div>'+
-                (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''));
+            var productHtml = '';
+            if(id==3){
+            //    手套
+                productHtml = '<div class="product-summary">'+json[id].productintro+'</div>'+
+                    (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+
+                    '<div class="clearfix"></div>'+
+                    (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''));
+            }else{
+                productHtml = '<div class="product-image"><img src="'+json[id].productimgsrc+'" alt=""/></div>'+
+                    '<div class="product-summary">'+json[id].productintro+'</div>'+
+                    (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+
+                    '<div class="clearfix"></div>'+
+                    (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''));
+            }
             Common.popupBox.add(productHtml);
         },
 
