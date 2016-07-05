@@ -19,7 +19,6 @@
                 servicesecond = Common.queryString().servicesecond;
             self.updateService(servicefirst,servicesecond);
             //self.initService(1,5);
-            self.presenvationTime();
 
         },
         //bind all element event,such as click, touchstart
@@ -140,15 +139,6 @@
             }
 
             bookingTimeEle.innerHTML = dateHtml;
-
-        },
-        presenvationTime:function(item){
-            //
-            var self = this;
-            var optionHtml = '';
-                optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
-
-            $('#input-booking-time').append(optionHtml);
 
         },
         formValidate:function(){
