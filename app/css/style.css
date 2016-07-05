@@ -664,6 +664,7 @@ hr {
   width: 100%;
   background: #000;
   padding: 0.2rem 0;
+  overflow: hidden;
 }
 .catagory-black .btn-close:before, .catagory-black .btn-close:after {
   background: #afafaf !important;
