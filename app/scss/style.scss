@@ -689,7 +689,26 @@ hr{
   }
 }
 
-
+//for spaservice
+.spaservice{
+  .slider{
+    margin: 0;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  .btn-booking{
+    position: absolute;
+    bottom: 0.1rem;
+    left: 10%;
+  }
+  .desc{
+    font-size: 0.28rem;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 //test
 #__bs_notify__{
   display: none !important;

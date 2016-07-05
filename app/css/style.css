@@ -797,6 +797,24 @@ hr {
   line-height: 2;
 }
 
+.spaservice .slider {
+  margin: 0;
+}
+.spaservice .wrapper {
+  width: 100%;
+}
+.spaservice .btn-booking {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 10%;
+}
+.spaservice .desc {
+  font-size: 0.28rem;
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+}
+
 #__bs_notify__ {
   display: none !important;
 }
