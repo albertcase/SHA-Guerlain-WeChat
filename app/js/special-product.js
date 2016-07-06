@@ -57,6 +57,18 @@
                     (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+
                     '<div class="clearfix"></div>'+
                     (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''));
+            }else if(json[id].productname == '芳香折扇'){
+
+                productHtml = '<div class="product-image"><img src="'+json[id].productimgsrc+'" alt=""/></div>'+
+                    '<div class="product-summary">'+json[id].productintro+'</div>'+
+                    (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+
+                    '<div class="clearfix"></div>'+
+                    (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''))+
+                    '<div class="product-image"><img src="'+json[id].productimgsrc2+'" alt=""/></div>'+
+                    '<div class="product-summary">'+json[id].productintro2+'</div>'+
+                    (json[id].price2?('<div class="product-price"> <span>'+json[id].price2+'</span> </div>'):(''))
+                ;
+
             }else{
                 productHtml = '<div class="product-image"><img src="'+json[id].productimgsrc+'" alt=""/></div>'+
                     '<div class="product-summary">'+json[id].productintro+'</div>'+

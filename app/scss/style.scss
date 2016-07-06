@@ -446,6 +446,7 @@ hr{
       font-size: 0.24rem;
       color: #818181;
       border: #fff 1px solid;
+      padding-top: 1rem;
       .msg{
         height: 100%;
         overflow: auto;
@@ -518,8 +519,6 @@ hr{
       .btn-close{
         text-indent: -999em;
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
         &:before,&:after{
           background: #515151;
         }
