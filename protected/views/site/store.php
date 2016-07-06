@@ -68,9 +68,12 @@
 	<body>
 	<div id="box">
 		<header class="header">
-			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.jpg" width="80%" />
+			<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/guerlain.png" width="80%" />
 		</header>
 		<article>
+			<section class="map">
+				<img src="<?php echo Yii::app()->request->baseUrl.'/'.$store['picUrl']; ?>" width="100%" />
+			</section>
 			<section class="description">
 				<h1><?php echo $store['name']; ?></h1>
 				<ul>
@@ -81,9 +84,7 @@
 					<li><span>店铺电话：</span><p><a href="tel:<?php echo str_replace(' ', '', $store['telphone']); ?>" ><?php echo $store['telphone']; ?></a></p></li>
 				</ul>
 			</section>
-			<section class="map">
-				<img src="<?php echo Yii::app()->request->baseUrl.'/'.$store['mapUrl']; ?>" width="100%" />
-			</section>
+			
 		</article>
 	</div>
 	</body>
