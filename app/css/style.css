@@ -66,7 +66,7 @@ body {
 * common css
 */
 body {
-  font: 0.26rem/1.5 "Heiti",sans-serif;
+  font: 0.26rem/1.8 "Heiti",sans-serif;
   background: #fff;
   color: #000;
 }
@@ -718,6 +718,34 @@ hr {
   width: 96%;
 }
 
+.vipservice .title {
+  margin: 0.3rem 0;
+}
+.vipservice .price {
+  text-align: center;
+  margin: 0.2rem 0;
+}
+.vipservice .price:before {
+  display: inline-block;
+  content: '';
+  width: 0.6rem;
+  height: 1px;
+  background: #b3b3b3;
+  top: -0.08rem;
+  position: relative;
+  margin-right: 0.15rem;
+}
+.vipservice .price:after {
+  display: inline-block;
+  content: '';
+  width: 0.6rem;
+  height: 1px;
+  background: #b3b3b3;
+  top: -0.08rem;
+  position: relative;
+  margin-left: 0.15rem;
+}
+
 .slider {
   margin: 2% 0;
 }
@@ -797,22 +825,20 @@ hr {
   line-height: 2;
 }
 
+.spaservice {
+  padding: 0.1rem;
+  line-height: 2;
+}
 .spaservice .slider {
   margin: 0;
 }
 .spaservice .wrapper {
   width: 100%;
 }
-.spaservice .btn-booking {
-  position: absolute;
-  bottom: 0.1rem;
-  left: 10%;
-}
 .spaservice .desc {
   font-size: 0.28rem;
   text-align: justify;
-  width: 80%;
-  margin: 0 auto;
+  margin: 0.2rem auto;
 }
 
 #__bs_notify__ {
