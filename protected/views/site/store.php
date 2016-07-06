@@ -72,7 +72,7 @@
 		</header>
 		<article>
 			<section class="map">
-				<img src="<?php echo Yii::app()->request->baseUrl.'/'.$store['picUrl']; ?>" width="100%" />
+				<img src="<?php echo Yii::app()->request->baseUrl.''.$store['picUrl']; ?>" width="100%" />
 			</section>
 			<section class="description">
 				<h1><?php echo $store['name']; ?></h1>
