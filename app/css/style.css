@@ -130,7 +130,9 @@ button {
 }
 
 .btn-close {
-  position: relative;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
   width: 0.8rem;
   height: 0.8rem;
   margin: 0rem auto 0rem;
@@ -809,6 +811,40 @@ hr {
 .page-qrcode .line {
   border-bottom: #b3b3b3 1px solid;
   margin: 0.6rem auto;
+}
+
+.qrcodebox {
+  background: transparent;
+}
+.qrcodebox .inner {
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.qrcodebox .msg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3rem;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.qrcodebox .qrdes {
+  font-size: 0.3rem;
+  color: #fff;
+}
+.qrcodebox .btn-close {
+  right: 0.2rem;
+  top: 0.2rem;
+  z-index: 100;
+  text-indent: -999em;
+}
+.qrcodebox .btn-close:before,
+.qrcodebox .btn-close:after {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .page-storeinfo .title {

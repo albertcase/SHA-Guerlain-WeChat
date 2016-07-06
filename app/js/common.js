@@ -135,6 +135,14 @@ function gotoPin(i) {
 				$('.popup').remove();
 			}
 		},
+		qrcodeBox:{
+			add:function(msg){
+				$('body').append('<div class="qrcodebox popup msgbox"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
+			},
+			remove:function(){
+				$('.qrcodebox').remove();
+			}
+		},
 
 
 	};
@@ -143,6 +151,9 @@ function gotoPin(i) {
 
 }).call(this);
 
-$(function(){
+
+$(document).ready(function(){
+
+
 
 });

@@ -22,7 +22,7 @@
             for(var i in starProducts){
                 listHtml = listHtml+ '<li class="item-product item-product-'+i+'">'+
                     '<div class="product-image">'+
-                    '<img src="'+starProducts[i].productimgsrc+'" alt=""/>'+
+                    '<img src="'+starProducts[i].thumbnail+'" alt=""/>'+
                     '</div>'+
                     '<div class="product-name">'+starProducts[i].productname+'</div>'+
                 '<div class="product-des">'+starProducts[i].productdes+'</div>'+
@@ -51,7 +51,7 @@
         showProductDetails:function(id){
             var json = starProducts;
             var productHtml = '';
-            if(id==3){
+            if(id==3 && json[id].productname == '手套'){
             //    手套
                 productHtml = '<div class="product-summary">'+json[id].productintro+'</div>'+
                     (json[id].price?('<div class="product-price"> <span>'+json[id].price+'</span> </div>'):(''))+

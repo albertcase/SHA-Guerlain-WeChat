@@ -71,7 +71,9 @@ button{
   text-align: center;
 }
 .btn-close{
-  position: relative;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
   @include size(0.8rem,0.8rem);
   margin: 0rem auto 0rem;
   &:after{
@@ -700,6 +702,36 @@ hr{
     margin: 0.6rem auto;
   }
 }
+.qrcodebox{
+  background: transparent;
+  .inner{
+    width: 80%;
+    height: 80%;
+    background: rgba(0,0,0,0.8);
+  }
+  .msg{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 3rem;
+    @include transform(translate(-50%,-50%));
+  }
+  .qrdes{
+    font-size: 0.3rem;
+    color: #fff;
+  }
+  .btn-close{
+    right: 0.2rem;
+    top: 0.2rem;
+    z-index: 100;
+    //background: red;
+    text-indent: -999em;
+  }
+  .btn-close:before,
+  .btn-close:after{
+    background: rgba(255,255,255,0.8);
+  }
+}
 
 //for page-storeinfo
 .page-storeinfo{
@@ -734,6 +766,8 @@ hr{
     margin: 0.2rem auto;
   }
 }
+
+
 //test
 #__bs_notify__{
   display: none !important;
