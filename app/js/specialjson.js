@@ -67,7 +67,7 @@ var starProducts = [
     productdes:'一个幸运的装饰品，在最特殊的日子里，点亮你的婚礼。 ',
     productintro:'娇兰之家在新娘对亲爱的他说"Yes"的时刻，献上意外的惊喜。洋溢着愉悦感的鲜花，围绕着橙色的花朵，代表着幸运。纯净的白色花朵在瓶身蔓延，就像新娘的花束，这就是香氛名字的由来。',
     productimgsrc:'/app/images/speicialproduct/product-8.jpg',
-    thumbnail:'/app/images/speicialproduct/product-8.jpg',
+    thumbnail:'/app/images/speicialproduct/product-8-1.jpg',
     price:'750,00 €',
     volume:'125ml'
   }

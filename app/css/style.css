@@ -858,6 +858,7 @@ hr {
 .page-storeinfo .info {
   font-size: 0.24rem;
   line-height: 2;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .spaservice {
