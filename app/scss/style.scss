@@ -748,6 +748,9 @@ hr{
     line-height: 2;
     color: rgba(0,0,0,0.8);
   }
+  .info-list{
+    margin: 0.5rem 0rem;
+  }
 }
 
 //for spaservice
@@ -764,6 +767,22 @@ hr{
     font-size: 0.28rem;
     text-align: justify;
     margin: 0.2rem auto;
+  }
+  .lists{
+    li{
+      display: inline-block;
+      width: 49%;
+      &:before{
+        content: '';
+        display: inline-block;
+        @include size(3px,3px);
+        @include vendor-prefix(border-radius,3px);
+        background: #000;
+        line-height: 1;
+        vertical-align: middle;
+        margin-right: 0.1rem;
+      }
+    }
   }
 }
 

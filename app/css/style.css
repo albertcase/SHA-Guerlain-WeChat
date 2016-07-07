@@ -859,6 +859,9 @@ hr {
   line-height: 2;
   color: rgba(0, 0, 0, 0.8);
 }
+.page-storeinfo .info-list {
+  margin: 0.5rem 0rem;
+}
 
 .spaservice {
   padding: 0.1rem;
@@ -874,6 +877,25 @@ hr {
   font-size: 0.28rem;
   text-align: justify;
   margin: 0.2rem auto;
+}
+.spaservice .lists li {
+  display: inline-block;
+  width: 49%;
+}
+.spaservice .lists li:before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #000;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 0.1rem;
 }
 
 #__bs_notify__ {
