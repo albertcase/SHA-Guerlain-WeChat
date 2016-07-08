@@ -42,8 +42,6 @@ class ApiController extends Controller
 
 	public function actionTestEmail()
 	{
-		$RS=mail('327414964@qq.com','test','agdsgasdasdsa');
-		var_dump($RS);die;
 		$sendMsg = '';
 		$sendMsg .= '<table cellpadding="0" cellpadding="0" border="0">';
 		$sendMsg .= '<tr>';
@@ -65,7 +63,7 @@ class ApiController extends Controller
 		$subject = "=?UTF-8?B?".base64_encode('test')."?=";
 		$mailbody = $sendMsg;
 		$mail->setHtml($mailbody, '', './');
-		$mail->setFrom('"panasonic" <service@panasonic.com>');
+		$mail->setFrom('"guerlain" <guerlain@samesamechian.com>');
 		$mail->setSubject($subject);
 		
 		$ccAry = null;
