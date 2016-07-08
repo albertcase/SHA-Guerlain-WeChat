@@ -12,7 +12,7 @@
 * common css
 */
 body{
-  font:0.26rem/1.5 "Heiti",sans-serif;
+  font:0.26rem/1.8 "Heiti",sans-serif;
   background: #fff;
   color: #000;
 }
@@ -71,7 +71,9 @@ button{
   text-align: center;
 }
 .btn-close{
-  position: relative;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
   @include size(0.8rem,0.8rem);
   margin: 0rem auto 0rem;
   &:after{
@@ -424,7 +426,7 @@ hr{
   background: #ebebeb;
   padding: 0.1rem;
   .wrapper{
-    position: absolute;
+    //position: absolute;
     width: calc(100% - 0.2rem);
     left: 0.1rem;
     top: 0.1rem;
@@ -444,6 +446,7 @@ hr{
       font-size: 0.24rem;
       color: #818181;
       border: #fff 1px solid;
+      padding-top: 1rem;
       .msg{
         height: 100%;
         overflow: auto;
@@ -516,8 +519,6 @@ hr{
       .btn-close{
         text-indent: -999em;
         position: absolute;
-        top: 0.1rem;
-        right: 0.1rem;
         &:before,&:after{
           background: #515151;
         }
@@ -611,6 +612,35 @@ hr{
 .vipservice .wrapper{
   width: 96%;
 }
+.vipservice{
+  .title{
+    margin: 0.3rem 0;
+  }
+  .price{
+    text-align: center;
+    margin: 0.2rem 0;
+    &:before{
+      display: inline-block;
+      content: '';
+      width: 0.6rem;
+      height: 1px;
+      background: #b3b3b3;
+      top: -0.08rem;
+      position: relative;
+      margin-right: 0.15rem;
+    }
+    &:after{
+      display: inline-block;
+      content: '';
+      width: 0.6rem;
+      height: 1px;
+      background: #b3b3b3;
+      top: -0.08rem;
+      position: relative;
+      margin-left: 0.15rem;
+    }
+  }
+}
 .slider {
   margin: 2% 0;
 }
@@ -671,6 +701,36 @@ hr{
     margin: 0.6rem auto;
   }
 }
+.qrcodebox{
+  background: transparent;
+  .inner{
+    width: 80%;
+    height: 80%;
+    background: rgba(0,0,0,0.8);
+  }
+  .msg{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 3rem;
+    @include transform(translate(-50%,-50%));
+  }
+  .qrdes{
+    font-size: 0.3rem;
+    color: #fff;
+  }
+  .btn-close{
+    right: 0.2rem;
+    top: 0.2rem;
+    z-index: 100;
+    //background: red;
+    text-indent: -999em;
+  }
+  .btn-close:before,
+  .btn-close:after{
+    background: rgba(255,255,255,0.8);
+  }
+}
 
 //for page-storeinfo
 .page-storeinfo{
@@ -686,29 +746,47 @@ hr{
   .info{
     font-size: 0.24rem;
     line-height: 2;
+    color: rgba(0,0,0,0.8);
+  }
+  .info-list{
+    margin: 0.5rem 0rem;
   }
 }
 
 //for spaservice
 .spaservice{
+  padding: 0.1rem;
+  line-height: 2;
   .slider{
     margin: 0;
   }
   .wrapper{
     width: 100%;
   }
-  .btn-booking{
-    position: absolute;
-    bottom: 0.1rem;
-    left: 10%;
-  }
   .desc{
     font-size: 0.28rem;
     text-align: justify;
-    width: 80%;
-    margin: 0 auto;
+    margin: 0.2rem auto;
+  }
+  .lists{
+    li{
+      display: inline-block;
+      width: 49%;
+      &:before{
+        content: '';
+        display: inline-block;
+        @include size(3px,3px);
+        @include vendor-prefix(border-radius,3px);
+        background: #000;
+        line-height: 1;
+        vertical-align: middle;
+        margin-right: 0.1rem;
+      }
+    }
   }
 }
+
+
 //test
 #__bs_notify__{
   display: none !important;

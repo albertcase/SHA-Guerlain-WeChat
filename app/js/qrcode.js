@@ -1,16 +1,17 @@
-(function(){
-    $(document).ready(function(){
-        _hmt.push(['_trackEvent', 'page', 'load', '页面PV - 8']);
-        $('.btn-close').on('click', function(){
-            if($(this).parent().hasClass('inner')){
-                $(this).parent().parent().addClass('hide');
-            }else{
-                $(this).parent().addClass('hide');
-            }
-        });
-        $('.link-terms').on('click', function(){
-            _hmt.push(['_trackEvent', 'button', 'click', 'Terms2']);
-            $('.details-pop').removeClass('hide');
-        });
+$(document).ready(function(){
+    $('.qrshow').on('touchstart', function(){
+        if($(this).hasClass('qrcode-1')){
+            var pophtml = $(this).find('.qrcode').html()+'<div class="qrdes">扫描或长按二维码<br>关注法国娇兰官方微博</div>';
+            Common.qrcodeBox.add(pophtml);
+        }else{
+            var pophtml = $(this).find('.qrcode').html()+'<div class="qrdes">扫描或长按二维码<br>前往法国娇兰官方商城</div>';
+            Common.qrcodeBox.add(pophtml);
+        }
+
     });
-})();
+
+    $('body').on('touchstart','.btn-close', function(){
+        $(this).parent().parent().remove();
+    });
+
+});
