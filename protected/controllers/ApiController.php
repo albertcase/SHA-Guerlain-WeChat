@@ -42,33 +42,19 @@ class ApiController extends Controller
 
 	public function actionTestEmail()
 	{
-		$sendMsg = '';
-		$sendMsg .= '<table cellpadding="0" cellpadding="0" border="0">';
-		$sendMsg .= '<tr>';
-		$sendMsg .= '<td width="100">问题类别:</td>';
-		$sendMsg .= '<td>123</td>';
-		$sendMsg .= '</tr><tr>';
+		$message            = new YiiMailMessage;		
+		$message->subject   = "=?UTF-8?B?".base64_encode('全家常见问题留言信息处理结果')."?=";
+        $message->setBody('test', 'text/html');                
+        $message->setTo(array('demon.zhang@samesamechina.com'=>"Demon"));
+        $message->setFrom(array("guerlain68@samesamechina.com"=>"guerlain"));   
+        try { 
+        	 $rr = Yii::app()->mail->send($message);
+        	 //var_dump($rr);
+        } catch (Exception $e) { 
+        	//var_dump($e->getMessage());
+        }
 		
-		$sendMsg .= '<td width="100"  valign="top">内容:</td>';
-		$sendMsg .= '<td>123123</td>';
-		$sendMsg .= '</tr>';
-		
-		$sendMsg .= '</table>';
-
-		$sendMsg .= '<br />';
-
-		$sendMsg .= '请登录后台进行处理，或点击此处<br />';
-
-		 $message = new YiiMailMessage();  
-                  
-        $message->setFrom(array($model->from => '送信人'));  
-        $message->setTo(array($model->to => '收信人'));  
-        $message->setSubject($model->subject);  
-        $message->setBody($model->body);  
-
-        $sendmail = Yii::app()->mail->send($message) ;  
-		
-		print_r($sendmail);
+		print_r($rr);
 		exit;
 	}
 
