@@ -59,7 +59,7 @@ class ApiController extends Controller
 
 		$sendMsg .= '请登录后台进行处理，或点击此处<br />';
 
-		$mail = Yii::app()->mailer;
+		$mail = Yii::app()->mail;
 		$subject = "=?UTF-8?B?".base64_encode('test')."?=";
 		$mailbody = $sendMsg;
 		$mail->setHtml($mailbody, '', './');

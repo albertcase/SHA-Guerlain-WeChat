@@ -46,9 +46,9 @@ return array(
                 'class' => 'ext.yii-mail.YiiMail',
                 'transportType'=>'smtp',
                 'transportOptions'=>array(
-                        'host'=>'127.0.0.1',
-                        'username'=>'',
-                        'password'=>'',
+                        'host'=>'smtp.exmail.qq.com',
+                        'username'=>'guerlain68@samesamechina.com',
+                        'password'=>'China68',
                         'port'=>'25',
                 ),
                 'viewPath' => 'application.views.mail',
