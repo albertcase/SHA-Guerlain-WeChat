@@ -40,6 +40,40 @@ class ApiController extends Controller
 
 	}
 
+	public function actionTestEmail()
+	{
+		$RS=mail('327414964@qq.com','test','agdsgasdasdsa');
+		var_dump($RS);die;
+		$sendMsg = '';
+		$sendMsg .= '<table cellpadding="0" cellpadding="0" border="0">';
+		$sendMsg .= '<tr>';
+		$sendMsg .= '<td width="100">问题类别:</td>';
+		$sendMsg .= '<td>123</td>';
+		$sendMsg .= '</tr><tr>';
+		
+		$sendMsg .= '<td width="100"  valign="top">内容:</td>';
+		$sendMsg .= '<td>123123</td>';
+		$sendMsg .= '</tr>';
+		
+		$sendMsg .= '</table>';
+
+		$sendMsg .= '<br />';
+
+		$sendMsg .= '请登录后台进行处理，或点击此处<br />';
+
+		$mail = Yii::app()->mailer;
+		$subject = "=?UTF-8?B?".base64_encode('test')."?=";
+		$mailbody = $sendMsg;
+		$mail->setHtml($mailbody, '', './');
+		$mail->setFrom('"panasonic" <service@panasonic.com>');
+		$mail->setSubject($subject);
+		
+		$ccAry = null;
+		$sAry = array();
+		$rsSendEmail = $mail->send(array('"demon" <demon.zhang@samesamechina.com>'), 'smtp');
+		print_r($rsSendEmail);
+		exit;
+	}
 
 	/**
 	 * This is the action to handle external exceptions.
