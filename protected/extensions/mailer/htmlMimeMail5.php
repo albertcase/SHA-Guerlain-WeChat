@@ -151,15 +151,15 @@ class htmlMimeMail5
             $helo = $_SERVER['SERVER_NAME'];
         
         } else {
-            $helo = '127.0.0.1';
+            $helo = 'smtp.exmail.qq.com';
         }
 
-        $this->smtp_params['host'] = '127.0.0.1';
+        $this->smtp_params['host'] = 'smtp.exmail.qq.com';
         $this->smtp_params['port'] = 25;
         $this->smtp_params['helo'] = $helo;
         $this->smtp_params['auth'] = false;
-        $this->smtp_params['user'] = '';
-        $this->smtp_params['pass'] = '';
+        $this->smtp_params['user'] = 'guerlain68@samesamechina.com';
+        $this->smtp_params['pass'] = 'China68';
 
         /**
         * Make sure the MIME version header is first.
