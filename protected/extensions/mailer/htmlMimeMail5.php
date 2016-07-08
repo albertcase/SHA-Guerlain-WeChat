@@ -151,7 +151,7 @@ class htmlMimeMail5
             $helo = $_SERVER['SERVER_NAME'];
         
         } else {
-            $helo = '127.0.0.1';
+            $helo = 'smtp.exmail.qq.com';
         }
 
         $this->smtp_params['host'] = 'smtp.exmail.qq.com';
