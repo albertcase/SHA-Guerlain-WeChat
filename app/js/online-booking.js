@@ -356,8 +356,6 @@
                             inputContactValue = inputContactEle[i].value;
                         }
                     };
-                    console.log(inputCallnameVal+' '+inputSurnameVal+' '+inputNameVal+' '+inputMobileVal+' '+inputEmailVal+' '+inputSelect1Val+' '+inputSelect2Val+' '+ inputSelect3Val+ ' '+inputBookingDateVal+' '+inputContactValue+' '+inputAdviceVal);
-
                     Api.submitAll({
                         sex:inputCallnameVal,
                         first:inputSurnameVal,
@@ -373,7 +371,9 @@
                     },function(data){
                         if(data.status == 1){
                             //alert('提交成功');
-                            Common.alertBox.add('success');
+                            Common.alertBox.add('提交成功');
+                        }else{
+                            Common.alertBox.add(data.msg);
                         }
                     });
 
