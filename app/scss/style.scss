@@ -431,17 +431,23 @@ hr{
 
 //For page-special-product
 .page-product{
+  //position: relative;
   background: #ebebeb;
   padding: 0.1rem;
   .wrapper{
-    //position: absolute;
-    width: calc(100% - 0.2rem);
-    left: 0.1rem;
-    top: 0.1rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
     box-sizing: border-box;
     background: #fff;
     color: #000;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .container{
+    padding: 0.1rem;
   }
   hr{
     border-bottom: #b0b0b0 1px dotted;
