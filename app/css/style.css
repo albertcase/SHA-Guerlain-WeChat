@@ -451,10 +451,12 @@ hr {
 #form-contact select {
   width: 100%;
   margin-bottom: 0.2rem;
-  background: transparent;
+  background-color: transparent;
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.4);
-  background: url("../images/arrow-down.png") 96% center no-repeat;
+  background-repeat: no-repeat;
+  background-position: 96% center;
+  background-image: url("../images/arrow-down.png");
   background-size: auto 20%;
 }
 #form-contact select:focus {
@@ -515,6 +517,12 @@ hr {
 }
 #form-contact .form-service .input-box.input-box-youradvice:before {
   display: none;
+}
+#form-contact .form-service .input-select-box {
+  padding-right: 0.2rem;
+}
+#form-contact .form-service .input-select-box select {
+  background-position: 100% center;
 }
 #form-contact .form-service select {
   border: none;
@@ -877,6 +885,7 @@ hr {
   font-size: 0.28rem;
   text-align: justify;
   margin: 0.2rem auto;
+  padding: 0 0.2rem;
 }
 .spaservice .lists li {
   display: inline-block;

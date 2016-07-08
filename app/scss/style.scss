@@ -326,10 +326,12 @@ hr{
   select{
     width: 100%;
     margin-bottom: 0.2rem;
-    background: transparent;
+    background-color: transparent;
     border-radius: 4px;
     color: rgba(0,0,0,0.4);
-    background: url("../images/arrow-down.png") 96% center no-repeat;
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    background-image:url("../images/arrow-down.png");
     background-size: auto 20%;
     &:focus{
       outline: none;
@@ -391,6 +393,12 @@ hr{
         &:before{
           display: none;
         }
+      }
+    }
+    .input-select-box{
+      padding-right: 0.2rem;
+      select{
+        background-position: 100% center;
       }
     }
     select{
@@ -767,6 +775,7 @@ hr{
     font-size: 0.28rem;
     text-align: justify;
     margin: 0.2rem auto;
+    padding: 0 0.2rem;
   }
   .lists{
     li{

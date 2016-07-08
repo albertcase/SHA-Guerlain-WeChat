@@ -154,6 +154,8 @@ function gotoPin(i) {
 
 $(document).ready(function(){
 
-
+	$(document).on('click','.btn-alert-ok',function(){
+		$(this).parent().parent().remove();
+	});
 
 });
