@@ -14,6 +14,7 @@
             self.bindEvent();
             //self.presenvationDate();
             self.addProducts();
+            Common.overscroll(document.querySelector('.wrapper'));
         },
         addProducts:function(){
             var self = this;
@@ -45,10 +46,9 @@
             $('body').on('touchstart','.btn-close', function(){
                 Common.popupBox.remove();
             });
-
-
         },
         showProductDetails:function(id){
+            //$('.wrapper').css('overflow','hidden');
             var json = starProducts;
             var productHtml = '';
             if(id==3 && json[id].productname == '手套'){
@@ -99,4 +99,5 @@
 window.addEventListener('load', function(){
     var redpacket= new controller();
     redpacket.init();
+
 });

@@ -6,46 +6,13 @@ function gotoPin(i) {
 	var ua = navigator.userAgent.toLowerCase();
 	var Common = {
 		//obj has type,url
-		//ajax:function(obj,callback){
-        //
-		//	var xhr = new XMLHttpRequest();
-		//	xhr.onreadystatechange = function(){
-		//		if (xhr.readyState === 4) {
-		//			if (xhr.status === 200) {
-		//				//	success
-		//				return callback(xhr.response);
-		//			} else {
-		//				console.error(xhr.statusText);
-		//			}
-		//		}
-		//	};
-		//	xhr.onerror = function(){
-		//		console.log('请求报错');
-		//	};
-		//	xhr.open(obj.type,obj.url,true);
-		//	xhr.setRequestHeader('Content-Type', 'application/json');
-		//	xhr.responseType = "json";
-		//	xhr.send(JSON.stringify(obj.data));
-        //
-		//},
 		hasClass:function(ele,newclass){
-			//var arryClass = ele.className.split(' ');
-			//for(var i=0;i<arryClass.length;i++){
-			//	if(arryClass[i]==newclass){
-			//		return true;
-			//	}else{
-			//		return false;
-			//	}
-			//};
 			newclass = newclass || '';
 			if (newclass.replace(/\s/g, '').length == 0) return false; //当cls没有参数时，返回false
 			return new RegExp(' ' + newclass + ' ').test(' ' + ele.className + ' ');
 		},
 		addClass:function(ele,newclass){
 			var self = this;
-			//if(!self.hasClass(ele,newclass)){
-			//	ele.className = ele.className + ' '+newclass;
-			//}
 			if (!self.hasClass(ele, newclass)) {
 				ele.className = ele.className == '' ? newclass : ele.className + ' ' + newclass;
 			}
@@ -129,7 +96,7 @@ function gotoPin(i) {
 		},
 		popupBox:{
 			add:function(msg){
-				$('body').append('<div class="msgbox popup"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
+				$('.wrapper').append('<div class="msgbox popup"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
 			},
 			remove:function(){
 				$('.popup').remove();
@@ -143,7 +110,36 @@ function gotoPin(i) {
 				$('.qrcodebox').remove();
 			}
 		},
-
+		overscroll:function(el) {
+			el.addEventListener('touchstart', function() {
+				var top = el.scrollTop
+					, totalScroll = el.scrollHeight
+					, currentScroll = top + el.offsetHeight
+				//If we're at the top or the bottom of the containers
+				//scroll, push up or down one pixel.
+				//
+				//this prevents the scroll from "passing through" to
+				//the body.
+				if(top === 0) {
+					el.scrollTop = 1
+				} else if(currentScroll === totalScroll) {
+					el.scrollTop = top - 1
+				}
+			});
+			el.addEventListener('touchmove', function(evt) {
+				//if the content is actually scrollable, i.e. the content is long enough
+				//that scrolling can occur
+				if(el.offsetHeight < el.scrollHeight)
+					evt._isScroller = true
+			});
+			document.body.addEventListener('touchmove', function(evt) {
+				//In this case, the default behavior is scrolling the body, which
+				//would result in an overflow.  Since we don't want that, we preventDefault.
+				if(!evt._isScroller) {
+					evt.preventDefault()
+				}
+			});
+		},
 
 	};
 
