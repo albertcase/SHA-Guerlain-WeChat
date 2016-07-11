@@ -860,7 +860,6 @@ hr{
 //for spaservice
 .spaservice{
   padding: 0.1rem;
-  line-height: 2;
   .slider{
     margin: 0;
   }
@@ -874,6 +873,9 @@ hr{
     text-align: justify;
     margin: 0.6rem auto;
     padding: 0;
+    &.desc-tt{
+      margin: 0.55rem 0 0.7rem;
+    }
   }
   .lists{
     li{

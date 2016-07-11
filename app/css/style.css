@@ -950,7 +950,6 @@ hr {
 
 .spaservice {
   padding: 0.1rem;
-  line-height: 2;
 }
 .spaservice .slider {
   margin: 0;
@@ -965,6 +964,9 @@ hr {
   text-align: justify;
   margin: 0.6rem auto;
   padding: 0;
+}
+.spaservice .desc.desc-tt {
+  margin: 0.55rem 0 0.7rem;
 }
 .spaservice .lists li {
   display: inline-block;
