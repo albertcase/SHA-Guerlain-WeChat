@@ -548,6 +548,10 @@ hr {
   background: #ebebeb;
   padding: 0.1rem;
 }
+.page-product .logo {
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
 .page-product .wrapper {
   position: absolute;
   width: 100%;
