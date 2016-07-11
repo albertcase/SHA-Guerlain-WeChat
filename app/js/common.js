@@ -95,12 +95,10 @@ function gotoPin(i) {
 			}
 		},
 		popupBox:{
-			add:function(msg,withpadding){
-				if(withpadding){
-					$('.wrapper').append('<div class="msgbox popup withpadding"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
-				}else{
-					$('.wrapper').append('<div class="msgbox popup"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
-				}
+			add:function(msg,btnclosebg){
+
+				$('.wrapper').append('<div class="msgbox popup '+(btnclosebg?btnclosebg:"")+'"><div class="inner"><div class="msg">'+msg+'</div><div class="btn-close">关闭</div></div></div>');
+
 
 			},
 			remove:function(){
