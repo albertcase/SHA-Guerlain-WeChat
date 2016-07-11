@@ -563,7 +563,6 @@ hr{
           height: 3rem;
           right: 0;
           top: 0;
-          z-index: 100;
           &:before,
           &:after{
             display: none;
@@ -843,12 +842,15 @@ hr{
     font-weight: bold;
     text-align: left;
     font-size: 0.3rem;
-    margin: 0.4rem 0 0.2rem;
+    margin: 0.9rem 0 0.6rem;
   }
   .info{
     font-size: 0.24rem;
     line-height: 2;
     color: rgba(0,0,0,0.8);
+    p{
+      margin: 0.6rem 0;
+    }
   }
   .info-list{
     margin: 0.5rem 0rem;
