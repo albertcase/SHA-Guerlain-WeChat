@@ -299,7 +299,7 @@ select:-webkit-autofill {
 /*For custom page*/
 .logo{
   @include size(3.88rem,0.83rem);
-  margin: 0 auto;
+  margin: 0.5rem auto;
   padding: 0;
 }
 hr{
@@ -898,6 +898,9 @@ hr{
 
 /*For page-online-booking*/
 .page-online-booking{
+  .logo{
+    margin: 0 auto;
+  }
   .wrapper{
     width: 100%;
     padding: 0.6rem;

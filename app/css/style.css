@@ -422,7 +422,7 @@ select:-webkit-autofill {
 .logo {
   width: 3.88rem;
   height: 0.83rem;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   padding: 0;
 }
 
@@ -986,6 +986,9 @@ hr {
 }
 
 /*For page-online-booking*/
+.page-online-booking .logo {
+  margin: 0 auto;
+}
 .page-online-booking .wrapper {
   width: 100%;
   padding: 0.6rem;
