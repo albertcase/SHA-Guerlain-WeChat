@@ -133,18 +133,18 @@ button {
   position: absolute;
   right: 0.1rem;
   top: 0.1rem;
-  width: 0.8rem;
-  height: 0.8rem;
+  width: 0.6rem;
+  height: 0.6rem;
   margin: 0rem auto 0rem;
 }
 .btn-close:after {
   content: '';
   display: block;
-  width: 0.8rem;
+  width: 0.6rem;
   height: 1px;
   position: absolute;
   left: 0;
-  top: 0.4rem;
+  top: 0.3rem;
   background: #c0a176;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -155,11 +155,11 @@ button {
 .btn-close:before {
   content: '';
   display: block;
-  width: 0.8rem;
+  width: 0.6rem;
   height: 1px;
   position: absolute;
   left: 0;
-  top: 0.4rem;
+  top: 0.3rem;
   background: #c0a176;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -555,16 +555,25 @@ hr {
   top: 0;
   height: 100%;
   box-sizing: border-box;
-  background: #fff;
   color: #000;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  padding: 0.1rem;
+  background: #ebebeb;
 }
 .page-product .container {
-  padding: 0.1rem;
+  background: #fff;
 }
 .page-product hr {
   border-bottom: #b0b0b0 1px dotted;
+}
+.page-product .popup.withpadding .inner {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.page-product .popup.withpadding .msg {
+  overflow: auto;
+  max-height: 8rem;
 }
 .page-product .popup .inner {
   position: absolute;
@@ -572,13 +581,10 @@ hr {
   font-size: 0.24rem;
   color: #818181;
   border: #fff 1px solid;
-  padding-top: 1rem;
 }
 .page-product .popup .inner .msg {
   height: 100%;
-  overflow: auto;
   padding: 0;
-  max-height: 10rem;
 }
 .page-product .popup .inner .product-image {
   height: 4rem;
@@ -632,7 +638,7 @@ hr {
   z-index: 1;
   width: 100%;
   height: 1px;
-  background: #333;
+  background: #b3b3b3;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -647,6 +653,8 @@ hr {
 .page-product .popup .inner .btn-close {
   text-indent: -999em;
   position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
 }
 .page-product .popup .inner .btn-close:before, .page-product .popup .inner .btn-close:after {
   background: #515151;
@@ -686,14 +694,13 @@ hr {
 
 .products-list .item-product {
   position: relative;
-  min-height: 3rem;
-  padding: 0.5rem;
+  padding: 0.9rem 0.6rem;
   border-bottom: #b0b0b0 1px dotted;
 }
 .products-list .item-product .product-image {
   position: absolute;
   width: 1.8rem;
-  right: 0.5rem;
+  right: 0.6rem;
   top: 50%;
   -webkit-transform: translate(0%, -50%);
   -moz-transform: translate(0%, -50%);
@@ -703,7 +710,8 @@ hr {
 }
 .products-list .item-product .product-name,
 .products-list .item-product .product-des {
-  width: 4rem;
+  width: 3.5rem;
+  text-align: justify;
 }
 .products-list .item-product .product-name {
   font-size: 0.3rem;
@@ -713,9 +721,10 @@ hr {
   font-weight: bold;
 }
 .products-list .item-product .product-des {
-  margin: 0.3rem 0;
+  margin: 0.6rem 0;
   font-size: 0.24rem;
   color: #818181;
+  line-height: 1.5;
 }
 .products-list .item-product .btn-details {
   width: 1.67rem;
