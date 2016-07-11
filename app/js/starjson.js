@@ -44,7 +44,7 @@ var starProducts = [
     productname:'定制香氛',
     productdes:'法国娇兰特调的定制香水，为您量身打造芳香故事。',
     productintro:'在最初的时候，法国娇兰的创始人只按照客人需求为他们定制专属香水。现在，这个传统依然如故。法国娇兰在香味和个性之间发现了奇妙的平衡点。作为少数人的特享，法国娇兰调香师定制每款香氛都如同定制成衣般拥有精细而又漫长的过程。法国娇兰香水部门的总监研习了不同个性人们的特质，让定制香氛能够极其准确地适应个人。定制香氛如同无形的标签，使得拥有它的人成为法国娇兰品牌最特别的客人，在香水的芳香中，带着宾客进入法国娇兰的历史世界。',
-    productimgsrc:'/app/images/starproduct/product-5.jpg',
+    productimgsrc:'/app/images/starproduct/big-product-5.jpg',
     thumbnail:'/app/images/starproduct/product-5.jpg'
   },
   {
