@@ -69,11 +69,9 @@ body {
   font: 0.26rem/1.5 "Heiti",sans-serif;
   background: #fff;
   color: #000;
+  text-align: justify;
 }
 
-@-webkit-keyframes fade {}
-@-moz-keyframes fade {}
-@-o-keyframes fade {}
 .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -472,7 +470,7 @@ hr {
 }
 #form-contact .input-box-contact {
   font-size: 0.32rem;
-  margin: 0.4rem 0;
+  margin: 0.2rem 0;
 }
 #form-contact #youradvice {
   width: 100%;
@@ -573,7 +571,7 @@ hr {
 }
 .page-product .popup.withpadding .inner {
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0rem;
 }
 .page-product .popup.withpadding .msg {
   overflow: auto;
@@ -706,6 +704,7 @@ hr {
 .catagory-white .popup .inner .product-summary-3 .product-image {
   width: 100%;
   height: auto;
+  padding: 0;
 }
 .catagory-white .popup .inner .product-summary-3 .product-image img {
   width: 100%;
@@ -744,6 +743,9 @@ hr {
   position: relative;
   padding: 0.9rem 0.6rem;
   border-bottom: #b0b0b0 1px dotted;
+}
+.products-list .item-product:last-of-type {
+  border-bottom: none;
 }
 .products-list .item-product .product-image {
   position: absolute;
@@ -917,8 +919,8 @@ hr {
   color: #fff;
 }
 .qrcodebox .btn-close {
-  right: 0.2rem;
-  top: 0.2rem;
+  right: 0.4rem;
+  top: 0.4rem;
   z-index: 100;
   text-indent: -999em;
 }
@@ -993,7 +995,7 @@ hr {
 
 /*For page-online-booking*/
 .page-online-booking .logo {
-  margin: 0 auto;
+  margin: 0rem auto 0.6rem;
 }
 .page-online-booking .wrapper {
   width: 100%;
@@ -1001,10 +1003,13 @@ hr {
   box-sizing: border-box;
 }
 .page-online-booking .title {
+  margin: 0.9rem auto 0.6rem;
+}
+.page-online-booking .title-1 {
   margin: 0.6rem auto;
 }
-.page-online-booking .line {
-  margin: 0.6rem 0;
+.page-online-booking .input-box-youradvice {
+  margin: 0.9rem 0 0.6rem;
 }
 
 #__bs_notify__ {

@@ -15,9 +15,7 @@ body{
   font:0.26rem/1.5 "Heiti",sans-serif;
   background: #fff;
   color: #000;
-}
-@include keyframes(fade){
-
+  text-align: justify;
 }
 
 .wrapper{
@@ -347,7 +345,7 @@ hr{
   }
   .input-box-contact{
     font-size: 0.32rem;
-    margin: 0.4rem 0;
+    margin: 0.2rem 0;
   }
   #youradvice{
     width: 100%;
@@ -462,7 +460,7 @@ hr{
     &.withpadding{
       .inner{
         padding-top: 1rem;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0rem;
       }
       .msg{
         overflow: auto;
@@ -609,6 +607,7 @@ hr{
         .product-image{
           width: 100%;
           height: auto;
+          padding: 0;
           img{
             width: 100%;
             height: auto;
@@ -660,6 +659,9 @@ hr{
     //min-height: 3rem;
     padding: 0.9rem 0.6rem;
     border-bottom: #b0b0b0 1px dotted;
+    &:last-of-type{
+      border-bottom: none;
+    }
     .product-image{
       position: absolute;
       width: 1.8rem;
@@ -821,8 +823,8 @@ hr{
     color: #fff;
   }
   .btn-close{
-    right: 0.2rem;
-    top: 0.2rem;
+    right: 0.4rem;
+    top: 0.4rem;
     z-index: 100;
     //background: red;
     text-indent: -999em;
@@ -901,7 +903,7 @@ hr{
 /*For page-online-booking*/
 .page-online-booking{
   .logo{
-    margin: 0 auto;
+    margin: 0rem auto 0.6rem;
   }
   .wrapper{
     width: 100%;
@@ -909,10 +911,13 @@ hr{
     box-sizing: border-box;
   }
   .title{
+    margin: 0.9rem auto 0.6rem;
+  }
+  .title-1{
     margin: 0.6rem auto;
   }
-  .line{
-    margin: 0.6rem 0;
+  .input-box-youradvice{
+    margin: 0.9rem 0 0.6rem;
   }
 }
 
