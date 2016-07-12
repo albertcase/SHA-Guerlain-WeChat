@@ -815,12 +815,18 @@ hr{
     position: absolute;
     left: 50%;
     top:50%;
-    width: 3rem;
+    //width: 3rem;
     @include transform(translate(-50%,-50%));
   }
+  .myimg{
+    width: 2.8rem;
+    margin: 0 auto 0.3rem;
+  }
   .qrdes{
+    width: 4rem;
     font-size: 0.3rem;
     color: #fff;
+    line-height: 1.8;
   }
   .btn-close{
     right: 0.4rem;
