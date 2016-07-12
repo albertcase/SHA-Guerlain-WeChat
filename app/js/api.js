@@ -68,7 +68,7 @@ Api = {
     },
     serviceJson:[
         {
-            title:'水疗中心',
+            title:'水疗会所',
             //type:[{name:'test'},{name:'RDV 美妆'},{name:'美妆课堂'},{name:'RDV 护理'},{name:'导游服务'},{name:'购物助理'}],
         },{
             title:'VIP服务',
