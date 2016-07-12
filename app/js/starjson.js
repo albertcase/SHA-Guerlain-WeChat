@@ -29,15 +29,14 @@ var starProducts = [
   },
   {
     id:4,
+    class:'withpadding fan',
     productname:'芳香折扇',
     productdes:'两款美丽的折扇，“金色折扇”可作为日常搭配，“新娘捧花折扇”可点缀你最特别的日子。 ',
-    productintro:'自上古以来，折扇一直是体现优雅和舒适的配件。法国娇兰和折扇商Duvelleroy制作了两款独家折扇，希望借此复兴这一精致的时尚传统及其共有的历史。精湛的手工技艺致敬法国的上等折扇制作工艺。法国娇兰将芬芳香气赋予优雅折扇，展开栩栩如生的华丽篇章。<br><br>“新娘捧花”折扇<br>极度轻盈丰满，点缀白色羽毛和刺绣珍珠亮片，为新娘一生中最特别的一天增添馥郁芬芳。',
-    productintro2:'金色折扇, 将娇兰挚爱的黄金材质放在首要地位，展开后如同孔雀般奢华，折扇散发迷人香味。',
+    productintro:'<p>自上古以来，折扇一直是体现优雅和舒适的配件。法国娇兰和折扇商Duvelleroy制作了两款独家折扇，希望借此复兴这一精致的时尚传统及其共有的历史。精湛的手工技艺致敬法国的上等折扇制作工艺。法国娇兰将芬芳香气赋予优雅折扇，展开栩栩如生的华丽篇章。</p><h3>“新娘捧花”折扇</h3><p>极度轻盈丰满，点缀白色羽毛和刺绣珍珠亮片，为新娘一生中最特别的一天增添馥郁芬芳。</p><div class="price-wrap"><span class="product-price"><span>7600,00 €</span></span></div><div><img src="/app/images/starproduct/product-4-6.jpg" alt=""></div><h3>金色折扇</h3><p>金色折扇, 将娇兰挚爱的黄金材质放在首要地位，展开后如同孔雀般奢华，折扇散发迷人香味。</p><div class="price-wrap"><span class="product-price"><span>5100,00 €</span></span></div>',
     productimgsrc:'/app/images/starproduct/product-4-2.jpg',
-    productimgsrc2:'/app/images/starproduct/product-4-6.jpg',
     thumbnail:'/app/images/starproduct/product-4.jpg',
-    price:'7600,00 €',
-    price2:'5100,00 €'
+    //price:'7600,00 €',
+    //price2:'5100,00 €'
   },
   {
     id:5,

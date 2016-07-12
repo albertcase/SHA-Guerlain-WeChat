@@ -11,7 +11,7 @@ var starProducts = [
   },
   {
     id:2,
-    class:'fullwidth',
+    class:'fullwidth withpadding',
     productname:'娇兰茗茶',
     productdes:'由Constance亲自甄选的七种独家香茗，让你的味蕾沉醉。',
     productintro:'娇兰之家拥有七种独家茶点，一千零一夜，小黑裙，蓝调时光，满堂红，橙花伊甸园，御廷兰花茶和柳儿，邀请您品尝和品味这一悠久饮品的同时，与传奇性法国娇兰香氛一起，一同传递完美协调的感官体验。<br><br>80克盒装，零售价格35,00欧元<br>“一千零一夜”茶：茶香浓烈性感，混合来自中国的绿茶和斯里兰卡的红茶，伴随香草，小豆蔻，肉桂，薰衣草和天然佛手柑的香气，向香水业的首支东方香水致敬。<br><br>“小黑裙”红茶：充满果味和辛香的顽皮气息，选自印度高纬度地带的红茶，夹着少许水果干（红莓和覆盆子）。个性鲜明的红茶极为浓烈，如同充满活力的巴黎女性，身穿优雅的黑色小礼服，恣意地回旋。<br><br>“满堂红”红茶：产自中国云南地区的红茶，品质非常出色，它的浓度和香气让人联想到皮革、蜂蜜的味道，和娇兰同名香氛略带烟熏的香调。<br><br>“橙花伊甸园”白茶：来自中国福建的白茶。它的香味使人联想到湿润的柳条，蜂蜜和花香。这款精致的茶品，充满清新明亮的气息。<br><br>蓝调时光茶：来自台湾的乌龙茶，茶香美味，蕴含栗子、蜂蜜和白花香，适于黄昏饮用，有舒缓镇静之功效。<br><br>御庭兰花茶：来自中国的一种红茶，其蕴含兰花香，从而达成了花香和茶香的完美平衡。<br><br>“柳儿”茶：臻选花香浓郁的中国茉莉茶。茶味与花香制造而成的感官冲击，是带给爱人和女性最好的颂歌。',
@@ -28,9 +28,10 @@ var starProducts = [
   },
   {
     id:4,
+    class:'withpadding pop-glove',
     productname:'手套',
     productdes:'三款优雅精致的小羊皮手套，精湛工艺，点缀数滴香水，香味一触即知。 ',
-    productintro:'<p>法国娇兰手套甄选最美丽、最上乘的皮革：天然而手感极佳的小羊皮。所有产品都为手工缝制，并配有丝绸衬里。高级时装般的工艺，一触即知，点缀数滴香水。</p>'+'<div class="product-image"><img src="/app/images/speicialproduct/big-product-4-1.jpg" alt=""/></div><p class="tt">调香师手套</p><p>扇形边缘装饰了这款精致蕾丝制成的长款紫色手套，蕾丝上装饰细小的银色铆钉，如同珠宝般点缀于略微扩口的手套腕部。限量发售。</p>'+'<div class="product-price"> <span>450,00 €</span> </div>'+'<div class="product-image"><img src="/app/images/speicialproduct/big-product-4-2.jpg" alt=""/></div><br><p class="tt">小黑裙手套</p><p>手套线条谨严完美，配合小黑裙的美妙香氛，呈现了优雅的巴黎风格。短款低开口手套，突出手部轮廓，打造纤细活力的风格，更突显手腕的优美形态。</p>'+'<div class="product-price"> <span>290,00 €</span> </div>'+'<div class="product-image"><img src="/app/images/speicialproduct/big-product-4-3.jpg" alt=""/></div><br><p class="tt">满堂红手套</p><p>为庆祝同名香水的50年诞辰的限定款手套，线条感的设计拥有触摸感应的功能，时髦又摩登，以红色元素作为点睛之笔。</p>'+'<div class="product-price"> <span>290,00 €</span> </div>',
+    productintro:'<p>法国娇兰手套甄选最美丽、最上乘的皮革：天然而手感极佳的小羊皮。所有产品都为手工缝制，并配有丝绸衬里。高级时装般的工艺，一触即知，点缀数滴香水。</p>'+'<div><img src="/app/images/speicialproduct/big-product-4-1.jpg" alt=""/></div><h3>调香师手套</h3><p>扇形边缘装饰了这款精致蕾丝制成的长款紫色手套，蕾丝上装饰细小的银色铆钉，如同珠宝般点缀于略微扩口的手套腕部。限量发售。</p>'+'<div class="price-wrap"><div class="product-price"> <span>450,00 €</span> </div></div>'+'<div><img src="/app/images/speicialproduct/big-product-4-2.jpg" alt=""/></div><br><h3>小黑裙手套</h3><p>手套线条谨严完美，配合小黑裙的美妙香氛，呈现了优雅的巴黎风格。短款低开口手套，突出手部轮廓，打造纤细活力的风格，更突显手腕的优美形态。</p>'+'<div class="price-wrap"><div class="product-price"> <span>290,00 €</span> </div></div>'+'<div><img src="/app/images/speicialproduct/big-product-4-3.jpg" alt=""/></div><h3>满堂红手套</h3><p>为庆祝同名香水的50年诞辰的限定款手套，线条感的设计拥有触摸感应的功能，时髦又摩登，以红色元素作为点睛之笔。</p>'+'<div class="price-wrap"><div class="product-price"> <span>290,00 €</span> </div></div>',
     productimgsrc:'/app/images/speicialproduct/product-4.jpg',
     thumbnail:'/app/images/speicialproduct/product-4.jpg',
     //price:'7600,00 €'
@@ -66,6 +67,7 @@ var starProducts = [
   },
   {
     id:8,
+    class:'fullwidth',
     productname:'执子之手',
     productdes:'一个幸运的装饰品，在最特殊的日子里，点亮你的婚礼。 ',
     productintro:'娇兰之家在新娘对亲爱的他说"Yes"的时刻，献上意外的惊喜。洋溢着愉悦感的鲜花，围绕着橙色的花朵，代表着幸运。纯净的白色花朵在瓶身蔓延，就像新娘的花束，这就是香氛名字的由来。',
