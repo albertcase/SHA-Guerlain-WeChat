@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="mainclass">
-      <img src="/app/images/logo.png" style="margin:0px auto;">
+      <div  style="margin:0px auto;"><img src="/app/images/logo.png" style="text-align:center"/></div>
       <hr style="margin:0px 50px">
       <div class="checkoption">
         <div class="tableinfo">
@@ -23,6 +23,7 @@
             <option value="sex">称呼</option>
             <option value="bak1">服务</option>
             <option value="type">期望的联系方式</option>
+            <option value="status">状态</option>
           </select>
           <!-- <i class="fa fa-chevron-down" style="color:#ddd;margin-left:-10px"></i> -->
           <i class="fa fa-plus-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

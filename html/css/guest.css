@@ -12,12 +12,13 @@ body{
 }
 
 .tableinfo{
-  background-color: #ce0058;
+  background-color: #fff;
   padding-left:10px;
   padding-right:10px;
   height:40px;
   line-height: 40px;
-  color:#fff;
+  color:#333;
+  font-weight: bold;
 }
 
 #searchbt:hover,#uploadpage:hover{
@@ -26,8 +27,8 @@ body{
 }
 
 #allorders,#everypage{
-  background-color: #ce0058;
-  color: #ddd;
+  background-color: #fff;
+  color: #555;
   padding:5px;
   border:0;
   font-size:1rem;
@@ -170,7 +171,7 @@ input:focus{
 
 /*bespeaklist stert*/
 .bespeaklist thead>tr,.gaddlist thead>tr,.gdellist thead>tr{
-  color:#ce0058 !important;
+  color:#222 !important;
   font-size:110%;
   border-bottom:1px solid #ccc;
   height:35px !important;
@@ -203,6 +204,12 @@ input:focus{
 
 .bespeaklist tbody>tr:hover,.gaddlist tbody>tr:hover,.gdellist tbody>tr:hover{
   background-color: #ddd;
+}
+
+.bespeaklist tbody>tr{
+  font-weight:normal !important;
+  font-size: 90%;
+  color:#777 !important;
 }
 
 .bespeaklist tr>th,.gaddlist tr>th,.gdellist tr>th{
@@ -341,7 +348,8 @@ input:focus{
 }
 
 .bespeaklistfoot ul>.chooseli,.gdellistfoot ul>.chooseli,.gaddlistfoot ul>.chooseli{
-  background-color: #ce0058 !important;
+  /*background-color: #ce0058 !important;*/
+  background-color: #bbb !important;
 }
 /*bespeaklist end*/
 
@@ -365,11 +373,20 @@ input:focus{
 }
 
 #logout{
-  color:#ddffff;
+  color:red;
   cursor: pointer;
   float:right;
 }
 
 #logout:hover{
   text-decoration: underline;
+}
+
+.comfirmp{
+  color: #ce0058;
+}
+
+.comfirmp:hover{
+  cursor:pointer;
+  color: #880058;
 }
