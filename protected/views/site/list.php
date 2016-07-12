@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="mainclass">
-      <img src="/app/images/logo.png" style="margin:0px auto;">
+      <div  style="margin:0px auto;"><img src="/app/images/logo.png" style="text-align:center"/></div>
       <hr style="margin:0px 50px">
       <div class="checkoption">
         <div class="tableinfo">

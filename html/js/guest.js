@@ -162,7 +162,7 @@ var adminlist = {
         a += '<th>'+data[i]["mobile"]+'</th>';
         a += '<th>'+data[i]["email"]+'</th>';
         a += '<th>'+data[i]["type"]+'</th>';
-        a += '<th>'+ ((data[i]["bak1"])?(data[i]["bak1"]+"|"):"")+ ((data[i]["bak2"])?(data[i]["bak2"]+"|"):"")+ ((data[i]["bak3"])?(data[i]["bak3"]+"|"):"")+'</th>';
+        a += '<th>'+ ((data[i]["bak1"])?(data[i]["bak1"]):"")+ ((data[i]["bak2"])?("|" + data[i]["bak2"]):"")+ ((data[i]["bak3"])?("|" + data[i]["bak3"]):"")+'</th>';
         a += '<th>'+data[i]["date"]+'</th>';
         a += '<th>'+data[i]["comment"]+'</th>';
         if(data[i]["status"] == "1"){
