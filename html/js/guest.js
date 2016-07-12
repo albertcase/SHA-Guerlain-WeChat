@@ -159,6 +159,7 @@ var adminlist = {
         a += '<th>'+i+'</th>';
         a += '<th>'+data[i]["second"]+'</th>';
         a += '<th>'+data[i]["first"]+'</th>';
+        a += '<th>'+data[i]["sex"]+'</th>';
         a += '<th>'+data[i]["mobile"]+'</th>';
         a += '<th>'+data[i]["email"]+'</th>';
         a += '<th>'+data[i]["type"]+'</th>';

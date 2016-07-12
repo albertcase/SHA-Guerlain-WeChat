@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="mainclass">
-      <div  style="margin:0px auto;"><img src="/app/images/logo.png" style="text-align:center"/></div>
-      <hr style="margin:0px 50px">
+      <div  style="margin:0px 5%;"><img src="/app/images/logo.png" style="text-align:center"/></div>
+      <hr style="margin:0px 20px">
       <div class="checkoption">
         <div class="tableinfo">
           SEARCH CRITERIA:
@@ -53,6 +53,7 @@
               <th>No.</th>
               <th>姓</th>
               <th>名</th>
+              <th>称呼</th>
               <th>联系电话</th>
               <th>电子邮件</th>
               <th>期望的联系方式</th>

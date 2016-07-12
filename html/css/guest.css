@@ -1,6 +1,6 @@
 .mainclass{
   margin:10px auto;
-  width:900px;
+  width:1000px;
 }
 
 body{
@@ -208,7 +208,7 @@ input:focus{
 
 .bespeaklist tbody>tr{
   font-weight:normal !important;
-  font-size: 90%;
+  font-size: 60%;
   color:#777 !important;
 }
 
@@ -232,44 +232,51 @@ input:focus{
 }
 
 .bespeaklist tr>th:nth-child(1){
-  max-width:10%;
+  max-width:5%;
 }
 
 .bespeaklist tr>th:nth-child(2){
-  max-width:30%;
-}
-
-.bespeaklist tr>th:nth-child(3){
-  max-width:30%;
-}
-
-.bespeaklist tr>th:nth-child(4){
   max-width:10%;
 }
 
+.bespeaklist tr>th:nth-child(3){
+  max-width:10%;
+}
+
+.bespeaklist tr>th:nth-child(4){
+  max-width:5%;
+}
+
 .bespeaklist  tr>th:nth-child(5){
-  max-width:20%;
+  max-width:10%;
   text-align: center;
 }
 
 .bespeaklist tr>th:nth-child(6){
-  max-width:400px;
+  max-width:10%;
   text-align: center;
 }
 
 .bespeaklist tr>th:nth-child(7){
-  text-align: center;
+  text-align: 5%;
 }
 
 .bespeaklist tr>th:nth-child(8){
-  max-width:400px;
+  max-width:15%;
 }
 
 .bespeaklist tr>th:nth-child(9){
+  max-width:10%;
   text-align: center;
 }
 
 .bespeaklist tr>th:nth-child(10){
+  max-width:10%;
+  text-align: center;
+}
+
+.bespeaklist tr>th:nth-child(11){
+  max-width:5%;
   text-align: center;
 }
 
