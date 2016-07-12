@@ -373,3 +373,12 @@ input:focus{
 #logout:hover{
   text-decoration: underline;
 }
+
+.comfirmp{
+  color: #ce0058;
+}
+
+.comfirmp:hover{
+  cursor:pointer;
+  color: #880058;
+}

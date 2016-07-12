@@ -23,6 +23,7 @@
             <option value="sex">称呼</option>
             <option value="bak1">服务</option>
             <option value="type">期望的联系方式</option>
+            <option value="status">状态</option>
           </select>
           <!-- <i class="fa fa-chevron-down" style="color:#ddd;margin-left:-10px"></i> -->
           <i class="fa fa-plus-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -125,6 +125,18 @@ var adminlist = {
     a += '</dl>';
     return a;
   },
+  buildstatus:function(){
+    var a='<dl>';
+    a += '<dt><i class="fa fa-minus-square faleft" opt="status"></i>期望的联系方式：</dt>';
+    a += '<dd>';
+    a += '<select id="orderstatus">';
+    a += '<option value="0">Process</option>';
+    a += '<option value="1">Processed</option>';
+    a += '</select>';
+    a += '</dd>';
+    a += '</dl>';
+    return a;
+  },
   buildbak1:function(){
     var a='<dl>';
     a += '<dt><i class="fa fa-minus-square faleft" opt="bak1"></i>服务：</dt>';
@@ -143,33 +155,21 @@ var adminlist = {
     var al = data.length;
     var a = '';
     for(var i=0 ;i<al ;i++){
-      <th>No.</th>
-      <th>姓</th>
-      <th>名</th>
-      <th>联系电话</th>
-      <th>电子邮件</th>
-      <th>期望的联系方式</th>
-      <th>需要的服务</th>
-      <th>预约日期</th>
-      <th>特殊要求</th>
-      <th>状态</th>
         a += '<tr sid="'+data[i]["id"]+'">';
         a += '<th>'+i+'</th>';
         a += '<th>'+data[i]["second"]+'</th>';
         a += '<th>'+data[i]["first"]+'</th>';
         a += '<th>'+data[i]["mobile"]+'</th>';
         a += '<th>'+data[i]["email"]+'</th>';
-        a += '<th>'+data[i]["email"]+'</th>';
-        a += '<th>'+data[i]["email"]+'</th>';
-        a += '<th>'+data[i]["email"]+'</th>';
-        if(data[i]["openid"]){
-            a += '<th>Yes</th>';
+        a += '<th>'+data[i]["type"]+'</th>';
+        a += '<th>'+ ((data[i]["bak1"])?(data[i]["bak1"]+"|"):"")+ ((data[i]["bak2"])?(data[i]["bak2"]+"|"):"")+ ((data[i]["bak3"])?(data[i]["bak3"]+"|"):"")+'</th>';
+        a += '<th>'+data[i]["date"]+'</th>';
+        a += '<th>'+data[i]["comment"]+'</th>';
+        if(data[i]["status"] == "1"){
+            a += '<th>Processed</th>';
           }else{
-            a += '<th>No</th>';
+            a += '<th><span class="comfirmp">Processe</span></th>';
           }
-        if(data[i]['createtime'] == "0000-00-00 00:00:00")
-          data[i]['createtime'] = "";
-        a += '<th>'+data[i]["createtime"]+'</th>';
         a += '</tr>';
     }
     return a;
@@ -261,26 +261,12 @@ var adminlist = {
     var val = $("#allorders").val();
     var opt ='';
     if(self.orderlist.indexOf(val) == "-1"){
-      switch (val){
-        case 'bak':
-          opt = self.buildbak();
-          break;
-        case 'firstname':
-          opt = self.buildfirstname();
-          break;
-        case 'secondname':
-          opt = self.buildsecondname();
-          break;
-        case 'cardno':
-          opt = self.buildcardno();
-          break;
-        case 'openid':
-            opt = self.buildopenid();
-            break;
-        case 'openidd':
-            opt = self.buildopenidd();
-            break;
-      }
+      // switch (val){
+      //   case 'bak1':
+      //     opt = self.buildbak1();
+      //     break;
+      // }
+      opt = self["build"+val]();
       self.orderlist.push(val);
       $(".dataoption").append(opt);
       return true;
@@ -466,7 +452,7 @@ var adminlist = {
     $("#logout").click(function(){
       self.logout();
     });
-    $(".bespeaklist").on("click" ,"tbody .logbt" ,function(){
+    $(".bespeaklist").on("click" ,"tbody .comfirmp" ,function(){
       var id = $(this).parent().parent().attr("sid");
       self.comfircome(id);
     });
