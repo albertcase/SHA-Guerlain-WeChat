@@ -292,6 +292,8 @@ select:-webkit-autofill {
   .btn-alert-ok{
     padding: 0.1rem;
   }
+
+
 }
 
 /*For custom page*/
@@ -445,7 +447,6 @@ hr{
     box-sizing: border-box;
     color: #000;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
     padding: 0.1rem;
     background: #ebebeb;
   }
@@ -457,6 +458,10 @@ hr{
   }
 
   .popup{
+    .price-wrap{
+      text-align: center;
+      margin: 0 0.4rem 0.2rem;
+    }
     &.withpadding{
       .inner{
         padding-top: 1rem;
@@ -466,6 +471,27 @@ hr{
         overflow: auto;
         max-height: 8rem;
       }
+    }
+    /*for fan pop*/
+    &.fan{
+      .inner{
+        .product-summary{
+          padding: 0;
+          p{
+            margin: 0 0.4rem 0.5rem;
+          }
+          h3{
+            font-size: 0.32rem;
+            margin: 0.5rem 0.4rem 0.2rem;
+            color: #000;
+          }
+          .price-wrap{
+            text-align: center;
+            margin: 0.5rem 0.4rem;
+          }
+        }
+      }
+
     }
     .inner{
       position: absolute;
@@ -484,6 +510,7 @@ hr{
         text-align: center;
         overflow: hidden;
         img{
+          display: block;
           //@include size(1.22rem,2.57rem);
           margin: 0 auto;
           width: auto;
@@ -492,19 +519,15 @@ hr{
       }
       .product-summary{
         margin: 0.5rem 0;
+        padding: 0rem 0.4rem;
         text-align: justify;
-        padding: 0.1rem 0.4rem;
         .tt{
           text-align: center;
-        }
-        .product-price{
-          width: 50%;
-          display: block;
-          margin: 0.2rem auto;
-          text-align: center;
+          font-size: 0.36rem;
         }
         p{
           margin: 0.2rem 0;
+          text-align: justify;
         }
       }
       .clearfix{
@@ -515,11 +538,11 @@ hr{
         position: relative;
         display: inline;
         clear: both;
-        padding: 0 0.5rem;
+        padding: 0 0.3rem;
         span{
           background: #fff;
           position: relative;
-          padding: 0 0.25rem;
+          padding: 0 0.3rem;
           z-index: 2;
         }
         &:before{
@@ -586,6 +609,35 @@ hr{
       }
 
     }
+    &.pop-glove{
+      .inner{
+        .product-image{
+          padding: 0;
+          margin: 0;
+          height: auto;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        .product-summary{
+          padding: 0;
+          p{
+            margin: 0 0.4rem 0.5rem;
+          }
+          h3{
+            font-size: 0.32rem;
+            margin: 0.5rem 0.4rem 0.2rem;
+            color: #000;
+          }
+          .price-wrap{
+            text-align: center;
+            margin: 0.5rem 0.4rem;
+          }
+        }
+      }
+
+    }
     .inner{
       .product-volume{
         display: inline-block;
@@ -596,29 +648,18 @@ hr{
       }
       .product-image{
         height: 2.2rem;
-        padding: 1rem 0 0.5rem;
-      }
-      .product-summary-3{
-        padding: 0;
-        margin: 0;
-        p{
-          padding: 0.1rem 0.4rem;
-        }
-        .product-image{
-          width: 100%;
-          height: auto;
-          padding: 0;
-          img{
-            width: 100%;
-            height: auto;
-          }
-        }
+        padding: 1rem 0 0rem;
       }
     }
   }
 
 }
 .catagory-black{
+  .popup{
+    .price-wrap{
+      margin: 0 0.4rem 0.5rem;
+    }
+  }
   .logo{
     padding: 0.5rem 0 0.5rem;
   }
