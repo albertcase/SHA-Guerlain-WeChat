@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 //Define the app path
 var path = {
-    all:['./app/template/index.html','./app/template/qrcode.html','./app/css/*.css','./app/js/*.js'],
+    all:['./app/template/*.html','./app/css/*.css','./app/js/*.js'],
     template:['./app/template/index.html'],
     css:['./app/css/*.css'],
     js:['./app/js/*.js','!app/js/widget.js'],

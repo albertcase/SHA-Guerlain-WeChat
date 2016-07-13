@@ -73,7 +73,9 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
+  padding: 0.6rem;
+  box-sizing: border-box;
   margin: 0 auto;
   height: 100%;
   z-index: 1;
@@ -1044,6 +1046,112 @@ hr {
 }
 .page-online-booking .input-box-youradvice {
   margin: 0.9rem 0 0.6rem;
+}
+
+/*For custom page*/
+.page-custom .title {
+  margin: 0 0 0.4rem;
+}
+.page-custom .step {
+  display: none;
+}
+.page-custom .step.current {
+  display: block;
+}
+.page-custom .switch-content {
+  width: 100%;
+  margin-top: 0.9rem;
+}
+.page-custom .lists-custom {
+  margin: 0 auto;
+  text-align: center;
+}
+.page-custom .lists-custom .item {
+  display: inline-block;
+  width: 2.28rem;
+  height: 7rem;
+  position: relative;
+  vertical-align: middle;
+}
+.page-custom .lists-custom .item.item-1 {
+  margin-right: 0.4rem;
+}
+.page-custom .lists-custom .item.selected .c-img {
+  width: 100%;
+  opacity: 1;
+}
+.page-custom .lists-custom .item.selected h4 {
+  opacity: 1;
+  visibility: visible;
+}
+.page-custom .lists-custom .item h4 {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.3rem;
+}
+.page-custom .lists-custom .item .c-img {
+  opacity: 0.6;
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.page-custom .next-block {
+  position: relative;
+  margin-top: 0.6rem;
+}
+.page-custom .tips {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.page-custom .btn {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  width: 6.5rem;
+  height: 1rem;
+  background: #000;
+  line-height: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.3rem;
+}
+.page-custom .details-custom {
+  position: relative;
+  min-height: 6.08rem;
+}
+.page-custom .details-custom .c-img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  width: 2.28rem;
+  height: 6.08rem;
+}
+.page-custom .details-custom .c-desc {
+  padding-left: 2.8rem;
+}
+.page-custom .details-custom h4 {
+  font-size: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.page-custom .details-custom .desc {
+  font-size: 0.24rem;
+  color: #818181;
+  text-align: justify;
 }
 
 #__bs_notify__ {
