@@ -43,7 +43,7 @@ class ApiController extends Controller
 	public function actionTestEmail()
 	{
 		$message            = new YiiMailMessage;		
-		$message->subject   = "=?UTF-8?B?".base64_encode('全家常见问题留言信息处理结果')."?=";
+		$message->subject   = "=?UTF-8?B?".base64_encode('Guerlain预约信息提醒')."?=";
         $message->setBody('test', 'text/html');                
         $message->setTo(array('demon.zhang@samesamechina.com'=>"Demon"));
         $message->setFrom(array("guerlain68@samesamechina.com"=>"guerlain"));   
