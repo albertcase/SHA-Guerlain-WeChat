@@ -143,6 +143,9 @@ function gotoPin(i) {
 				}
 			});
 		},
+		gotoBookingPage:function(first,second){
+			window.location.href = 'online-booking.html?servicefirst='+first+'&servicesecond='+second;
+		}
 
 	};
 

@@ -1,12 +1,5 @@
 /*All the api collection*/
 Api = {
-//{
-//    msg:{
-//        mobile:’’,
-//        money:''
-//    },
-//    status:1
-//}
     isLogin:function(callback){
         $.ajax({
             url:'/api/islogin',
