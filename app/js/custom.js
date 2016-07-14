@@ -13,7 +13,7 @@
             var self = this;
 
             //selected the item
-            $('.lists-custom .item').on('click', function(){
+            $('.lists-custom .item').on('touchstart', function(){
                 $('.lists-custom .item').removeClass('selected');
                 $(this).addClass('selected');
                 self.selectedItem = $(this).index();
@@ -22,7 +22,7 @@
 
             // go next step, show details
             var step = 1;
-            $('.btn-next').on('click',function(){
+            $('.btn-next').on('touchstart',function(){
                 var i = self.selectedItem;
                 if(step == 1){
                     //go next step

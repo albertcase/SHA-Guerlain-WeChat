@@ -5,6 +5,3 @@ $(function(){
     });
 
 });
-function gotoBookingPage(first,second){
-    window.location.href = 'online-booking.html?servicefirst='+first+'&servicesecond='+second;
-}

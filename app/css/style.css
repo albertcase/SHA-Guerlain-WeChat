@@ -1105,11 +1105,11 @@ hr {
   opacity: 0;
   visibility: hidden;
   font-size: 0.3rem;
-  transition: all 1s;
-  -ms-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .page-custom .lists-custom .item .c-img {
   opacity: 0.6;
@@ -1123,11 +1123,11 @@ hr {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  transition: all 1s;
-  -ms-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  -webkit-transition: all 1s;
+  transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 .page-custom .tips {
   text-align: center;
