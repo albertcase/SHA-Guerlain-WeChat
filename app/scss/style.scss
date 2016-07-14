@@ -999,10 +999,6 @@ hr{
     box-sizing: border-box;
 
   }
-  .next-block{
-    position: absolute;
-    bottom: 0.3rem;
-  }
   .lists-custom{
     margin: 0 auto;
     text-align: center;
@@ -1048,10 +1044,11 @@ hr{
     margin-bottom: 0.3rem;
   }
   .btn{
-    position: relative;
+    position: absolute;
     left: 50%;
+    bottom: 0.3rem;
     @include transform(translate(-50%,0%));
-    @include size(6.5rem,1rem);
+    @include size(calc(100% - 1.2rem),1rem);
     background: #000;
     line-height: 1rem;
     color: #fff;
