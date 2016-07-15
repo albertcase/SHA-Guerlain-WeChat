@@ -1080,6 +1080,20 @@ hr{
   }
 }
 
+/*for panorama page*/
+.panorama{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img{
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+}
 
 //test
 #__bs_notify__{

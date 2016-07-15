@@ -1174,6 +1174,21 @@ hr {
   text-align: justify;
 }
 
+/*for panorama page*/
+.panorama {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.panorama img {
+  width: auto;
+  height: 100%;
+  display: block;
+}
+
 #__bs_notify__ {
   display: none !important;
 }
