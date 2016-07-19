@@ -85,8 +85,11 @@
 
 }).call(this);
 
+
+
 $(document).ready(function(){
 
+    $('#panorama').html('<img src="/app/images/panorama/panorama-'+Common.queryString().id+'.jpg">');
     //when the img loaded,then show the position
     $('.panorama img').on('load',function(){
         var customStart = new panorama();
