@@ -13,6 +13,7 @@
             var self = this;
             var ele = $('.panorama img');
             self.centerImg(ele);
+            self.touchTo();
         },
         centerImg:function(ele){
 
@@ -64,6 +65,10 @@
                 alert('Not supported.');
             }
         },
+        touchTo:function(pos){
+
+        }
+
 
 
     };

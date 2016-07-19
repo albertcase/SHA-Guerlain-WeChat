@@ -1081,6 +1081,29 @@ hr{
 }
 
 /*for panorama page*/
+.page-panorama{
+  .title{
+    margin: 0 0 0.4rem;
+    font-size: 0.46rem;
+  }
+  .subtitle{
+    font-size: 0.36rem;
+    text-align: center;
+    margin: 0.4rem 0 0.6rem;
+  }
+  .name{
+    font-size: 0.3rem;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  li.last{
+    .name{
+      margin-bottom: 0;
+    }
+  }
+  
+
+}
 .panorama{
   position: absolute;
   left: 0;
