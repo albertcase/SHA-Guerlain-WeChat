@@ -1189,6 +1189,14 @@ hr {
   display: block;
 }
 
+.top {
+  position: relative;
+  z-index: 100;
+  background: red;
+  width: 100px;
+  height: 300px;
+}
+
 #__bs_notify__ {
   display: none !important;
 }

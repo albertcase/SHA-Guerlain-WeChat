@@ -1092,9 +1092,24 @@ hr{
     width: auto;
     height: 100%;
     display: block;
+    //position: absolute;
+    //-webkit-transform: translateX(-50%);
+    //-moz-transform: translateX(-50%);
+    //-o-transform: translateX(-50%);
+    //transform: translateX(-50%);
+    //left: 7px;
+    //position: absolute;
+    //@include transition(transform 1s);
   }
 }
 
+.top{
+  position: relative;
+  z-index: 100;
+  background: red;
+  width: 100px;
+  height: 300px;
+}
 //test
 #__bs_notify__{
   display: none !important;
