@@ -1192,6 +1192,44 @@ hr {
 .page-panorama li.last .name {
   margin-bottom: 0;
 }
+.page-panorama .tips {
+  position: absolute;
+  z-index: 10;
+  width: 4.79rem;
+  height: 2.35rem;
+  background: url("../images/button-tips.png") no-repeat;
+  background-size: 100%;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.page-panorama .panorama-pop {
+  background: none;
+}
+.page-panorama .panorama-pop .inner {
+  width: 5rem;
+  padding: 1.5rem 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 0.3rem;
+  text-align: center;
+}
+.page-panorama .panorama-pop .msg {
+  padding: 0;
+  line-height: 2;
+}
+.page-panorama .panorama-pop .btn-close {
+  text-indent: -999em;
+  right: 0.3rem;
+  top: 0.3rem;
+}
+.page-panorama .panorama-pop .btn-close:before, .page-panorama .panorama-pop .btn-close:after {
+  background: #fff;
+}
 
 .panorama {
   position: absolute;

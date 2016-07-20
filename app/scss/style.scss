@@ -1101,6 +1101,39 @@ hr{
       margin-bottom: 0;
     }
   }
+  .tips{
+    position: absolute;
+    z-index: 10;
+    @include size(4.79rem,2.35rem);
+    background: url("../images/button-tips.png") no-repeat;
+    background-size: 100%;
+    bottom: 2%;
+    left: 50%;
+    @include transform(translateX(-50%));
+  }
+  .panorama-pop{
+    background: none;
+    .inner{
+      width: 5rem;
+      padding: 1.5rem 1rem;
+      background: rgba(0,0,0,0.9);
+      color: #fff;
+      font-size: 0.3rem;
+      text-align: center;
+    }
+    .msg{
+      padding: 0;
+      line-height: 2;
+    }
+    .btn-close{
+      text-indent: -999em;
+      right: 0.3rem;
+      top: 0.3rem;
+      &:before,&:after{
+        background: #fff;
+      }
+    }
+  }
   
 
 }

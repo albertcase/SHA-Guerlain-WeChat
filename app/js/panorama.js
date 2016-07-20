@@ -8,9 +8,20 @@
         init:function(){
             var self = this;
             self.bindEvent();
+
+            //hide the tips
+            var hideTips = setTimeout(function(){
+                $('.tips').hide(1000);
+                clearTimeout(hideTips);
+            },3000);
+            
         },
         bindEvent:function(){
             var self = this;
+
+            //load pop
+            Common.popupBox.add('<p class="pop-content">通过全景图感受娇兰香榭丽舍68号,门店、中层楼、水疗中心、Le 68,餐厅的视觉体验，探索娇兰之家的奥秘。</p>','panorama-pop');
+
             var ele = $('.panorama img');
             self.centerImg(ele);
             self.touchTo();
@@ -89,7 +100,12 @@
 
 $(document).ready(function(){
 
-    $('#panorama').html('<img src="/app/images/panorama/panorama-'+Common.queryString().id+'.jpg">');
+    if(Common.queryString().id){
+        $('#panorama img').attr('src',"/app/images/panorama/panorama-"+Common.queryString().id+".jpg");
+    }else{
+        $('#panorama img').attr('src',"/app/images/panorama/panorama-1.jpg");
+    }
+
     //when the img loaded,then show the position
     $('.panorama img').on('load',function(){
         var customStart = new panorama();

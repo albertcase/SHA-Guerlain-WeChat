@@ -49,9 +49,6 @@ function gotoPin(i) {
 			return query_string;
 
 		},
-		goHomepage:function(){
-			gotoPin(0);
-		},
 		msgBox:function(msg,long){
 			if(long){
 				$('body').append('<div class="ajaxpop msgbox minwidthbox"><div class="loading">'+msg+'</div></div>');
@@ -157,6 +154,9 @@ function gotoPin(i) {
 $(document).ready(function(){
 
 	$(document).on('click','.btn-alert-ok',function(){
+		$(this).parent().parent().remove();
+	});
+	$('body').on('touchstart','.btn-close',function(){
 		$(this).parent().parent().remove();
 	});
 
