@@ -1,3 +1,19 @@
+(function(){
+	document.addEventListener("DOMContentLoaded", function(event) {
+		//add timestamp to all js and css file use in html
+		var timeStamp=Date.now();
+		var scriptEle = document.getElementsByTagName("script"),
+			cssEle = document.getElementsByTagName("link")
+			;
+		for(var i in scriptEle){
+			scriptEle[i].src = scriptEle[i].src+'?v='+timeStamp;
+		}
+		for(var j in cssEle){
+			cssEle[j].href = cssEle[j].href+'?v='+timeStamp;
+		}
+	});
+
+})();
 (function(doc, win) {
 	var docEl = doc.documentElement,
 		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
