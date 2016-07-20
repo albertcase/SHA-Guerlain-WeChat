@@ -14,6 +14,7 @@ var path = {
     template:['./app/template/index.html'],
     css:['./app/css/*.css'],
     js:['./app/js/*.js','!app/js/widget.js'],
+    dev_js:['./app/dev-js/*.js','./app/dev-js/*/*.js'],
     index_include_js:['./app/js/lib/zepto.min.js','./app/js/lib/pre-loader.js','./app/js/lib/shake.js','./app/js/rem.js','./app/js/common.js','./app/js/api.js','./app/js/controller.js'],
 };
 
@@ -37,6 +38,16 @@ gulp.task('css',function () {
         // 3. 另存为压缩文件
         .pipe(gulp.dest('./app/css'));
 });
+
+//uglify all js
+gulp.task('js', function () {
+    // 1. 找到文件
+    gulp.src(path.dev_js)
+        .pipe(uglify())
+        // 3. 另存为压缩文件
+        .pipe(gulp.dest('./app/js/'));
+});
+
 
 //concat and uglify indexjs
 gulp.task('indexjs', function () {

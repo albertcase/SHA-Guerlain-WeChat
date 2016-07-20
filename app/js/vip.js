@@ -1,7 +1,1 @@
-$(function(){
-    $(".slideshow").slidesjs({
-        width: 940,
-        height: 528
-    });
-
-});
+$(function(){$(".slideshow").slidesjs({width:940,height:528})});
