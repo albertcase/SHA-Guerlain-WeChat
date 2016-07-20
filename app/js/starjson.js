@@ -6,7 +6,7 @@ var starProducts = [
     productintro:'这款带翼轮廓的香水宝石——翼之蜂华，采用巴卡拉水晶制作而成。瓶身如同钻石表面，闪耀无限光芒，成为动人杰作。',
     productimgsrc:'/app/images/starproduct/product-1.jpg',
     thumbnail:'/app/images/starproduct/product-1.png',
-    price:'17 000,00€',
+    price:'17 000,00 欧元',
     //volume:'100',
   },
   {
@@ -61,7 +61,7 @@ var starProducts = [
     productintro:'法国娇兰重新诠释了1914年诞生的传奇式龟形瓶——采用黑色巴卡拉水晶制作成全新的版本。新的龟形瓶使用了翻修已有百年历史的老模具精制而成，令这一杰出技艺成为可能，也使这款独特的玻璃香水瓶得以重生。全新的龟形瓶身配备了一个24K镀金塑造的典雅巴黎街景，令沉醉时光永驻于百年之前的巴黎，呈现了巨匠Ateliers Gohard的辛勤杰作。',
     productimgsrc:'/app/images/starproduct/product-6.jpg',
     thumbnail:'/app/images/starproduct/product-6.jpg',
-    price:'40000,00 €'
+    price:'40000,00 欧元'
   },
   {
     id:8,
@@ -70,6 +70,6 @@ var starProducts = [
     productintro:'法国娇兰与美国街头艺术家JonOne携手，重塑经典蜂姿瓶，以彩绘重新演绎现代时尚。三个色彩的宇宙，承载着各自的香味星云。属于“小黑裙”的粉色，“一千零一夜”的蓝色，“野蛮玫瑰”的橘色在瓶身蔓延。这些“JonOne”蜂姿瓶由JonOne在巴黎的工作室中亲自绘色，在娇兰之家限量发售。',
     productimgsrc:'/app/images/starproduct/product-8.jpg',
     thumbnail:'/app/images/starproduct/product-8.jpg',
-    price:'9000,00 €'
+    price:'9000,00 欧元'
   }
 ];

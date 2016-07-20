@@ -53,8 +53,8 @@
             var productHtml = '';
             productHtml = '<div class="product-image"><img src="'+json[id].productimgsrc+'" alt=""/></div>'+
                 '<div class="product-summary">'+json[id].productintro+'</div>'+
-                (json[id].price?('<div class="price-wrap"><div class="product-price"> <span>'+json[id].price+'</span> </div></div>'):(''))+
-                (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''));
+                (json[id].volume?('<div class="product-volume"><span>'+json[id].volume+'</span></div>'):(''))+
+                (json[id].price?('<div class="price-wrap"><div class="product-price"> <span>'+json[id].price+'</span> </div></div>'):(''));
             Common.popupBox.add(productHtml,json[id].class);
 
         },
