@@ -75,10 +75,10 @@ gulp.task('generate_index',['css','indexjs'], function () {
 
 //watch the template
 gulp.task('watch',function(){
-    gulp.watch(path.all,['generate_index']);
+    gulp.watch(path.dev_js,['js']);
 });
 
 //gulp default
-gulp.task('default',['browser-sync']);
+gulp.task('default',['browser-sync','watch']);
 
 
