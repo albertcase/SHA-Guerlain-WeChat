@@ -21,9 +21,10 @@
             var self = this;
             self.bindEvent();
             self.centerImg(self.obj.ele);
+            Common.overscroll(document.getElementById('wrapper'));
             self.touchTo();
-            //
-            ////hide the tips
+
+            //hide the tips
             var hideTips = setTimeout(function(){
                 $('.tips').hide(1000);
                 clearTimeout(hideTips);
@@ -44,7 +45,6 @@
             //init the img
             self.curImgTransform(self.obj.CurTranslateX);
             if (window.DeviceOrientationEvent) {
-                //document.getElementById("").innerHTML = "DeviceOrientation";
                 // Listen for the deviceorientation event and handle the raw data
                 var i = 0,tiltLR2 = 0,tiltLR1=0;
                 window.addEventListener('deviceorientation', bbb, false);
@@ -117,13 +117,9 @@
                     self.obj.CurTranslateX = self.obj.CurTranslateX-self.obj.perX;
                 }
                 self.curImgTransform(self.obj.CurTranslateX);
-
-
             });
 
         }
-
-
 
     };
 

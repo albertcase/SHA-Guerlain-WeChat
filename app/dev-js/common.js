@@ -114,7 +114,7 @@ function gotoPin(i) {
 			el.addEventListener('touchstart', function() {
 				var top = el.scrollTop
 					, totalScroll = el.scrollHeight
-					, currentScroll = top + el.offsetHeight
+					, currentScroll = top + el.offsetHeight;
 				//If we're at the top or the bottom of the containers
 				//scroll, push up or down one pixel.
 				//
