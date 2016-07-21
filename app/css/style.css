@@ -932,7 +932,7 @@ hr {
 .qrcodebox .inner {
   width: 80%;
   height: 80%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
 }
 .qrcodebox .msg {
   position: absolute;
