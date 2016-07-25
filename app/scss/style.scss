@@ -750,10 +750,13 @@ hr{
     box-sizing: border-box;
   }
   .item-service{
-    padding: 0.6rem;
+    padding: 0.8rem 0.6rem;
     border-bottom: #b0b0b0 1px dotted;
     &:last-child{
       border-bottom: none;
+      .title{
+        margin-top: 0;
+      }
     }
   }
   .btn-booking{
