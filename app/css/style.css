@@ -820,17 +820,27 @@ hr {
 
 .vipservice .wrapper {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0;
   box-sizing: border-box;
 }
+.vipservice .item-service {
+  padding: 0.6rem;
+  border-bottom: #b0b0b0 1px dotted;
+}
+.vipservice .item-service:last-child {
+  border-bottom: none;
+}
 .vipservice .btn-booking {
-  margin: 0.6rem 0 1rem;
+  margin: 0.6rem 0 0;
 }
 .vipservice .btn-booking-last {
   margin-bottom: 0;
 }
 .vipservice .slider {
   margin: 0;
+}
+.vipservice .slider img {
+  display: block;
 }
 .vipservice .title {
   margin: 0.6rem 0;

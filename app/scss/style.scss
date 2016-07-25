@@ -746,17 +746,27 @@ hr{
 .vipservice{
   .wrapper{
     width: 100%;
-    padding: 0.6rem;
+    padding: 0;
     box-sizing: border-box;
   }
+  .item-service{
+    padding: 0.6rem;
+    border-bottom: #b0b0b0 1px dotted;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
   .btn-booking{
-    margin: 0.6rem 0 1rem;
+    margin: 0.6rem 0 0;
   }
   .btn-booking-last{
     margin-bottom:0;
   }
   .slider{
     margin: 0;
+    img{
+      display: block;
+    }
   }
   .title{
     margin: 0.6rem 0;
