@@ -2,6 +2,7 @@
 
     var custom = function(){
         this.selectedItem = 0;
+        this.step = 1;
     };
     custom.prototype = {
 
@@ -17,14 +18,21 @@
                 $('.lists-custom .item').removeClass('selected');
                 $(this).addClass('selected');
                 self.selectedItem = $(this).index();
+            });
 
+            $('.btn-back').on('click', function(){
+                $('.step').removeClass('current');
+                $('.first-step').addClass('current');
+                self.step = 1;
+                $('.btn-next').html('下一步');
+                $('.btn-back').addClass('hide');
             });
 
             // go next step, show details
-            var step = 1;
             $('.btn-next').on('touchstart',function(){
+
                 var i = self.selectedItem;
-                if(step == 1){
+                if(self.step == 1){
                     //go next step
                     $('.step').removeClass('current');
                     $('.second-step').addClass('current');
@@ -38,7 +46,8 @@
                         '</p>'+self.itemJson[i].desc+
                         '</div>';
                     $('.details-custom').html(detailsHtml);
-                    step++;
+                    $('.btn-back').removeClass('hide');
+                    self.step = 2;
                 }else{
                     // go online booking
                     Common.gotoBookingPage('定制服务',self.itemJson[i].name);

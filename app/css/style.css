@@ -1067,6 +1067,24 @@ hr {
   height: 100%;
   min-height: 10rem;
 }
+.page-custom .btn-back {
+  text-align: right;
+  font-size: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+.page-custom .btn-back:before {
+  content: "";
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-left: #242424 1px solid;
+  border-top: #242424 1px solid;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 .page-custom .title {
   margin: 0 0 0.4rem;
 }
