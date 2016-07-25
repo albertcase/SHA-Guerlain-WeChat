@@ -34,53 +34,53 @@
     <hr class="top-line"/>
     <h3 class="subtitle">点击欣赏娇兰之家</h3>
     <ul class="panorama-list">
-        <li class="item">
-            <div class="pimg">
-                <img src="/app/images/panorama/thumbnail-1.jpg" alt=""/>
-            </div>
-            <h4 class="name">曼妙茶室</h4>
-        </li>
-        <li class="item">
+        <li class="item" id="2">
             <div class="pimg">
                 <img src="/app/images/panorama/thumbnail-2.jpg" alt=""/>
             </div>
-            <h4 class="name">精致玄关</h4>
+            <h4 class="name">店铺一览</h4>
         </li>
-        <li class="item">
-            <div class="pimg">
-                <img src="/app/images/panorama/thumbnail-3.jpg" alt=""/>
-            </div>
-            <h4 class="name">冬景花园</h4>
-        </li>
-        <li class="item">
-            <div class="pimg">
-                <img src="/app/images/panorama/thumbnail-4.jpg" alt=""/>
-            </div>
-            <h4 class="name">水疗会所</h4>
-        </li>
-        <li class="item">
+        <li class="item" id="5">
             <div class="pimg">
                 <img src="/app/images/panorama/thumbnail-5.jpg" alt=""/>
             </div>
             <h4 class="name">美妆吧台</h4>
         </li>
-        <li class="item">
+        <li class="item" id="6">
             <div class="pimg">
                 <img src="/app/images/panorama/thumbnail-6.jpg" alt=""/>
             </div>
             <h4 class="name">香氛展厅</h4>
         </li>
-        <li class="item">
+        <li class="item" id="7">
             <div class="pimg">
                 <img src="/app/images/panorama/thumbnail-7.jpg" alt=""/>
             </div>
-            <h4 class="name">木质镶框沙龙</h4>
+            <h4 class="name">私人会客室</h4>
         </li>
-        <li class="item last">
+        <li class="item" id="8">
             <div class="pimg">
                 <img src="/app/images/panorama/thumbnail-8.jpg" alt=""/>
             </div>
-            <h4 class="name">饕餮美食餐厅</h4>
+            <h4 class="name">Le 68 餐厅</h4>
+        </li>
+        <li class="item" id="1">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-1.jpg" alt=""/>
+            </div>
+            <h4 class="name">曼妙茶室</h4>
+        </li>
+        <li class="item" id="4">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-4.jpg" alt=""/>
+            </div>
+            <h4 class="name">娇兰会所</h4>
+        </li>
+        <li class="item last" id="3">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-3.jpg" alt=""/>
+            </div>
+            <h4 class="name">冬景花园</h4>
         </li>
     </ul>
 </div>
@@ -88,8 +88,9 @@
 
     $(document).ready(function(){
         $('.panorama-list .pimg').on('click', function(){
-            var curIndex  = $(this).parent().index();
-            window.location.href = 'panorama.html?id='+(curIndex+1);
+            var curIndex  = Math.floor($(this).parent().attr('id'));
+            console.log(curIndex);
+            window.location.href = 'panorama.html?id='+(curIndex);
         });
     });
 
