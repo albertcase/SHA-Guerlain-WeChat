@@ -198,7 +198,8 @@ class Weixin{
 					$data = array();
             		for($i=0;$i<count($rs);$i++){
             			$meter = $this->getDistance($lat,$lng,$rs[$i]['lat'],$rs[$i]['lng']);
-            			$meters = "(距离约" . $meter ."米)";
+            			$meter = round($meter/1000, 1);
+            			$meters = "(距离您还有" . $meter ."千米)";
             			$datas[$meter] = array('title'=>$rs[$i]['name'].$meters,'description'=>$rs[$i]['name'],'picUrl'=>Yii::app()->request->hostInfo.'/'.Yii::app()->request->baseUrl.'/'.$rs[$i]['picUrl'],'url'=>Yii::app()->request->hostInfo.'/site/store?id='.$rs[$i]['id']); 
             		}
 					ksort($datas);
