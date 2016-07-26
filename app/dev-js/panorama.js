@@ -35,7 +35,7 @@
             var self = this;
 
             //load pop
-            Common.popupBox.add('<p class="pop-content">通过全景图感受娇兰香榭丽舍68号,门店、中层楼、水疗中心、Le 68,餐厅的视觉体验，探索娇兰之家的奥秘。</p>','panorama-pop');
+            Common.popupBox.add('<p class="pop-content">通过全景图感受娇兰香榭丽舍68号门店、中层楼、会所、Le 68餐厅的视觉体验，探索娇兰之家的奥秘。</p>','panorama-pop');
 
         },
         centerImg:function(ele){
