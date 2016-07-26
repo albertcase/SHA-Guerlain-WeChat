@@ -9,38 +9,56 @@
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="/app/css/style.css"/>
     <!-- endinject -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-80489545-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <!-- inject:js -->
     <script type="text/javascript" src="../js/lib/jquery.js"></script>
     <script type="text/javascript" src="../js/lib/jquery.slides.js"></script>
-    <script type="text/javascript" src="../js/rem.js"></script>
+    <script type="text/javascript" src="../js/rem.js?v=1"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/vip.js"></script>
     <!-- endinject -->
 </head>
-<body class="vipservice">
+<body class="vipservice spaservice">
 <div class="wrapper">
     <div class="slider" >
         <ul class="slideshow">
             <li class="item"><img src="/app/images/restaurant-1.jpg" alt=""/></li>
             <li class="item"><img src="/app/images/restaurant-2.jpg" alt=""/></li>
             <li class="item"><img src="/app/images/restaurant-3.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/restaurant-4.jpg" alt=""/></li>
+            <li class="item"><img src="/app/images/restaurant-5.jpg" alt=""/></li>
         </ul>
     </div>
     <p class="desc">
-        这是一家将味蕾与嗅觉完美平衡的餐厅。<br><br>
-
-        由米其林星级厨师Guy Martin主掌的Le 68餐厅位于香榭丽舍大街68号娇兰之家的地下一楼。餐厅提供精致可口的佳肴，传递着法国娇兰所秉承的品牌精神。<br><br>
-
-        Guy Martin还是餐厅的拥有者。同时，他与娇兰第五代调香师Thierry Wasser在各自擅长的领域共同探讨美食和香水的艺术，发现了美食与娇兰传奇性香氛之间的联系。<br><br>
-
-        餐厅营业时间：周一至周日 上午10点至晚间11点
-        <br><br>
-
-        预约电话：0145625410<br><br>
-        点击发现菜单
+        这是一家将味蕾与嗅觉达成平衡的餐厅。
     </p>
-    <div class="btn-booking" onclick="gotoBookingPage('Le 68餐厅','')">预约</div>
+    <p class="desc">
+        由米其林星级厨师Guy Martin主掌的Le 68餐厅位于香榭丽舍大街68号娇兰之家的地下一楼。餐厅提供精致可口的佳肴，传递着法国娇兰所秉承的品牌精神。
+    </p>
+    <p class="desc">
+        Guy Martin还是Le Grand Véfour餐厅的拥有者。同时，他与娇兰第五代调香师Thierry Wasser在各自擅长的领域共同探讨美食和香水的艺术，发现美食与娇兰传奇性香氛之间的联系。
+    </p>
+    <p class="desc">
+        餐厅营业时间：周一至周日 10:00 - 23:00
+    </p>
+    <p class="desc">
+        预约电话：0145625410
+    </p>
+    <p class="desc desc-tt">
+        <a href="http://www.le68guymartin.com/en/les-instants-gourmands/">
+            点击获取下午茶菜单
+        </a>
+    </p>
+    <div class="btn-booking btn-booking-last" onclick="Common.gotoBookingPage('Le 68餐厅','')">预约</div>
 </div>
 </body>
 </html>

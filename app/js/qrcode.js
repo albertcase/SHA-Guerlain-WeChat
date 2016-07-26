@@ -1,17 +1,1 @@
-$(document).ready(function(){
-    $('.qrshow').on('touchstart', function(){
-        if($(this).hasClass('qrcode-1')){
-            var pophtml = $(this).find('.qrcode').html()+'<div class="qrdes">扫描或长按二维码<br>关注法国娇兰官方微博</div>';
-            Common.qrcodeBox.add(pophtml);
-        }else{
-            var pophtml = $(this).find('.qrcode').html()+'<div class="qrdes">扫描或长按二维码<br>前往法国娇兰官方商城</div>';
-            Common.qrcodeBox.add(pophtml);
-        }
-
-    });
-
-    $('body').on('touchstart','.btn-close', function(){
-        $(this).parent().parent().remove();
-    });
-
-});
+$(document).ready(function(){var e=[{img:"/app/images/qrcode-3.png",des:"扫描或长按二维码<br>前往法国娇兰官方公众号"},{img:"/app/images/qrcode-2.png",des:"扫描或长按二维码<br>前往法国娇兰官方商城"},{img:"/app/images/qrcode-1.png",des:"扫描或长按二维码<br>关注法国娇兰官方微博"}];$(".qrshow .qrcode").on("touchstart",function(){var d=$(this).parent().index(),o='<div class="myimg"><img src="'+e[d].img+'"></div><div class="qrdes">'+e[d].des+"</div>";Common.qrcodeBox.add(o)}),$("body").on("touchstart",".btn-close",function(){$(this).parent().parent().remove()})});

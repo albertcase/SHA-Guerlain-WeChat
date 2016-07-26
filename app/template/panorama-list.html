@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>娇兰香街68号</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" >
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- inject:css -->
+    <link rel="stylesheet" type="text/css" href="/app/css/style.css"/>
+    <!-- endinject -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80489545-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- inject:js -->
+    <script type="text/javascript" src="../js/lib/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/rem.js?v=1"></script>
+
+    <!-- endinject -->
+</head>
+<div class=""></div>
+<body class="page-panorama">
+<div class="wrapper">
+    <h2 class="title">
+        魅力视角
+    </h2>
+    <hr class="top-line"/>
+    <h3 class="subtitle">点击欣赏娇兰之家</h3>
+    <ul class="panorama-list">
+        <li class="item" id="2">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-2.jpg" alt=""/>
+            </div>
+            <h4 class="name">店铺一览</h4>
+        </li>
+        <li class="item" id="5">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-5.jpg" alt=""/>
+            </div>
+            <h4 class="name">美妆吧台</h4>
+        </li>
+        <li class="item" id="6">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-6.jpg" alt=""/>
+            </div>
+            <h4 class="name">香氛展厅</h4>
+        </li>
+        <li class="item" id="7">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-7.jpg" alt=""/>
+            </div>
+            <h4 class="name">私人会客室</h4>
+        </li>
+        <li class="item" id="8">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-8.jpg" alt=""/>
+            </div>
+            <h4 class="name">Le 68 餐厅</h4>
+        </li>
+        <li class="item" id="1">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-1.jpg" alt=""/>
+            </div>
+            <h4 class="name">曼妙茶室</h4>
+        </li>
+        <li class="item" id="4">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-4.jpg" alt=""/>
+            </div>
+            <h4 class="name">娇兰会所</h4>
+        </li>
+        <li class="item last" id="3">
+            <div class="pimg">
+                <img src="/app/images/panorama/thumbnail-3.jpg" alt=""/>
+            </div>
+            <h4 class="name">冬景花园</h4>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.panorama-list .pimg').on('click', function(){
+            var curIndex  = Math.floor($(this).parent().attr('id'));
+            console.log(curIndex);
+            window.location.href = 'panorama.html?id='+(curIndex);
+        });
+    });
+
+</script>
+
+</body>
+</html>

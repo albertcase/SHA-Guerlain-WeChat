@@ -9,21 +9,69 @@
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="/app/css/style.css"/>
     <!-- endinject -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-80489545-1', 'auto');
+        ga('send', 'pageview');
+
+//        var timeStamp = new;
+
+    </script>
     <!-- inject:js -->
-    <!--<script type="text/javascript" src="../js/lib/zepto.min.js"></script>-->
-    <!--<script type="text/javascript" src="../js/lib/pre-loader.js"></script>-->
-    <!--<script type="text/javascript" src="../js/lib/shake.js"></script>-->
-    <!--<script type="text/javascript" src="../js/rem.js"></script>-->
-    <!--<script type="text/javascript" src="../js/common.js"></script>-->
-    <!--<script type="text/javascript" src="../js/api.js"></script>-->
-    <!--<script type="text/javascript" src="../js/controller.js"></script>-->
+    <script type="text/javascript" src="../js/lib/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/rem.js?v=1"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/api.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
 
     <!-- endinject -->
 </head>
-<body>
+<body class="page-custom">
 <div class="wrapper">
-test
+    <div class="btn-back hide">
+        返回
+    </div>
+    <h2 class="title">
+        尊享服务－量身定制
+    </h2>
+    <hr class="top-line"/>
+    <div class="switch-content">
+        <div class="step first-step current">
+            <ul class="lists-custom">
+                <li class="item item-1 selected">
+                    <h4>丝带配选</h4>
+                    <div class="c-img">
+                        <img src="/app/images/item-1.png" alt=""/>
+                    </div>
+                </li>
+                <li class="item">
+                    <h4>刻字服务</h4>
+                    <div class="c-img">
+                        <img src="/app/images/item-2.png" alt=""/>
+                    </div>
+                </li>
+            </ul>
+            <p class="tips">选择您需要的服务</p>
+        </div>
+        <div class="step second-step">
+            <div class="details-custom">
+                <div class="c-img">
+                    <img src="/app/images/item-1.png" alt=""/>
+                </div>
+                <div class="c-desc">
+                    <h4>丝带配选</h4>
+                    <p class="desc">
+                        法国娇兰与香水之间的故事是特别的。为了尽情展现这个亲密且珍贵的关系，法国娇兰将您的姓名或者缩写字母刻在香水瓶身，赋予它独特的气质。除了刻字服务，优雅的巴黎女人还会选择在香水瓶颈位置系上自己喜爱的罗缎丝带，多种颜色可供选择。这些珍贵定制的丝带是通过来自吕内维尔优秀的工匠手工制成，他们继承了传统技艺，同时结合杰出的专业知识和高级时装般工艺。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn btn-next">下一步</div>
 </div>
 </body>
 </html>
