@@ -174,13 +174,7 @@
                 Common.addClass(inputMobile.parentElement,'error');
                 validate = false;
             }else{
-                var reg=/^1\d{10}$/;
-                if(!(reg.test(inputMobile.value))){
-                    validate = false;
-                    Common.addClass(inputMobile.parentElement,'error');
-                }else{
-                    Common.removeClass(inputMobile.parentElement,'error');
-                }
+                Common.removeClass(inputMobile.parentElement,'error');
             }
 
             if(!inputEmail.value){
