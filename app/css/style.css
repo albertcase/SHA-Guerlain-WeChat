@@ -1195,7 +1195,28 @@ hr {
   -o-transform: translate(0%, -50%);
   transform: translate(0%, -50%);
   width: 2.28rem;
-  height: 6.08rem;
+  height: 7rem;
+}
+.page-custom .details-custom .c-img .price {
+  position: relative;
+  font-size: 0.24rem;
+  color: #000;
+  text-align: center;
+}
+.page-custom .details-custom .c-img .price:after, .page-custom .details-custom .c-img .price:before {
+  content: '';
+  display: inline-block;
+  width: 0.3rem;
+  height: 1px;
+  background: #b3b3b3;
+  -webkit-transform: translateY(-0.08rem);
+  -moz-transform: translateY(-0.08rem);
+  -ms-transform: translateY(-0.08rem);
+  -o-transform: translateY(-0.08rem);
+  transform: translateY(-0.08rem);
+}
+.page-custom .details-custom .c-img .price span {
+  padding: 0 0.3rem;
 }
 .page-custom .details-custom .c-desc {
   padding-left: 2.8rem;
