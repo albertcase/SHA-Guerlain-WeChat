@@ -68,6 +68,7 @@ var starProducts = [
     productintro:'这款被大众所熟知的蜂姿瓶是在1853年为欧仁妮皇后的专属香水“帝王之水”而生。瓶身覆盖着69只造型华丽的帝王蜂图案，象征着皇室的权威。在2013年，蜂姿瓶迎来了160岁的生日。为了庆贺蜂姿瓶的周年庆，娇兰之家推出了香水定制和瓶身雕刻的特别服务。根据客人喜好，呈现散发不同香味和贴有个性化瓶身标签的蜂姿瓶香水。',
     productimgsrc:'/app/images/speicialproduct/product-7.jpg',
     thumbnail:'/app/images/speicialproduct/product-7.jpg',
+    price:'140欧元 — 290欧元'
   },
   {
     id:8,
