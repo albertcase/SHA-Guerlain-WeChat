@@ -1,7 +1,7 @@
 var starProducts = [
   {
     id:1,
-    productname:'翼之蜂华',
+    productname:'水晶蜜蜂',
     productdes:'用巴卡拉水晶制成的翼之蜂华——一件真正意义上的杰作。',
     productintro:'这款带翼轮廓的香水宝石——翼之蜂华，采用巴卡拉水晶制作而成。瓶身如同钻石表面，闪耀无限光芒，成为动人杰作。',
     productimgsrc:'/app/images/starproduct/product-1.jpg',

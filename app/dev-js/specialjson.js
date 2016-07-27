@@ -51,7 +51,7 @@ var starProducts = [
   },
   {
     id:6,
-    productname:'色彩系列',
+    productname:'5色系列',
     class:'fullwidth withpadding',
     productdes:'经典的四叶形香水瓶以五种不同的颜色呈现，代表着娇兰五种香氛味道，象征了五种不同珍贵宝石。',
     productintro:'四叶形香水瓶由Jacques Guerlain先生在1908年设计而成，香水瓶是以其顶部形状命名。在5色系列中，四叶形香水瓶以不同的颜色呈现，象征五种不同的珍贵宝石，每种颜色限量120瓶。<br><br>蓝色：蓝宝石般香水瓶中的“午夜巴黎”香水，向灵感来源“蓝调时光”香水致敬。<br><br>绿色：象征翡翠的香水瓶中装有“皇家檀香”香水，伴有神秘的东方木质气息。<br><br>琥珀色：仿若琥珀的香水瓶中装有“香草甜酒”香水，伴随着温暖又辛辣的香草味道。<br><br>紫色：紫水晶般香水瓶中装有“68号”香水 ，从中可以寻见花香。',
@@ -63,7 +63,7 @@ var starProducts = [
   {
     id:7,
     class:'ctnclose fullwidth',
-    productname:'定制蜜蜂瓶',
+    productname:'定制蜂姿瓶',
     productdes:'法国娇兰经典的蜂姿瓶可以根据您的要求定制，并装以您选择的心爱香水。 ',
     productintro:'这款被大众所熟知的蜂姿瓶是在1853年为欧仁妮皇后的专属香水“帝王之水”而生。瓶身覆盖着69只造型华丽的帝王蜂图案，象征着皇室的权威。在2013年，蜂姿瓶迎来了160岁的生日。为了庆贺蜂姿瓶的周年庆，娇兰之家推出了香水定制和瓶身雕刻的特别服务。根据客人喜好，呈现散发不同香味和贴有个性化瓶身标签的蜂姿瓶香水。',
     productimgsrc:'/app/images/speicialproduct/product-7.jpg',
@@ -73,7 +73,7 @@ var starProducts = [
   {
     id:8,
     class:'fullwidth',
-    productname:'执子之手',
+    productname:'执子之手系列',
     productdes:'在这个特殊的日子中，用这个充满幸运的香水打造专属你的迷人新娘妆。',
     productintro:'娇兰之家在新娘对亲爱的他说"Yes"的时刻，献上意外的惊喜。洋溢着愉悦感的鲜花，盛载着橙花枝叶，代表着幸运。纯净的白色花朵在瓶身蔓延，就像新娘的花束，这就是香氛名字的由来。<br><br>在这幸福香氛的环绕下，娇兰香榭丽舍68号的专业化妆师将为您打造美丽新娘妆，让您在拍摄婚纱照或是婚礼上光艳动人。您可以光临店铺获取更多信息。',
     productimgsrc:'/app/images/speicialproduct/product-8.jpg',
