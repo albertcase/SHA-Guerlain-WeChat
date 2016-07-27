@@ -345,7 +345,7 @@
                     },function(data){
                         if(data.status == 1){
                             //alert('提交成功');
-                            Common.alertBox.add('提交成功');
+                            Common.alertBox.add('当您成功提交预订表格后，将会收到确认信息。娇兰之家随后会通过电话或者邮件直接联系您。');
                         }else{
                             Common.alertBox.add(data.msg);
                         }
