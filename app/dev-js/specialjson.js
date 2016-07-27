@@ -27,6 +27,7 @@ var starProducts = [
     productintro:'娇兰蜂蜜采自娇兰位于法国奥尔凡地区的香氛生产地，是娇兰之家独家出售的产品。法国娇兰不错过一切向品牌最初的象征——蜜蜂致敬的机会。',
     productimgsrc:'/app/images/speicialproduct/product-3.jpg',
     thumbnail:'/app/images/speicialproduct/product-3.jpg',
+    price:'15 欧元',
   },
   {
     id:4,
@@ -51,6 +52,7 @@ var starProducts = [
   {
     id:6,
     productname:'色彩系列',
+    class:'fullwidth withpadding',
     productdes:'经典的四叶形香水瓶以五种不同的颜色呈现，代表着娇兰五种香氛味道，象征了五种不同珍贵宝石。',
     productintro:'四叶形香水瓶由Jacques Guerlain先生在1908年设计而成，香水瓶是以其顶部形状命名。在5色系列中，四叶形香水瓶以不同的颜色呈现，象征五种不同的珍贵宝石，每种颜色限量120瓶。<br><br>蓝色：蓝宝石般香水瓶中的“午夜巴黎”香水，向灵感来源“蓝调时光”香水致敬。<br><br>绿色：象征翡翠的香水瓶中装有“皇家檀香”香水，伴有神秘的东方木质气息。<br><br>琥珀色：仿若琥珀的香水瓶中装有“香草甜酒”香水，伴随着温暖又辛辣的香草味道。<br><br>紫色：紫水晶般香水瓶中装有“68号”香水 ，从中可以寻见花香。',
     productimgsrc:'/app/images/speicialproduct/product-6-1.jpg',
