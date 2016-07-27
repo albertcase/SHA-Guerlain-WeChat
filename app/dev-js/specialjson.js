@@ -6,7 +6,7 @@ var starProducts = [
     productintro:'诱人的、神秘的、奇妙的，这些词汇都不足以形容这款娇兰之家的独特香氛。香氛经由法国娇兰经典四叶形瓶身呈现在世人面前，瓶颈上卓越的压花技艺和娇兰高级工匠师的精湛技艺向品牌精神致敬。“勿忘我”香氛连接着法国娇兰的过去和未来，向所有来到香榭丽舍大街68号的贵宾发声：勿忘我，勿忘这个美丽的地方。 ',
     productimgsrc:'/app/images/speicialproduct/product-1.png',
     thumbnail:'/app/images/speicialproduct/product-1.png',
-    price:'500,00 欧元',
+    price:'500 欧元',
     volume:'125 ML',
   },
   {
@@ -17,7 +17,7 @@ var starProducts = [
     productintro:'娇兰之家拥有七种独家茶点，一千零一夜，小黑裙，蓝调时光，满堂红，橙花伊甸园，御廷兰花茶和柳儿。邀请您品味这一悠久茶品的同时，请与法国娇兰传奇香氛一起，传递协调的感官体验。<br><br>“一千零一夜”茶：茶香浓烈性感，混合来自中国的绿茶和斯里兰卡的红茶，伴随香草，小豆蔻，肉桂，薰衣草和佛手柑的香气，向这款东方香水致敬。 <br><br>“小黑裙”红茶：充满果味和辛香的顽皮气息，选自印度高纬度地带的红茶，夹着红莓和覆盆子的果香。个性鲜明的红茶极为浓烈，如同充满活力的巴黎女性，身穿优雅的黑色小礼服，恣意地回旋。<br><br>“满堂红”红茶：产自中国云南地区的红茶，品质非常出色，它的浓度和香气让人联想到皮革、蜂蜜和略带烟熏的香调。<br><br>“橙花伊甸园”白茶：来自中国福建的白茶。它的香味使人联想到湿润的柳条，蜂蜜和花香。这款精致的茶品，充满清新的气息。<br><br>蓝调时光茶：来自台湾的乌龙茶，茶香美味，蕴含栗子、蜂蜜和白花香，适合黄昏饮用，有舒缓之功效。<br><br>御廷兰花茶：来自中国的一种红茶，其蕴含兰花香，从而达成了花香和茶香的平衡。<br><br>“柳儿”茶：臻选花香浓郁的中国茉莉茶。茶味与花香的感官融合是带给爱人和女性美妙的礼物。',
     productimgsrc:'/app/images/speicialproduct/big-product-2.jpg',
     thumbnail:'/app/images/speicialproduct/product-2.jpg',
-    price:'35,00 欧元',
+    price:'35 欧元',
     volume:'80克',
   },
   {
@@ -46,7 +46,7 @@ var starProducts = [
     productintro:'法国娇兰在香榭丽舍大街68号出售丝绸方巾系列（90×90cm），讲述了有关其历史和传奇香水的故事。无论作为围巾的搭配还是臀线的改善，方巾总能提升气质，并成为凸显法国娇兰香氛的多用配饰。',
     productimgsrc:'/app/images/speicialproduct/product-5.jpg',
     thumbnail:'/app/images/speicialproduct/product-5.jpg',
-    price:'330.00 欧元'
+    price:'330 欧元'
   },
   {
     id:6,
@@ -55,7 +55,7 @@ var starProducts = [
     productintro:'四叶形香水瓶由Jacques Guerlain先生在1908年设计而成，香水瓶是以其顶部形状命名。在5色系列中，四叶形香水瓶以不同的颜色呈现，象征五种不同的珍贵宝石，每种颜色限量120瓶。<br><br>蓝色：蓝宝石般香水瓶中的“午夜巴黎”香水，向灵感来源“蓝调时光”香水致敬。<br><br>绿色：象征翡翠的香水瓶中装有“皇家檀香”香水，伴有神秘的东方木质气息。<br><br>琥珀色：仿若琥珀的香水瓶中装有“香草甜酒”香水，伴随着温暖又辛辣的香草味道。<br><br>紫色：紫水晶般香水瓶中装有“68号”香水 ，从中可以寻见花香。',
     productimgsrc:'/app/images/speicialproduct/product-6-1.jpg',
     thumbnail:'/app/images/speicialproduct/product-6-1.jpg',
-    price:'650.00 欧元',
+    price:'650 欧元',
     volume:'125 ML'
   },
   {
@@ -75,7 +75,7 @@ var starProducts = [
     productintro:'娇兰之家在新娘对亲爱的他说"Yes"的时刻，献上意外的惊喜。洋溢着愉悦感的鲜花，盛载着橙花枝叶，代表着幸运。纯净的白色花朵在瓶身蔓延，就像新娘的花束，这就是香氛名字的由来。<br><br>在这幸福香氛的环绕下，娇兰香榭丽舍68号的专业化妆师将为您打造美丽新娘妆，让您在拍摄婚纱照或是婚礼上光艳动人。您可以光临店铺获取更多信息。',
     productimgsrc:'/app/images/speicialproduct/product-8.jpg',
     thumbnail:'/app/images/speicialproduct/product-8-1.jpg',
-    price:'750,00 欧元',
+    price:'750 欧元',
     volume:'125 ML'
   }
 ];
