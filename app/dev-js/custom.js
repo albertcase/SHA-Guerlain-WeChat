@@ -39,6 +39,7 @@
                     $(this).html('预约服务');
                     var detailsHtml = '<div class="c-img">'+
                         '<img src="'+self.itemJson[i].img+'" alt=""/>'+
+                        '<div class="price"><span>价格店洽</span></div>'+
                         '</div>'+
                         '<div class="c-desc">'+
                         '<h4>'+self.itemJson[i].name+'</h4>'+

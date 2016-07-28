@@ -18,7 +18,6 @@
             var servicefirst = Common.queryString().servicefirst,
                 servicesecond = Common.queryString().servicesecond;
             self.updateService(servicefirst,servicesecond);
-            //self.initService(1,5);
 
         },
         //bind all element event,such as click, touchstart
@@ -149,10 +148,6 @@
                 inputName = document.getElementById('input-name'),
                 inputMobile = document.getElementById('input-mobile'),
                 inputEmail = document.getElementById('input-email');
-                //inputSelect1 = document.getElementById('input-select-1'),
-                //inputSelect2 = document.getElementById('input-select-2'),
-                //inputSelect3 = document.getElementById('input-select-3'),
-                //inputBookingDate = document.getElementById('input-booking-date');
 
             if(!inputCallname.value){
                 Common.addClass(inputCallname.parentElement,'error');
@@ -179,13 +174,7 @@
                 Common.addClass(inputMobile.parentElement,'error');
                 validate = false;
             }else{
-                var reg=/^1\d{10}$/;
-                if(!(reg.test(inputMobile.value))){
-                    validate = false;
-                    Common.addClass(inputMobile.parentElement,'error');
-                }else{
-                    Common.removeClass(inputMobile.parentElement,'error');
-                }
+                Common.removeClass(inputMobile.parentElement,'error');
             }
 
             if(!inputEmail.value){
@@ -194,35 +183,6 @@
             }else{
                 Common.removeClass(inputEmail.parentElement,'error');
             }
-
-
-            //if(!inputSelect1.value){
-            //    Common.addClass(inputSelect1.parentElement,'error');
-            //    validate = false;
-            //}else{
-            //    Common.removeClass(inputSelect1.parentElement,'error');
-            //}
-
-            //if(!inputSelect2.value){
-            //    Common.addClass(inputSelect2.parentElement,'error');
-            //    validate = false;
-            //}else{
-            //    Common.removeClass(inputSelect2.parentElement,'error');
-            //}
-            //
-            //if(!inputSelect3.value){
-            //    Common.addClass(inputSelect3.parentElement,'error');
-            //    validate = false;
-            //}else{
-            //    Common.removeClass(inputSelect3.parentElement,'error');
-            //}
-
-            //if(!inputBookingDate.value){
-            //    Common.addClass(inputBookingDate.parentElement,'error');
-            //    validate = false;
-            //}else{
-            //    Common.removeClass(inputBookingDate.parentElement,'error');
-            //}
 
 
             if(validate){
@@ -299,7 +259,8 @@
                 selectBox_1 = $('.input-box-select-1'),
                 selectBox_2 = $('.input-box-select-2'),
                 selectBox_3 = $('.input-box-select-3'),
-                selectWrapEle = $('.panel-select');
+                selectWrapEle = $('.panel-select'),
+                timeLimit = $('.time-limit');
             var serviceJson = Api.serviceJson;
             var optionHtml = '';
             //selectEle_1.val(serviceJson[index].title);
@@ -309,6 +270,13 @@
                 optionHtml =  optionHtml+'<option value="'+serviceJson[i].title+'">'+serviceJson[i].title+'</option>';
             }
             selectEle_1.html(optionHtml).val(serviceJson[index].title);
+
+            //load time
+            if(serviceJson[index].time){
+                timeLimit.html('<p>'+serviceJson[index].time+'</p>');
+            }else{
+                timeLimit.html('');
+            }
 
             /*load second*/
             var secondSelectHtml = '';
@@ -369,9 +337,9 @@
                         date:inputBookingDateVal,
                         comment:inputAdviceVal
                     },function(data){
-                        if(data.status == 1){
+                        if(data.code == 1){
                             //alert('提交成功');
-                            Common.alertBox.add('提交成功');
+                            Common.alertBox.add('娇兰之家随后会通过电话或者邮件直接联系您。');
                         }else{
                             Common.alertBox.add(data.msg);
                         }
@@ -381,46 +349,6 @@
                 };
             });
         },
-        //倒计时
-        countDown:function(){
-            var countdownTime = 59,
-                btnGetKeycode = document.getElementsByClassName('btn-getkeycode')[0];
-            var countdownline = setInterval(function(){
-                countdownTime--;
-                Common.addClass(btnGetKeycode,'countdown');
-                btnGetKeycode.innerHTML = countdownTime;
-                if(countdownTime<=0){
-                    clearInterval(countdownline);
-                    Common.removeClass(btnGetKeycode,'countdown');
-                    btnGetKeycode.innerHTML = '';
-                }
-            },1000);
-
-        },
-        /*
-        * get redpacket
-        * */
-        getRedpacket:function(){
-            Api.getRedpacket({},function(data){
-                if(data.status == 1){
-                    Common.removeClass(document.getElementsByClassName('qrcode-pop')[0],'hide');
-                }else{
-                    Common.alertBox.add(data.msg);
-                }
-            });
-        },
-
-        //
-
-        compareCommand:function(commandline){
-            /*
-            * If the input command is right, then upload the command to server.
-            * Show different message according input command.
-            * The commandline is input value
-            * */
-            var self = this;
-        },
-
 
     };
 
