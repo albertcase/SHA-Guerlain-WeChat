@@ -122,18 +122,20 @@ class Weixin{
 							if ($qid) {
 								$sql = "select * from same_wmenu_event where qid = ". $qid;
 								$rs = $this->_db->createCommand($sql)->select()->queryAll();
-								if($rs[0]['msgtype']=='text'){
-			                		return $this->sendMsgForText($fromUsername, $toUsername, $time, "text", $rs[0]['content']);
-			                	}else if($rs[0]['msgtype']=='news'){
-			                		$data = array();
+								if ($rs) {
+									if($rs[0]['msgtype']=='text'){
+				                		return $this->sendMsgForText($fromUsername, $toUsername, $time, "text", $rs[0]['content']);
+				                	}else if($rs[0]['msgtype']=='news'){
+				                		$data = array();
 
-			                		for($i=0;$i<count($rs);$i++){
-			                			if($rs[$i]['msgtype']!='news'){
-			                				continue;
-			                			}
-			                			$data[] = array('title'=>$rs[$i]['title'],'description'=>$rs[$i]['description'],'picUrl'=>Yii::app()->request->hostInfo.'/'.Yii::app()->request->baseUrl.'/'.$rs[$i]['picUrl'],'url'=>$rs[$i]['url']); 
-			                		}
-			                		return $this->sendMsgForNews($fromUsername, $toUsername, $time, $data);
+				                		for($i=0;$i<count($rs);$i++){
+				                			if($rs[$i]['msgtype']!='news'){
+				                				continue;
+				                			}
+				                			$data[] = array('title'=>$rs[$i]['title'],'description'=>$rs[$i]['description'],'picUrl'=>Yii::app()->request->hostInfo.'/'.Yii::app()->request->baseUrl.'/'.$rs[$i]['picUrl'],'url'=>$rs[$i]['url']); 
+				                		}
+				                		return $this->sendMsgForNews($fromUsername, $toUsername, $time, $data);
+				                	}
 			                	}
 							}
 						}
@@ -156,19 +158,21 @@ class Weixin{
 							if ($qid) {
 								$sql = "select * from same_wmenu_event where qid = ". $qid;
 								$rs = $this->_db->createCommand($sql)->select()->queryAll();
-								if($rs[0]['msgtype']=='text'){
-			                		return $this->sendMsgForText($fromUsername, $toUsername, $time, "text", $rs[0]['content']);
-			                	}else if($rs[0]['msgtype']=='news'){
-			                		$data = array();
+								if ($rs) {
+									if($rs[0]['msgtype']=='text'){
+				                		return $this->sendMsgForText($fromUsername, $toUsername, $time, "text", $rs[0]['content']);
+				                	}else if($rs[0]['msgtype']=='news'){
+				                		$data = array();
 
-			                		for($i=0;$i<count($rs);$i++){
-			                			if($rs[$i]['msgtype']!='news'){
-			                				continue;
-			                			}
-			                			$data[] = array('title'=>$rs[$i]['title'],'description'=>$rs[$i]['description'],'picUrl'=>Yii::app()->request->hostInfo.'/'.Yii::app()->request->baseUrl.'/'.$rs[$i]['picUrl'],'url'=>$rs[$i]['url']); 
-			                		}
-			                		return $this->sendMsgForNews($fromUsername, $toUsername, $time, $data);
-			                	}
+				                		for($i=0;$i<count($rs);$i++){
+				                			if($rs[$i]['msgtype']!='news'){
+				                				continue;
+				                			}
+				                			$data[] = array('title'=>$rs[$i]['title'],'description'=>$rs[$i]['description'],'picUrl'=>Yii::app()->request->hostInfo.'/'.Yii::app()->request->baseUrl.'/'.$rs[$i]['picUrl'],'url'=>$rs[$i]['url']); 
+				                		}
+				                		return $this->sendMsgForNews($fromUsername, $toUsername, $time, $data);
+				                	}
+				                }
 							}
 						}
 						$this->systemLog($postStr,$fromUsername,$msgType,$event,$eventKey);
