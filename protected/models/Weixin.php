@@ -120,7 +120,7 @@ class Weixin{
 							$sql = "select id from same_qrcode where ticket = '".$ticket."'";
 							$qid = $this->_db->createCommand($sql)->select()->queryScalar();
 							if ($qid) {
-								$sql = "select * from same_wmenu_event where qid = ". $qid;
+								$sql = "select * from same_wmenu_event where event='qrcode_sub' and qid = ". $qid;
 								$rs = $this->_db->createCommand($sql)->select()->queryAll();
 								if ($rs) {
 									if($rs[0]['msgtype']=='text'){
@@ -156,7 +156,7 @@ class Weixin{
 							$sql = "select id from same_qrcode where ticket = '".$ticket."'";
 							$qid = $this->_db->createCommand($sql)->select()->queryScalar();
 							if ($qid) {
-								$sql = "select * from same_wmenu_event where qid = ". $qid;
+								$sql = "select * from same_wmenu_event where event='qrcode_scan' and qid = ". $qid;
 								$rs = $this->_db->createCommand($sql)->select()->queryAll();
 								if ($rs) {
 									if($rs[0]['msgtype']=='text'){

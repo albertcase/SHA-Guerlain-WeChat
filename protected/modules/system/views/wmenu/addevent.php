@@ -21,7 +21,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 						<input class="easyui-combobox" name="SystemWmenuAddEventEvent" id="SystemWmenuAddEventEvent" data-options='  
 								valueField: "id",
 								textField: "name",
-								data: [{id:"subscribe",name:"关注"},{id:"click",name:"点击"},{id:"text",name:"接收文本"},{id:"qrcode",name:"二维码"}],
+								data: [{id:"subscribe",name:"关注"},{id:"click",name:"点击"},{id:"text",name:"接收文本"},{id:"qrcode_sub",name:"二维码关注"},{id:"qrcode_scan",name:"二维码扫描"}],
 								onSelect: function(record){
 									if(record.id=="click"){
 										$("#SystemWmenuAddEventKeywordArea").hide();
@@ -31,7 +31,11 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 										$("#SystemWmenuAddEventKeywordArea").show();
 										$("#SystemWmenuAddEventMenuList").hide();
 										$("#SystemWmenuAddEventQrcodeList").hide();
-									}else if(record.id=="qrcode"){
+									}else if(record.id=="qrcode_sub"){
+										$("#SystemWmenuAddEventKeywordArea").hide();
+										$("#SystemWmenuAddEventMenuList").hide();
+										$("#SystemWmenuAddEventQrcodeList").show();
+									}else if(record.id=="qrcode_scan"){
 										$("#SystemWmenuAddEventKeywordArea").hide();
 										$("#SystemWmenuAddEventMenuList").hide();
 										$("#SystemWmenuAddEventQrcodeList").show();

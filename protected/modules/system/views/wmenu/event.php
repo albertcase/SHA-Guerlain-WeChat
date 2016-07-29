@@ -40,8 +40,10 @@
 									return "点击";
 								}else if(value=="text"){
 									return "接收文本";
-								}else if(value=="qrcode"){
-									return "二维码";
+								}else if(value=="qrcode_sub"){
+									return "二维码关注";
+								}else if(value=="qrcode_scan"){
+									return "二维码扫描";
 								}
 						}'>事件</th>
 			<th data-options='field:"keyword",width:100,formatter:function(value,row){
