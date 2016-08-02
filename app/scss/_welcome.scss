@@ -1,0 +1,72 @@
+.page-welcome{
+  .bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    @include size(100%,100%);
+    overflow: hidden;
+    border:#000 2px solid;
+    box-sizing: border-box;
+    .black-bg{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include size(100%,30vh);
+      background: #000;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -20vh;
+        left: 0;
+        @include size(120vw,40vh);
+        @include transform(rotate(-15deg));
+        background: #000;
+      }
+    }
+  }
+  .wrapper{
+    position: absolute;
+    left: 7vw;
+    top: 0;
+    z-index: 2;
+    padding: 0;
+    @include size(86vw,100%);
+    min-height: 10rem;
+  }
+  .logo{
+    margin: 0.5rem auto 0;
+  }
+  .title{
+    position: relative;
+    margin: 0.3rem auto 0.2rem;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      @include size(100%,1px);
+      left: 0;
+      top: 50%;
+      z-index: 1;
+      background: #000;
+    }
+    span{
+      position: relative;
+      z-index: 2;
+      font-size: 0.4rem;
+      background: #fff;
+      padding: 0 0.1rem;
+    }
+  }
+  .welcome-discount{
+    background: url("/app/images/rectangle-bg.jpg") repeat;
+    color: #fff;
+    border: #fff 1px solid;
+    padding: 0.1rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    font-size: 0.26rem;
+  }
+}

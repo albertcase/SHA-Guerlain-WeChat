@@ -1313,3 +1313,83 @@ hr {
 #__bs_notify__ {
   display: none !important;
 }
+
+.page-welcome .bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: #000 2px solid;
+  box-sizing: border-box;
+}
+.page-welcome .bg .black-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: #000;
+}
+.page-welcome .bg .black-bg:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20vh;
+  left: 0;
+  width: 120vw;
+  height: 40vh;
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  background: #000;
+}
+.page-welcome .wrapper {
+  position: absolute;
+  left: 7vw;
+  top: 0;
+  z-index: 2;
+  padding: 0;
+  width: 86vw;
+  height: 100%;
+  min-height: 10rem;
+}
+.page-welcome .logo {
+  margin: 0.5rem auto 0;
+}
+.page-welcome .title {
+  position: relative;
+  margin: 0.3rem auto 0.2rem;
+}
+.page-welcome .title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  background: #000;
+}
+.page-welcome .title span {
+  position: relative;
+  z-index: 2;
+  font-size: 0.4rem;
+  background: #fff;
+  padding: 0 0.1rem;
+}
+.page-welcome .welcome-discount {
+  background: url("/app/images/rectangle-bg.jpg") repeat;
+  color: #fff;
+  border: #fff 1px solid;
+  padding: 0.1rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  font-size: 0.26rem;
+}
