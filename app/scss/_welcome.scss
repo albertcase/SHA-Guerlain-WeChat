@@ -41,29 +41,29 @@
   .title{
     position: relative;
     margin: 0.3rem auto 0.2rem;
-    &:after{
-      content: '';
-      display: block;
-      position: absolute;
-      @include size(100%,1px);
-      left: 0;
-      top: 50%;
-      z-index: 1;
-      background: #000;
-    }
-    span{
-      position: relative;
-      z-index: 2;
-      font-size: 0.4rem;
-      background: #fff;
-      padding: 0 0.1rem;
-    }
+    //&:after{
+    //  content: '';
+    //  display: block;
+    //  position: absolute;
+    //  @include size(100%,1px);
+    //  left: 0;
+    //  top: 50%;
+    //  z-index: 1;
+    //  background: #000;
+    //}
+    //span{
+    //  position: relative;
+    //  z-index: 2;
+    //  font-size: 0.4rem;
+    //  background: #fff;
+    //  padding: 0 0.1rem;
+    //}
   }
   .welcome-discount{
-    background: url("/app/images/rectangle-bg.jpg") repeat;
+    //background: url("/app/images/rectangle-bg.jpg") repeat;
     color: #fff;
-    border: #fff 1px solid;
-    padding: 0.1rem;
+    //border: #fff 1px solid;
+    //padding: 0.1rem;
     margin-top: 0.4rem;
     margin-bottom: 0.4rem;
     text-align: center;

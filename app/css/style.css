@@ -1365,29 +1365,8 @@ hr {
   position: relative;
   margin: 0.3rem auto 0.2rem;
 }
-.page-welcome .title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  top: 50%;
-  z-index: 1;
-  background: #000;
-}
-.page-welcome .title span {
-  position: relative;
-  z-index: 2;
-  font-size: 0.4rem;
-  background: #fff;
-  padding: 0 0.1rem;
-}
 .page-welcome .welcome-discount {
-  background: url("/app/images/rectangle-bg.jpg") repeat;
   color: #fff;
-  border: #fff 1px solid;
-  padding: 0.1rem;
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
   text-align: center;
