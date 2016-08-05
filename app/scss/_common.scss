@@ -1,0 +1,319 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "_mixins.scss";
+@import "_animate.scss";
+
+/*
+* common css
+*/
+body{
+  font:0.26rem/1.5 "Heiti",sans-serif;
+  background: #fff;
+  color: #000;
+  text-align: justify;
+}
+
+.wrapper{
+  width: 100%;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 1;
+  &.landscape{
+    background-size: 100%;
+  }
+}
+img{
+  width: 100%;
+}
+.show{
+  display: block !important;
+}
+.hide{
+  display: none !important;
+}
+.clearfix{
+  clear: both;
+  display: block;
+}
+.clearfix:after{
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.error {
+  select{
+    border: red 1px solid;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='tel']{
+    border: red 1px solid;
+  }
+}
+
+/*
+  button style
+*/
+button{
+  background: #000;
+  color: #fff;
+  font-size: 0.3rem;
+  border: none;
+  text-align: center;
+}
+.btn-close{
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+  @include size(0.6rem,0.6rem);
+  margin: 0rem auto 0rem;
+  &:after{
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    background: #c0a176;
+    @include transform(rotate(45deg));
+  }
+  &:before{
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    background: #c0a176;
+    @include transform(rotate(-45deg));
+  }
+
+}
+
+/*
+  css3 animate
+*/
+.animate{
+  animation-duration: 600ms;
+  -webkit-animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  -webkit-animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-fill-mode :both;
+  -webkit-animation-fill-mode :both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.fade{
+  animation-name: fade;
+  -webkit-animation-name: fade;
+}
+@-webkit-keyframes fade
+{
+  0%   {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes fade
+{
+  0%   {opacity:0;}
+  100% {opacity:1;}
+}
+.delay1{
+  animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+}
+.delay2{
+  animation-delay: 800ms;
+  -webkit-animation-delay: 800ms;
+}
+.delay3{
+  animation-delay: 1200ms;
+  -webkit-animation-delay: 1200ms;
+}
+.delay4{
+  animation-delay: 1600ms;
+  -webkit-animation-delay: 1600ms;
+}
+.delay5{
+  animation-delay: 2000ms;
+  -webkit-animation-delay: 2000ms;
+}
+/*
+form css
+*/
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+  border: #141414 1px solid;
+  padding: 0.2rem;
+  font-size: 0.32rem;
+}
+select{
+  border: #141414 1px solid;
+  padding: 0.2rem;
+  font-size: 0.32rem;
+}
+::-webkit-input-placeholder{
+  color: rgba(0,0,0,0.4);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0,0,0,0.4);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(0,0,0,0.4);
+}
+
+:-ms-input-placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background: transparent;
+  color: #efce92;
+}
+
+
+//for ajax loading
+.ajaxpop{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-right: 5px;
+  .loading{
+    position: absolute;
+    width: 2rem;
+    height: 1rem;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.1rem;
+    margin-top: -0.6rem;
+    line-height: 1rem;
+    background: rgba(0,0,0,0.8);
+    padding: 0.2rem;
+    @include vendor-prefix(border-radius,10px);
+    text-align: center;
+    color: #fff;
+  }
+  .icon-loading{
+    display: inline-block;
+    position: relative;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-right: 4px;
+    vertical-align: middle;
+    @include vendor-prefix(border-radius,100%);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    &:after{
+      content: '';
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px;
+      @include vendor-prefix(border-radius,100%);
+      border: 3px solid transparent;
+      border-top-color: #fff;
+      -webkit-animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@include keyframes(spin){
+  0%{
+    @include transform(rotate(0deg));
+  }
+  100%{
+    @include transform(rotate(360deg));
+  }
+}
+
+//for pop-up
+.popup{
+  position: absolute;
+  z-index: 101;
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+//for msgbox
+.msgbox{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  background: rgba(0,0,0,0.6);
+  .inner{
+    background: #fff;
+    border-radius: 1px;
+    color: #000;
+    font-size: 0.3rem;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 3rem;
+    @include transform(translate(-50%,-50%));
+  }
+  .msg{
+    padding: 0.4rem;
+  }
+  .btn-alert-ok{
+    padding: 0.1rem;
+  }
+
+
+}
+
+/*For custom page*/
+.logo{
+  @include size(3.88rem,0.83rem);
+  margin: 0.5rem auto;
+  padding: 0;
+}
+hr{
+  background: none;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  margin: 0.2rem auto;
+  border: none;
+  border-bottom: #000 1px dashed;
+}
+.title{
+  text-align: center;
+  font-size: 0.36rem;
+  margin: 0.4rem auto 0.4rem;
+}
+.subtitle{
+  font-size: 0.32rem;
+  margin: 0.2rem 0 0.2rem;
+}
