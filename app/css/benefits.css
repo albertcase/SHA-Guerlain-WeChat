@@ -1,3 +1,4 @@
+/*For benefits-page*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -441,4 +442,68 @@ hr {
 .subtitle {
   font-size: 0.32rem;
   margin: 0.2rem 0 0.2rem;
+}
+
+.btn-submit {
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+  font-size: 0.3rem;
+  background: #000;
+  color: #fff;
+  margin: 0.3rem auto;
+}
+
+.wrapper {
+  padding: 0;
+}
+
+.middel-block {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0.5rem auto 0;
+}
+
+.line {
+  margin: 0.2rem 0 0.3rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.36rem;
+}
+
+.des {
+  font-size: 0.36rem;
+  text-align: center;
+}
+
+.getbenefits-page .wrapper {
+  width: 85vw;
+}
+
+#form-contact .tips {
+  font-size: 0.24rem;
+  color: #818181;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+#form-contact .input-box {
+  margin-bottom: 0.2rem;
+}
+#form-contact .input-box.error input[type="text"], #form-contact .input-box.error input[type="tel"] {
+  border: red 1px solid;
+}
+#form-contact input[type="text"], #form-contact input[type="tel"] {
+  border: #313131 1px solid;
+  border-radius: 5px;
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  box-sizing: border-box;
 }
