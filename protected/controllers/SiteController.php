@@ -30,6 +30,16 @@ class SiteController extends Controller
 		$this->renderPartial('guest',array('xsscode' => $xss->addXsscode()));
 	}
 
+	public function actionGuest2(){
+		$session = new Session();
+		if($session->has('loguser')){
+			$this->redirect('/site/list2');
+			Yii::app()->end();
+		}
+		$xss = new forbidXss();
+		$this->renderPartial('guest2',array('xsscode' => $xss->addXsscode()));
+	}
+
 	public function actionList()
 	{
 		$session = new Session();
@@ -38,6 +48,16 @@ class SiteController extends Controller
 			Yii::app()->end();
 		}
 		$this->redirect('/site/guest');
+	}
+
+	public function actionList2()
+	{
+		$session = new Session();
+		if($session->has('loguser')){
+			$this->renderPartial('list2');
+			Yii::app()->end();
+		}
+		$this->redirect('/site/guest2');
 	}
 
 	public function actionApi($action ,$xsscode = null){
