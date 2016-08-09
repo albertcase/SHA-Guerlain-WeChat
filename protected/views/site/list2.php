@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/html/css/guest.css"/>
     <link rel="stylesheet" type="text/css" href="/html/css/font-awesome.min.css"/>
     <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/html/js/guest.js"></script>
+    <script type="text/javascript" src="/html/js/guest2.js"></script>
 </head>
 <body>
     <div class="mainclass">
