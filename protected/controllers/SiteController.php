@@ -86,6 +86,17 @@ class SiteController extends Controller
 		Yii::app()->end();
 	}
 
+	public function actionAdminapi2($action){
+		$guestadmin = new guestadmin2();
+		$session = new Session();
+		if($session->has('loguser')){
+			echo json_encode($guestadmin->$action());
+			Yii::app()->end();
+		}
+		echo json_encode('4');/*not login*/
+		Yii::app()->end();
+	}
+
 	public function actionLogout(){
 		$session = new Session();
 		$session->clean();

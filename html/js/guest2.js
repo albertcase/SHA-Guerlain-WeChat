@@ -58,7 +58,7 @@ var popbox={
       },
       success:function(data){
         if(data == '14'){
-            window.location.href='/site/list/';
+            window.location.href='/site/list2/';
         }
         if(data == '15'|| data == '11'){
           html.closepop2();
@@ -87,23 +87,23 @@ var adminlist = {
   orderlist:[],
   page:1,
   count:0,
-  buildsecond:function(){
+  buildname:function(){
     var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="second"></i>姓：</dt>';
+    a += '<dt><i class="fa fa-minus-square faleft" opt="name"></i>姓名：</dt>';
     a += '<dd><input type="text" id="ordersecond"></input></dd>';
     a += '</dl>';
     return a;
   },
-  buildfirst:function(){
+  buildmobile:function(){
     var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="first"></i>名：</dt>';
+    a += '<dt><i class="fa fa-minus-square faleft" opt="mobile"></i>手机：</dt>';
     a += '<dd><input type="text" id="orderfirst"></input></dd>';
     a += '</dl>';
     return a;
   },
-  buildsex:function(){
+  buildaddress:function(){
     var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="sex"></i>称呼：</dt>';
+    a += '<dt><i class="fa fa-minus-square faleft" opt="address"></i>地址：</dt>';
     a += '<dd>';
     a += '<select id="ordersex">';
     a += '<option value="先生">先生</option>';
@@ -113,39 +113,13 @@ var adminlist = {
     a += '</dl>';
     return a;
   },
-  buildtype:function(){
+  buildcreatetime:function(){
     var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="type"></i>期望的联系方式：</dt>';
+    a += '<dt><i class="fa fa-minus-square faleft" opt="createtime"></i>createtime：</dt>';
     a += '<dd>';
     a += '<select id="ordertype">';
     a += '<option value="电子邮件">电子邮件</option>';
     a += '<option value="联系电话">联系电话</option>';
-    a += '</select>';
-    a += '</dd>';
-    a += '</dl>';
-    return a;
-  },
-  buildstatus:function(){
-    var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="status"></i>期望的联系方式：</dt>';
-    a += '<dd>';
-    a += '<select id="orderstatus">';
-    a += '<option value="0">Process</option>';
-    a += '<option value="1">Processed</option>';
-    a += '</select>';
-    a += '</dd>';
-    a += '</dl>';
-    return a;
-  },
-  buildbak1:function(){
-    var a='<dl>';
-    a += '<dt><i class="fa fa-minus-square faleft" opt="bak1"></i>服务：</dt>';
-    a += '<dd>';
-    a += '<select id="orderbak1">';
-    a += '<option value="水疗中心">水疗中心</option>';
-    a += '<option value="VIP服务">VIP服务</option>';
-    a += '<option value="定制服务">定制服务</option>';
-    a += '<option value="Le 68餐厅">Le 68餐厅</option>';
     a += '</select>';
     a += '</dd>';
     a += '</dl>';
@@ -157,20 +131,10 @@ var adminlist = {
     for(var i=0 ;i<al ;i++){
         a += '<tr sid="'+data[i]["id"]+'">';
         a += '<th>'+i+'</th>';
-        a += '<th>'+data[i]["second"]+'</th>';
-        a += '<th>'+data[i]["first"]+'</th>';
-        a += '<th>'+data[i]["sex"]+'</th>';
+        a += '<th>'+data[i]["name"]+'</th>';
         a += '<th>'+data[i]["mobile"]+'</th>';
-        a += '<th>'+data[i]["email"]+'</th>';
-        a += '<th>'+data[i]["type"]+'</th>';
-        a += '<th>'+ ((data[i]["bak1"])?(data[i]["bak1"]):"")+ ((data[i]["bak2"])?("|" + data[i]["bak2"]):"")+ ((data[i]["bak3"])?("|" + data[i]["bak3"]):"")+'</th>';
-        a += '<th>'+data[i]["date"]+'</th>';
-        a += '<th>'+data[i]["comment"]+'</th>';
-        if(data[i]["status"] == "1"){
-            a += '<th>Processed</th>';
-          }else{
-            a += '<th><span class="comfirmp">Processe</span></th>';
-          }
+        a += '<th>'+data[i]["address"]+'</th>';
+        a += '<th>'+data[i]["createtime"]+'</th>';
         a += '</tr>';
     }
     return a;
@@ -181,8 +145,8 @@ var adminlist = {
     for(var i=0 ;i<al ;i++){
         a += '<tr>';
         a += '<th>'+parseInt(start+i+1)+'</th>';
-        a += '<th>'+data[i]["firstname"]+'</th>';
-        a += '<th>'+data[i]["cardno"]+'</th>';
+        a += '<th>'+data[i]["name"]+'</th>';
+        a += '<th>'+data[i]["mobile"]+'</th>';
         a += '</tr>';
     }
     return a;
@@ -316,7 +280,7 @@ var adminlist = {
     subdata['numb'] = a;
     subdata['one'] = b;
     $.ajax({
-      url:"/site/adminapi/action/getpage",
+      url:"/site/adminapi2/action/getpage",
       dataType:"json",
       type:"POST",
       data:subdata,
@@ -346,7 +310,7 @@ var adminlist = {
   comfircome:function(sid){
     html.pagehold();
     $.ajax({
-      url:"/site/adminapi/action/comfirmbespk",
+      url:"/site/adminapi2/action/comfirmbespk",
       dataType:"json",
       type:"POST",
       data:{id: sid},
@@ -375,7 +339,7 @@ var adminlist = {
     var self = this;
     html.pagehold();
     $.ajax({
-      url:"/site/adminapi/action/getcount",
+      url:"/site/adminapi2/action/getcount",
       dataType:"json",
       type:"POST",
       data:subdata,

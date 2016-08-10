@@ -18,12 +18,10 @@
         <div class="tableinfo">
           SEARCH CRITERIA:
           <select id="allorders">
-            <option value="second">姓</option>
-            <option value="first">名</option>
-            <option value="sex">称呼</option>
-            <option value="bak1">服务</option>
-            <option value="type">期望的联系方式</option>
-            <option value="status">状态</option>
+            <option value="name">姓名</option>
+            <option value="mobile">手机</option>
+            <option value="address">地址</option>
+            <option value="createtime">时间</option>
           </select>
           <!-- <i class="fa fa-chevron-down" style="color:#ddd;margin-left:-10px"></i> -->
           <i class="fa fa-plus-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -51,16 +49,10 @@
           <thead>
             <tr>
               <th>No.</th>
-              <th>姓</th>
-              <th>名</th>
-              <th>称呼</th>
+              <th>姓名</th>
               <th>联系电话</th>
-              <th>电子邮件</th>
-              <th>期望的联系方式</th>
-              <th>需要的服务</th>
-              <th>预约日期</th>
-              <th>特殊要求</th>
-              <th>状态</th>
+              <th>地址</th>
+              <th>提交时间</th>
             </tr>
           </thead>
           <tbody>
