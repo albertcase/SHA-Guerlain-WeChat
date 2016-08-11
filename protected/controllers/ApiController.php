@@ -40,6 +40,26 @@ class ApiController extends Controller
 
 	}
 
+	public function actionInfo()
+	{
+		$tag = false;
+	    $name = isset($_POST['name']) ? $_POST['name'] : $tag = true;
+	    $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : $tag = true;
+	    $address = isset($_POST['address']) ? $_POST['address'] : $tag = true;
+	    if ( $tag ) {
+	    	print json_encode(array('code' => 2, 'msg' => '请填写必填项'));
+	    	Yii::app()->end();
+	    }
+	    $sql="insert into same_lottery set name = :name, mobile = :mobile, address = :address";
+		$command = Yii::app()->db->createCommand($sql);
+		$command->bindParam(':name',$name,PDO::PARAM_STR);
+		$command->bindParam(':mobile',$mobile,PDO::PARAM_STR);
+		$command->bindParam(':address',$address,PDO::PARAM_STR);
+		$command->execute();
+	    print json_encode(array('code' => 1, 'msg' => '提交成功'));
+	    Yii::app()->end();
+	}
+
 	public function actionTestEmail()
 	{
 		$message            = new YiiMailMessage;		
