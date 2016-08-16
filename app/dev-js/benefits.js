@@ -55,7 +55,7 @@ $(function(){
                     inputMobileVal = document.getElementById('input-mobile').value,
                     inputAddressVal = document.getElementById('input-address').value;
                 $.ajax({
-                    url:'/api/getredpacket',
+                    url:'/api/info',
                     type:'POST',
                     dataType:'json',
                     data:{
