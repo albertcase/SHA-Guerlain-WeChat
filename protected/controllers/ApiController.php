@@ -62,20 +62,38 @@ class ApiController extends Controller
 
 	public function actionTestEmail()
 	{
-		$message            = new YiiMailMessage;		
+		$message            = new YiiMailMessage;
 		$message->subject   = "=?UTF-8?B?".base64_encode('Guerlain预约信息提醒')."?=";
-        $message->setBody('test', 'text/html');                
+        $message->setBody('test', 'text/html');
         $message->setTo(array('demon.zhang@samesamechina.com'=>"Demon"));
-        $message->setFrom(array("guerlain68@samesamechina.com"=>"guerlain"));   
-        try { 
+        $message->setFrom(array("guerlain68@samesamechina.com"=>"guerlain"));
+        try {
         	 $rr = Yii::app()->mail->send($message);
         	 //var_dump($rr);
-        } catch (Exception $e) { 
+        } catch (Exception $e) {
         	//var_dump($e->getMessage());
         }
-		
+
 		print_r($rr);
 		exit;
+	}
+
+	public function actionApi2(){
+		$sendMail = new sendMail();
+		$keys = array(
+			"name" => "name",
+			"surname" =>  'aaaasurname',
+			"title" => 'aaaatitle',
+			'telphone' => 'aaaatelphone',
+			'email' => 'aaaaemail',
+			'callway' => 'aaaacallway',
+			'country' => 'aaaacountry',
+			'storeid' => 'aaaastoreid',
+			'sguide' => 'aaaasguide',
+			'bespeaktime' => 'aaaabespeaktime',
+		);
+		$sendMail->addmail($sendMail->buildemil($keys));
+		$sendMail->mailsend();
 	}
 
 	/**
