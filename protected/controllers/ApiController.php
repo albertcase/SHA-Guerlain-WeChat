@@ -37,7 +37,7 @@ class ApiController extends Controller
 		$command->execute();
 		//send email
 		$sendMail = new sendMail();
-		$keys => array(
+		$keys = array(
 			'sex' => $sex,
 			'first' => $first,
 			'second' => $second,
