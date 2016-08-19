@@ -35,8 +35,25 @@ class ApiController extends Controller
 		$command->bindParam(':date',$date,PDO::PARAM_STR);
 		$command->bindParam(':comment',$comment,PDO::PARAM_STR);
 		$command->execute();
-	    print json_encode(array('code' => 1, 'msg' => '提交成功'));
-	    Yii::app()->end();
+		//send email
+		$sendMail = new sendMail();
+		$keys => array(
+			'sex' => $sex,
+			'first' => $first,
+			'second' => $second,
+			'mobile' => $mobile,
+			'email' => $email,
+			'type' => $type,
+			'bak1' => $bak1,
+			'bak2' => $bak2,
+			'bak3' => $bak3,
+			'date' => $date,
+			'comment' => $comment
+		);
+		$sendMail->addmail($sendMail->buildemil($keys));
+		$sendMail->mailsend();
+	  print json_encode(array('code' => 1, 'msg' => '提交成功'));
+	  Yii::app()->end();
 
 	}
 

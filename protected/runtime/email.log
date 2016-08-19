@@ -1,4 +1,0 @@
-nohup: failed to run command '/vagrant/sha-guerlain-wechat/protected/models/sh/sendmail.sh': Permission denied
-nohup: failed to run command '/vagrant/sha-guerlain-wechat/protected/models/sh/sendmail.sh': Permission denied
-nohup: failed to run command '/vagrant/sha-guerlain-wechat/protected/models/sh/sendmail.sh': Permission denied
-PHP Catchable fatal error:  Argument 1 passed to mails::addmemmail() must be of the type array, null given, called in /vagrant/sha-guerlain-wechat/protected/models/sh/sendemail.php on line 44 and defined in /vagrant/sha-guerlain-wechat/protected/models/sh/sendemail.php on line 33

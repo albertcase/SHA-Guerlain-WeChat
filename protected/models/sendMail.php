@@ -11,7 +11,7 @@ class sendMail
   private $now = 'now';
   private $list = 'list:';
   private $from = array('guerlain68@samesamechina.com' => 'Wechat Guerlain');
-  private $to = array('dirk.wang@samesamechina.com' => 'DIRC','reservationwechat@guerlain.fr' => 'Guerlain Wechat Booking');
+  private $to = array('757867658@qq.com' => 'DIRC','reservationwechat@guerlain.fr' => 'Guerlain Wechat Booking');
 
   public function __construct(){
     $this->mem = new memcaches();
@@ -35,7 +35,7 @@ class sendMail
       'from' => $this->from,
       'to' => $this->to,
       'body' => $this->body($data),
-      'subject' => 'Wechat An appointment from :'.$data['name'],
+      'subject' => 'Wechat An appointment from :'.$data['first'],
     );
     return $datain;
   }
@@ -45,16 +45,15 @@ class sendMail
       '<html>'.
       ' <head></head>'.
       ' <body>'.
-      '<span style="color:#090">First Name:</span>&nbsp;'.$data['name'].'<br>'.
-      '<span style="color:#090">Family Nnme:</span>&nbsp;'.$data['surname'].'<br>'.
-      '<span style="color:#090">Title:</span>&nbsp;'.$data['title'].'<br>'.
-      '<span style="color:#090">Phone No.:</span>&nbsp;'.$data['telphone'].'<br>'.
+      '<span style="color:#090">First Name:</span>&nbsp;'.$data['first'].'<br>'.
+      '<span style="color:#090">Family Nnme:</span>&nbsp;'.$data['second'].'<br>'.
+      '<span style="color:#090">Title:</span>&nbsp;'.$data['sex'].'<br>'.
+      '<span style="color:#090">Phone No.:</span>&nbsp;'.$data['mobile'].'<br>'.
       '<span style="color:#090">Email Address:</span>&nbsp;'.$data['email'].'<br>'.
-      '<span style="color:#090">Preferred way to contact:</span>&nbsp;'.$data['callway'].'<br>'.
-      '<span style="color:#090">Store:country:</span>&nbsp;'.$data['country'].'<br>'.
-      '<span style="color:#090">Store:</span>&nbsp;'.$data['storeid'].'<br>'.
-      '<span style="color:#090">Chinese Guide:</span>&nbsp;'.$data['sguide'].'<br>'.
-      '<span style="color:#090">appointment Date:</span>&nbsp;'.$data['bespeaktime'].'<br>'.
+      '<span style="color:#090">Preferred way to contact:</span>&nbsp;'.$data['type'].'<br>'.
+      '<span style="color:#090">Services:</span>&nbsp;'.$data['bak1'].'|'.$data['bak2'].'|'.$data['bak3'].'<br>'.
+      '<span style="color:#090">Comment:</span>&nbsp;'.$data['comment'].'<br>'.
+      '<span style="color:#090">appointment Date:</span>&nbsp;'.$data['date'].'<br>'.
       ' </body>'.
       '</html>';
       return $body;
