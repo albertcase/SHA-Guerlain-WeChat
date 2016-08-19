@@ -94,6 +94,8 @@ class ApiController extends Controller
 		);
 		$sendMail->addmail($sendMail->buildemil($keys));
 		$sendMail->mailsend();
+		print "\nsuccess";
+		Yii::app()->end();
 	}
 
 	/**

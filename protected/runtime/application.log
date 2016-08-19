@@ -11020,3 +11020,20 @@ Stack trace:
 REQUEST_URI=/html/fonts/fontawesome-webfont.ttf?v=4.3.0
 HTTP_REFERER=http://127.0.0.1:9133/html/css/font-awesome.min.css
 ---
+2016/08/19 16:34:21 [error] [php] include(bespeakApi.php): failed to open stream: No such file or directory (/vagrant/sha-guerlain-wechat/protected/framework/YiiBase.php:421)
+Stack trace:
+#0 /vagrant/sha-guerlain-wechat/protected/models/sendMail.php(44): spl_autoload_call()
+#1 /vagrant/sha-guerlain-wechat/protected/models/sendMail.php(37): sendMail->body()
+#2 /vagrant/sha-guerlain-wechat/protected/controllers/ApiController.php(95): sendMail->buildemil()
+#3 /vagrant/sha-guerlain-wechat/protected/framework/web/actions/CInlineAction.php(49): ApiController->actionApi2()
+#4 /vagrant/sha-guerlain-wechat/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /vagrant/sha-guerlain-wechat/protected/framework/web/CController.php(286): ApiController->runAction()
+#6 /vagrant/sha-guerlain-wechat/protected/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#7 /vagrant/sha-guerlain-wechat/protected/framework/web/CWebApplication.php(282): ApiController->run()
+#8 /vagrant/sha-guerlain-wechat/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /vagrant/sha-guerlain-wechat/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /vagrant/sha-guerlain-wechat/index.php(15): CWebApplication->run()
+REQUEST_URI=/api/api2
+in /vagrant/sha-guerlain-wechat/protected/models/sendMail.php (44)
+in /vagrant/sha-guerlain-wechat/protected/models/sendMail.php (37)
+in /vagrant/sha-guerlain-wechat/protected/controllers/ApiController.php (95)
