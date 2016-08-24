@@ -50,6 +50,7 @@ $(function(){
             if(formValidate()){
                 if(!enableSubmit) return;
                 enableSubmit = false;
+                Common.msgBox('loading...');
                 //    start to get keycode
                 var inputNameVal = document.getElementById('input-name').value,
                     inputMobileVal = document.getElementById('input-mobile').value,
@@ -64,6 +65,7 @@ $(function(){
                         address:inputAddressVal
                     },
                     success:function(data){
+                        $('.ajaxpop').remove();
                         enableSubmit = true;
                         if(data.code == 1){
                             //alert('提交成功');
