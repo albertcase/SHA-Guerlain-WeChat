@@ -152,7 +152,7 @@ function gotoPin(i) {
 
 $(document).ready(function(){
 
-	$(document).on('click','.btn-alert-ok',function(){
+	$(document).on('touchstart','.btn-alert-ok',function(){
 		$(this).parent().parent().remove();
 	});
 	$('body').on('touchstart','.btn-close',function(){

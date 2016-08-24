@@ -67,7 +67,7 @@ $(function(){
                         enableSubmit = true;
                         if(data.code == 1){
                             //alert('提交成功');
-                            Common.alertBox.add('您已提交成功，娇兰之家随后会通过电话或者邮件直接联系您。');
+                            Common.alertBox.add('您已提交成功');
                         }else{
                             Common.alertBox.add(data.msg);
                         }
