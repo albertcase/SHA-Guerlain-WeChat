@@ -59,12 +59,16 @@ class ApiController extends Controller
 
 	public function actionInfo()
 	{
+		if (isset($_COOKIE['little_gift161101'])&&$_COOKIE['little_gift161101']!='') {
+			print json_encode(array('code' => 3, 'msg' => '您已经提交过信息了'));
+	    	Yii::app()->end();
+		}
 		$tag = false;
 	    $name = isset($_POST['name']) ? $_POST['name'] : $tag = true;
 	    $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : $tag = true;
 	    $address = isset($_POST['address']) ? $_POST['address'] : $tag = true;
 	    if ( $tag ) {
-	    	print json_encode(array('code' => 3, 'msg' => '请填写必填项'));
+	    	print json_encode(array('code' => 4, 'msg' => '请填写必填项'));
 	    	Yii::app()->end();
 	    }
 	    $sql="insert into same_lottery set name = :name, mobile = :mobile, address = :address";
@@ -74,8 +78,15 @@ class ApiController extends Controller
 		$command->bindParam(':address',$address,PDO::PARAM_STR);
 		$command->execute();
 
+		setcookie("little_gift161101","1",time()+3600*24*365);
+		$_COOKIE['little_gift161101'] = 1;
+		
 		$rs = Yii::app()->db->createCommand("select count(id) from same_lottery")->select()->queryScalar();
-	    print json_encode(array('code' => 1, 'msg' => $rs));
+		if ($rs>1000) {
+			print json_encode(array('code' => 2, 'msg' => '小样已经申领完了'));
+	    	Yii::app()->end();
+		}
+	    print json_encode(array('code' => 1, 'msg' => '申领成功'));
 	    Yii::app()->end();
 	}
 
