@@ -74,7 +74,7 @@ class ApiController extends Controller
 		$command->bindParam(':address',$address,PDO::PARAM_STR);
 		$command->execute();
 
-		$rs = Yii::app()->createCommand("select count(id) from same_lottery")->select()->queryScalar();
+		$rs = Yii::app()->db->createCommand("select count(id) from same_lottery")->select()->queryScalar();
 	    print json_encode(array('code' => 1, 'msg' => $rs));
 	    Yii::app()->end();
 	}
