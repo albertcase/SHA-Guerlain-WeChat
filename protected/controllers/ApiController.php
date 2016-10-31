@@ -64,7 +64,7 @@ class ApiController extends Controller
 	    $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : $tag = true;
 	    $address = isset($_POST['address']) ? $_POST['address'] : $tag = true;
 	    if ( $tag ) {
-	    	print json_encode(array('code' => 2, 'msg' => '请填写必填项'));
+	    	print json_encode(array('code' => 3, 'msg' => '请填写必填项'));
 	    	Yii::app()->end();
 	    }
 	    $sql="insert into same_lottery set name = :name, mobile = :mobile, address = :address";
@@ -73,7 +73,9 @@ class ApiController extends Controller
 		$command->bindParam(':mobile',$mobile,PDO::PARAM_STR);
 		$command->bindParam(':address',$address,PDO::PARAM_STR);
 		$command->execute();
-	    print json_encode(array('code' => 1, 'msg' => '提交成功'));
+
+		$rs = Yii::app()->createCommand("select count(id) from same_lottery")->queryScalar();
+	    print json_encode(array('code' => 1, 'msg' => $rs));
 	    Yii::app()->end();
 	}
 
