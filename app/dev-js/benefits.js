@@ -85,8 +85,11 @@ $(function(){
                         $('.ajaxpop').remove();
                         enableSubmit = true;
                         if(data.code == 1){
-                            //alert('提交成功');
-                            Common.alertBox.add('您已提交成功');
+                            //申领成功
+                            window.location.href = window.location.origin+'/app/template/benefits-result.html?result=yes';
+                        }else if(data.code==2){
+                            //小样已经申领完了
+                            window.location.href = window.location.origin+'/app/template/benefits-result.html?result=no';
                         }else{
                             Common.alertBox.add(data.msg);
                         }

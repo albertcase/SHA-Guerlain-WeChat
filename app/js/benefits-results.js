@@ -1,0 +1,1 @@
+!function(){$(document).ready(function(){function t(t,e){$(".title").html(t),$(".des").html(e)}var e=Common.queryString("result"),s={yes:{title:"恭喜你!",des:"几天后，法国娇兰“小黑裙”<br>小样即将来到你的身边。"},no:{title:'很抱歉 <span class="subtitle">精美小黑裙小样已经发完了。</span> ',des:"别灰心，继续关注法国娇兰香榭丽舍68<br>号官方微信账号，<br>更多惊喜期待与你分享！"}};e&&("yes"==e.result?t(s.yes.title,s.yes.des):t(s.no.title,s.no.des))})}();

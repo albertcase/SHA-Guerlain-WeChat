@@ -136,3 +136,25 @@
     width: 85vw;
   }
 }
+
+
+//for benefits-page-answer
+.benefits-page-answer{
+  .title{
+    font-size: 0.67rem;
+    line-height: 1.2;
+    .subtitle{
+      display: block;
+      font-size: 0.34rem;
+      font-weight: normal;
+    }
+  }
+  .des{
+    color: #4a4a4a;
+    font-size: 0.34rem;
+  }
+  .bottle{
+    @include size(2.62rem,4.55rem);
+    margin: 0 auto;
+  }
+}
