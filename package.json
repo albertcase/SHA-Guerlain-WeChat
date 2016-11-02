@@ -13,6 +13,7 @@
   "repository": "ruanyf/webpack-demos",
   "devDependencies": {
     "browser-sync": "^2.12.3",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-inject": "^4.0.0",
