@@ -11,7 +11,13 @@ class sendMail
   private $now = 'now';
   private $list = 'list:';
   private $from = array('guerlain68@samesamechina.com' => 'Wechat Guerlain');
-  private $to = array('757867658@qq.com' => 'DIRC','reservationwechat@guerlain.fr' => 'Guerlain Wechat Booking');
+  private $to = array(
+    '757867658@qq.com' => 'DIRC',
+    'reservationwechat@guerlain.fr' => 'Guerlain Wechat Booking',
+    'Jingtao.He@mcgarrybowen.com' => 'Jingtao He',
+    'NADIA.DUAULT@mcgarrybowen.com' => 'NADIA DUAULT',
+    'NATACHA.BLAZQUEZYGOMEZ@mcgarrybowen.com' => 'NATACHA BLAZQUEZYGOMEZ'
+   );
 
   public function __construct(){
     $this->mem = new memcaches();
