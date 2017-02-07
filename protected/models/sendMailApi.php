@@ -45,7 +45,6 @@ class sendMailApi
       'subject' => 'Wechat An appointment from : %bookingname%',
       'templateInvokeName' => 'booking_module',
       'xsmtpapi' => array(
-        array(
           "to" => $this->to,
           'sub' => array(
             "%bookingname%" => array("%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%"),
@@ -71,7 +70,7 @@ class sendMailApi
             "%Mcomment%" => $this->getparam($data, 'comment'),
             "%Mappointdate%" => $this->getparam($data, 'date'),
           )
-      ),
+        )
     );
     return $datain;
   }
