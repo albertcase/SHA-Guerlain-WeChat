@@ -17,3 +17,9 @@
 * http://[域名]/system
 * 帐号: admin
 * 密码: aaaaaa
+
+### 邮件服务 ###
+
+* https://sendcloud.sohu.com/
+* 帐号: dirk.wang@samesamechina.com
+* 密码: Samesame2016
