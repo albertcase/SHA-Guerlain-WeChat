@@ -15,11 +15,12 @@ class sendMailApi
     'name' => 'Wechat Guerlain'
   );
   private $to = array(
-    '757867658@qq.com',
     'reservationwechat@guerlain.fr',
     'Jingtao.He@mcgarrybowen.com',
     'NADIA.DUAULT@mcgarrybowen.com',
-    'NATACHA.BLAZQUEZYGOMEZ@mcgarrybowen.com'
+    'NATACHA.BLAZQUEZYGOMEZ@mcgarrybowen.com',
+    'dirk.wang@samesamechina.com',
+    '757867658@qq.com',
    );
 
   public function __construct(){
@@ -47,16 +48,16 @@ class sendMailApi
       'xsmtpapi' => array(
           "to" => $this->to,
           'sub' => array(
-            "%bookingname%" => array("%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%"),
-            "%firstname%" => array("%Mfirstname%","%Mfirstname%","%Mfirstname%","%Mfirstname%","%Mfirstname%"),
-            "%familyname%" => array("%Mfamilyname%","%Mfamilyname%","%Mfamilyname%","%Mfamilyname%","%Mfamilyname%"),
-            "%title%" => array("%Mtitle%","%Mtitle%","%Mtitle%","%Mtitle%","%Mtitle%"),
-            "%phonenumber%" => array("%Mphonenumber%","%Mphonenumber%","%Mphonenumber%","%Mphonenumber%","%Mphonenumber%"),
-            "%emailaddress%" => array("%Memailaddress%","%Memailaddress%","%Memailaddress%","%Memailaddress%","%Memailaddress%"),
-            "%contactway%" => array("%Mcontactway%","%Mcontactway%","%Mcontactway%","%Mcontactway%","%Mcontactway%"),
-            "%services%" => array("%Mservices%","%Mservices%","%Mservices%","%Mservices%","%Mservices%"),
-            "%comment%" => array("%Mcomment%","%Mcomment%","%Mcomment%","%Mcomment%","%Mcomment%"),
-            "%appointdate%" => array("%Mappointdate%","%Mappointdate%","%Mappointdate%","%Mappointdate%","%Mappointdate%"),
+            "%bookingname%" => array("%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%","%Mbookingname%"),
+            "%firstname%" => array("%Mfirstname%","%Mfirstname%","%Mfirstname%","%Mfirstname%","%Mfirstname%","%Mfirstname%"),
+            "%familyname%" => array("%Mfamilyname%","%Mfamilyname%","%Mfamilyname%","%Mfamilyname%","%Mfamilyname%","%Mfamilyname%"),
+            "%title%" => array("%Mtitle%","%Mtitle%","%Mtitle%","%Mtitle%","%Mtitle%","%Mtitle%"),
+            "%phonenumber%" => array("%Mphonenumber%","%Mphonenumber%","%Mphonenumber%","%Mphonenumber%","%Mphonenumber%","%Mphonenumber%"),
+            "%emailaddress%" => array("%Memailaddress%","%Memailaddress%","%Memailaddress%","%Memailaddress%","%Memailaddress%","%Memailaddress%"),
+            "%contactway%" => array("%Mcontactway%","%Mcontactway%","%Mcontactway%","%Mcontactway%","%Mcontactway%","%Mcontactway%"),
+            "%services%" => array("%Mservices%","%Mservices%","%Mservices%","%Mservices%","%Mservices%","%Mservices%"),
+            "%comment%" => array("%Mcomment%","%Mcomment%","%Mcomment%","%Mcomment%","%Mcomment%","%Mcomment%"),
+            "%appointdate%" => array("%Mappointdate%","%Mappointdate%","%Mappointdate%","%Mappointdate%","%Mappointdate%","%Mappointdate%"),
           ),
           "section" => array(
             "%Mbookingname%" => $this->getparam($data, 'first'),
