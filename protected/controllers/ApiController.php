@@ -36,7 +36,8 @@ class ApiController extends Controller
 		$command->bindParam(':comment',$comment,PDO::PARAM_STR);
 		$command->execute();
 		//send email
-		$sendMail = new sendMail();
+		$sendMail = new sendMailApi();
+		// $sendMail = new sendMail();
 		$keys = array(
 			'sex' => $sex,
 			'first' => $first,
@@ -80,7 +81,7 @@ class ApiController extends Controller
 
 		setcookie("little_gift161101","1",time()+3600*24*365);
 		$_COOKIE['little_gift161101'] = 1;
-		
+
 		$rs = Yii::app()->db->createCommand("select count(id) from same_lottery")->select()->queryScalar();
 		if ($rs>1000) {
 			print json_encode(array('code' => 2, 'msg' => '小样已经申领完了'));
